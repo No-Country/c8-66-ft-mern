@@ -1,33 +1,22 @@
 const { db, DataTypes } = require("../utils/database.util");
 
-const User = db.define("user", {
+const ShippingStatusHistory = db.define("shippingStatusHistories", {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
     autoIncrement: true,
     allowNull: false,
   },
-  name: {
-    type: DataTypes.STRING,
+  shipping_id: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
-  phone: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-  },
-  email: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
-  },
-  password: {
-    type: DataTypes.STRING,
+  status_id: {
+    type: DataTypes.INTEGER,
     allowNull: false,
   },
-  role: {
+  status_date: {
     type: DataTypes.STRING,
-    defaultValue: "normal",
     allowNull: false,
   },
   status: {
@@ -37,4 +26,4 @@ const User = db.define("user", {
   },
 });
 
-module.exports = { User };
+module.exports = { ShippingStatusHistory };
