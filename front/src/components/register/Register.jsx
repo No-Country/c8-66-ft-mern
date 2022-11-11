@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { useForm } from "react-hook-form";
 
 const defaultValues = {
@@ -13,6 +13,7 @@ const Register = () => {
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
   const createUser =(data)=>{
+
     const url = `url`;
     axios.post(url, data)
       .then((res) => {
