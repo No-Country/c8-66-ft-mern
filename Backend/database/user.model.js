@@ -13,7 +13,7 @@ const User = db.define("user", {
   },
   phone: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: true,
     unique: true,
   },
   email: {
@@ -27,8 +27,8 @@ const User = db.define("user", {
   },
   role: {
     type: DataTypes.STRING,
-    defaultValue: "normal",
     allowNull: false,
+    defaultValue: "normal",
   },
   status: {
     type: DataTypes.STRING,
