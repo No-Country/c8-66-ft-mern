@@ -31,13 +31,19 @@ const Login = () => {
 
   const onSubmit = (data)=>{
       console.log(data)
-    //   if (data.password == userForEmail.password) {
-    //     login(data)
-    //   }
-    //  else{
-    //   alert ("Usuario no existente")
-    //  }
+      if (data.email == userForEmail.email) {
+        login(data)
+      }
+     else{
+      alert ("Usuario no existente")
+     }
   }
+
+ 
+
+  // useEffect(() => {
+  //   dispatch(getUserDetail(email.email));
+  // }, [dispatch, email.email]);
 
   const showPass = ()=>{
     if (eyes) {
@@ -53,7 +59,11 @@ const Login = () => {
     <h2>Login</h2>
     <section>
         <label htmlFor="email">Email</label>
-        <input type="text" placeholder="email" {...register('email',{
+        <input 
+        type="text"
+        name="email"
+        placeholder="email" 
+        {...register('email',{
           required: true,
           pattern:/^[^\s@]+@[^\s@]+\.[^\s@]+$/i
         })}/>
@@ -63,7 +73,9 @@ const Login = () => {
 
       <section>
         <label htmlFor="password">Contraseña</label>
-        <input  {...register('password',{
+        <input
+        name="password"
+        {...register('password',{
           required: true,
         })}type={ eyes ? "text": "password"} id="password" placeholder="Password"/>
         <span onClick={showPass}>
