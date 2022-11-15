@@ -12,6 +12,7 @@ const Register = () => {
   const { register, handleSubmit,formState:{errors}, reset } = useForm();
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
+const [repeatPass, setrepeatPass] = useState(false)
   const createUser =(data)=>{
 
     const url = `url`;
@@ -30,30 +31,21 @@ const submit = (data)=>{
     createUser(data)
   }
  else{
-  alert ("Las Contraseña deben ser iguales")
+  setrepeatPass(true)
  }
  
 }
 const showPass = ()=>{
-  if (eyes) {
-    setEyes(false)
-  }
- else{
-  setEyes(true)
- }
+    setEyes(!eyes)
+  
 }
 const showRepeatPass = ()=>{
-  if (eyesRepeat) {
-    setEyesRepeat(false)
-  }
- else{
-  setEyesRepeat(true)
- }
+    setEyesRepeat(!eyesRepeat)
 }
 
   return (
-    <form onSubmit={handleSubmit(submit)}>
-        <h2>
+    <form onSubmit={handleSubmit(submit)} className='register_form'>
+        <h2 className="title">
         ¡Bienvenido!
         </h2>
         <h3>
@@ -92,25 +84,28 @@ const showRepeatPass = ()=>{
           required: true
         })} type={ eyes ? "text": "password"} id="password" placeholder="Password"/>
         <span onClick={showPass}>
-       {eyes ?  <i class="fa-solid fa-eye">  </i> : <i class="fa-solid fa-eye-slash"></i>}
+       {eyes ?  <i className="fa-solid fa-eye">  </i> : <i className="fa-solid fa-eye-slash"></i>}
        </span>
        {errors.password?.type === 'required' && <p>El password es requerido</p>}
       </section>
       <section>
         <label htmlFor="repeat_password">Repetir contraseña</label>
+        {repeatPass ?  <p>las contraseñas no cinciden </p> : <p></p> }
         <input {...register("repeat_password",{
           required: true
         })} type={ eyesRepeat ? "text": "password"} id="repeat_password" placeholder="Repetir contraseña"/>
        <span onClick={showRepeatPass}>
-       {eyesRepeat ?  <i class="fa-solid fa-eye">  </i> : <i class="fa-solid fa-eye-slash"></i>}
+       {eyesRepeat ?  <i className="fa-solid fa-eye">  </i> : <i className="fa-solid fa-eye-slash"></i>}
        </span>
-       {errors.repeat_password?.type === 'required' && <p>Repetir la contraseña es requerido</p>}
+       {/* {errors.repeat_password?.type === 'required' && <p>Repetir la contraseña es requerido</p>} */}
+       {repeatPass ?  <p>las contraseñas no coinciden </p> : <p></p> }
       </section>
-      <section>
+      <section className="register_checkbox">
         <input type="checkbox" id="checkbox" />
         <label htmlFor="checkbox">Acepto términos y condiciones</label>
+        {errors.repeat_password?.type === 'required' && <p>Acepte los términos y condiciones</p>}
       </section>
-      <button> Resgistrarme</button>
+      <button className="login__btn"> Resgistrarme</button>
     </form>
   )
 }
