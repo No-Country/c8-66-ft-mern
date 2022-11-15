@@ -1,15 +1,15 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv');
+require('dotenv').config();
 
 // Models
-const { User } = require('../models/user.model');
+const { User } = require('../database/user.model');
 
 // Utils
 const { catchAsync } = require('../utils/catchAsync.util');
 const { AppError } = require('../utils/appError.util');
 
-dotenv.config({ path: './config.env' });
+//dotenv.config({ path: './config.env' });
 
 // Gen random jwt signs
 // require('crypto').randomBytes(64).toString('hex') -> Enter into the node console and paste the command
@@ -27,11 +27,9 @@ const getAllUsers = catchAsync(async (req, res, next) => {
 });
 
 const createUser = catchAsync(async (req, res, next) => {
-	const { name, email, password, role } = req.body;
+	const { name, email, password,  phone } = req.body;
 
-	if (role !== 'admin' && role !== 'normal') {
-		return next(new AppError('Invalid role', 400));
-	}
+
 
 	// Encrypt the password
 	const salt = await bcrypt.genSalt(12);
@@ -41,7 +39,7 @@ const createUser = catchAsync(async (req, res, next) => {
 		name,
 		email,
 		password: hashedPassword,
-		role,
+		phone,
 	});
 
 	// Remove password from response
