@@ -9,7 +9,7 @@ const defaultValues = {
 }
 
 const Register = () => {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit,formState:{errors}, reset } = useForm();
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
   const createUser =(data)=>{
@@ -59,39 +59,52 @@ const showRepeatPass = ()=>{
         <h3>
           Controla tus envios desde donde estés
         </h3>
+        <h2>Registrarme</h2>
         <section>
         <label htmlFor="name">Nombre</label>
         <input
-          {...register("name")}
+          {...register("name",{
+            required: true
+          })}
           type="text"
           id="name"
           placeholder="Nombre y Apellido"
         />
+        {errors.name?.type === 'required' && <p>El nombre es requerido</p>}
         </section>
         <section>
         <label htmlFor="email">Email</label>
-        <input
-          {...register("email")}
+        <input 
+          {...register("email",{
+            required: true,
+            // pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+          })}
           type="email" 
           id="email"
           placeholder="email"
         />
+        {errors.email?.type === 'required' && <p>El email es requerido</p>}
+        {/* {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>} */}
       </section>
       <section>
         <label htmlFor="password">Contraseña</label>
-        <input {...register("password")} type={ eyes ? "text": "password"} id="password" placeholder="Password"/>
+        <input {...register("password",{
+          required: true
+        })} type={ eyes ? "text": "password"} id="password" placeholder="Password"/>
         <span onClick={showPass}>
        {eyes ?  <i class="fa-solid fa-eye">  </i> : <i class="fa-solid fa-eye-slash"></i>}
        </span>
-     
+       {errors.password?.type === 'required' && <p>El password es requerido</p>}
       </section>
       <section>
         <label htmlFor="repeat_password">Repetir contraseña</label>
-        <input {...register("repeat_password")} type={ eyesRepeat ? "text": "password"} id="repeat_password" placeholder="Repetir contraseña"/>
+        <input {...register("repeat_password",{
+          required: true
+        })} type={ eyesRepeat ? "text": "password"} id="repeat_password" placeholder="Repetir contraseña"/>
        <span onClick={showRepeatPass}>
        {eyesRepeat ?  <i class="fa-solid fa-eye">  </i> : <i class="fa-solid fa-eye-slash"></i>}
        </span>
-     
+       {errors.repeat_password?.type === 'required' && <p>Repetir la contraseña es requerido</p>}
       </section>
       <section>
         <input type="checkbox" id="checkbox" />
