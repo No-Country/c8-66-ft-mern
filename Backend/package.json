@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon server.js",
-		"dev": "nodemon -L --inspect=0.0.0.0 src/server.js"
+		"dev": "nodemon -L --inspect=0.0.0.0 server.js"
 	},
 	"author": "Maximiliano Rangel",
 	"license": "ISC",
