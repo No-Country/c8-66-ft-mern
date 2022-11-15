@@ -1,4 +1,4 @@
-const dotenv = require('dotenv');
+require('dotenv').config();
 
 const { app } = require('./app');
 
@@ -6,7 +6,7 @@ const { app } = require('./app');
 const { initModels } = require('./database/initModels');
 const { db } = require('./utils/database.util');
 
-dotenv.config({ path: './config.env' });
+//dotenv.config({ path: './config.env' });
 
 const startServer = async () => {
 	try {
