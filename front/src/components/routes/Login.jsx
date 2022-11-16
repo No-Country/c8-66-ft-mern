@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useSelector } from "react-redux";
+import axios from "axios";
 
 const Login = () => {
   const {
@@ -16,10 +17,9 @@ const Login = () => {
     },
   });
   const [eyes, setEyes] = useState(false);
-  // const userForEmail = useSelector(state => state.user);
 
   const login = (data) => {
-    const url = `url`;
+    const url = `http://localhost:4000/api/v1/users/login`;
     axios
       .post(url, data)
       .then((res) => {
@@ -29,12 +29,8 @@ const Login = () => {
   };
 
   const onSubmit = (data) => {
-      if (data.password == userForEmail.password) {
-        login(data)
-      }
-     else{
-      alert ("Usuario no existente")
-     }
+  login(data)
+  
   };
 
   const showPass = () => {
