@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
 import { useSelector } from "react-redux";
 
 const Login = () => {
@@ -16,26 +17,28 @@ const Login = () => {
     },
   });
   const [eyes, setEyes] = useState(false);
-  // const userForEmail = useSelector(state => state.user);
+  const [user, setUser] = useState([]);
 
   const login = (data) => {
-    const url = `url`;
+    const url = `http://localhost:4000/api/v1/users/login`;
     axios
       .post(url, data)
       .then((res) => {
-        console.log(res.data);
+        setUser(res.data.data)
+        console.log(res.data.data.token)
+        localStorage.setItem('token',res.data.data.token)
       })
-      .catch((err) => alert("El usuario no se a podido loguear"));
+      .catch((err) =>
+      console.log(err))
   };
 
-  const onSubmit = (data) => {
-      if (data.password == userForEmail.password) {
+  const onSubmit = (data) => {   
         login(data)
-      }
-     else{
-      alert ("Usuario no existente")
-     }
   };
+
+  const handleClick = () => {
+    localStorage.removeItem('token')
+  }
 
   const showPass = () => {
     setEyes(!eyes);
@@ -85,6 +88,7 @@ const Login = () => {
         )}
       </section>
       <button className="login__btn"> Loguearme</button>
+      <button onClick={handleClick} className='form-logout__btn'>Logout</button>
     </form>
   );
 };
