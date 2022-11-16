@@ -28,13 +28,10 @@ const [repeatPass, setrepeatPass] = useState(false)
   }
 
 const submit = (data)=>{
-
   if (data.password == data.repeat_password) {
-  
       createUser(data)
     }
    
-  
  else{
   setrepeatPass(true)
  }
@@ -107,7 +104,6 @@ const showRepeatPass = ()=>{
        </span>
        {errors.password?.type === 'required' && <p>Este campo es requerido</p>}
        {errors.password?.type === 'pattern' && <p className="small_letter">La contraseña debe tener Mínimo 8 caracteres, al menos una letra y un número</p>}
-       
       </section>
       <section>
         <label htmlFor="repeat_password">Repetir contraseña</label>
