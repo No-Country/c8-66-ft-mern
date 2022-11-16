@@ -28,10 +28,13 @@ const [repeatPass, setrepeatPass] = useState(false)
   }
 
 const submit = (data)=>{
-  
+
   if (data.password == data.repeat_password) {
-    createUser(data)
-  }
+  
+      createUser(data)
+    }
+   
+  
  else{
   setrepeatPass(true)
  }
@@ -96,12 +99,15 @@ const showRepeatPass = ()=>{
       <section>
         <label htmlFor="password">Contraseña</label>
         <input {...register("password",{
-          required: true
+          required: true,
+           pattern:/(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,32}$/
         })} type={ eyes ? "text": "password"} id="password" placeholder="Password"/>
         <span onClick={showPass}>
        {eyes ?  <i className="fa-solid fa-eye">  </i> : <i className="fa-solid fa-eye-slash"></i>}
        </span>
-       {errors.password?.type === 'required' && <p>El password es requerido</p>}
+       {errors.password?.type === 'required' && <p>Este campo es requerido</p>}
+       {errors.password?.type === 'pattern' && <p className="small_letter">La contraseña debe tener Mínimo 8 caracteres, al menos una letra y un número</p>}
+       
       </section>
       <section>
         <label htmlFor="repeat_password">Repetir contraseña</label>

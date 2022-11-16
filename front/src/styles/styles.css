@@ -38,6 +38,9 @@ form section p {
   bottom: -40px;
   color: rgb(247, 75, 75);
 }
+form section .small_letter {
+  font-size: 12px;
+}
 form .register_checkbox {
   display: flex;
   flex-direction: row;
