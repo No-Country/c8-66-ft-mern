@@ -29,12 +29,12 @@ const Login = () => {
   };
 
   const onSubmit = (data) => {
-    //   if (data.password == userForEmail.password) {
-    //     login(data)
-    //   }
-    //  else{
-    //   alert ("Usuario no existente")
-    //  }
+      if (data.password == userForEmail.password) {
+        login(data)
+      }
+     else{
+      alert ("Usuario no existente")
+     }
   };
 
   const showPass = () => {

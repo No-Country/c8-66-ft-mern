@@ -14,14 +14,22 @@ const Register = () => {
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
 const [repeatPass, setrepeatPass] = useState(false)
+<<<<<<< HEAD
 
   const createUser =(data)=>{
 
 
+=======
+
+
+
+  const createUser =(data)=>{
+    let dataFinal= delete data.repeat_password
+>>>>>>> 6aefb22738a03391ba34da9fb8026dc385d3e0b4
     const url = `localhost:4000/api/v1/users/`;
     axios.post(url, data)
       .then((res) => {
-        console.log(res.data);
+        console.log("final",res.data);
       })
       .catch((err) => 
            alert(err.message)
@@ -29,6 +37,10 @@ const [repeatPass, setrepeatPass] = useState(false)
   }
 
 const submit = (data)=>{
+<<<<<<< HEAD
+=======
+  // console.log("final",data);
+>>>>>>> 6aefb22738a03391ba34da9fb8026dc385d3e0b4
   if (data.password == data.repeat_password) {
     createUser(data)
   }
@@ -83,7 +95,11 @@ const showRepeatPass = ()=>{
         <input 
           {...register("email",{
             required: true,
+<<<<<<< HEAD
             pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+=======
+             pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+>>>>>>> 6aefb22738a03391ba34da9fb8026dc385d3e0b4
           })}
           type="text" 
           id="email"
