@@ -6,7 +6,7 @@ const defaultValues = {
   name: "",
   email: "",
   password: "",
-  phone
+  phone: ""
 }
 
 const Register = () => {
@@ -14,33 +14,21 @@ const Register = () => {
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
 const [repeatPass, setrepeatPass] = useState(false)
-<<<<<<< HEAD
 
   const createUser =(data)=>{
 
-
-=======
-
-
-
-  const createUser =(data)=>{
-    let dataFinal= delete data.repeat_password
->>>>>>> 6aefb22738a03391ba34da9fb8026dc385d3e0b4
-    const url = `localhost:4000/api/v1/users/`;
+    const url = `http://localhost:4000/api/v1/users`;
     axios.post(url, data)
       .then((res) => {
-        console.log("final",res.data);
+        console.log(res.data);
       })
       .catch((err) => 
-           alert(err.message)
+           console.log(err)
       )
   }
 
 const submit = (data)=>{
-<<<<<<< HEAD
-=======
-  // console.log("final",data);
->>>>>>> 6aefb22738a03391ba34da9fb8026dc385d3e0b4
+  
   if (data.password == data.repeat_password) {
     createUser(data)
   }
@@ -48,6 +36,7 @@ const submit = (data)=>{
   setrepeatPass(true)
  }
  delete data.repeat_password 
+ console.log(data);
 }
 const showPass = ()=>{
     setEyes(!eyes)
@@ -79,7 +68,7 @@ const showRepeatPass = ()=>{
         {errors.name?.type === 'required' && <p>El nombre es requerido</p>}
         </section>
         <section>
-        <label htmlFor="phone">telefono</label>
+        <label htmlFor="phone">Telefono</label>
         <input
           {...register("phone",{
             required: true
@@ -88,18 +77,14 @@ const showRepeatPass = ()=>{
           id="phone"
           placeholder="telefono"
         />
-        {errors.name?.type === 'required' && <p>El telefono es requerido</p>}
+        {errors.phone?.type === 'required' && <p>El telefono es requerido</p>}
         </section>
         <section>
         <label htmlFor="email">Email</label>
         <input 
           {...register("email",{
             required: true,
-<<<<<<< HEAD
-            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
-=======
              pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
->>>>>>> 6aefb22738a03391ba34da9fb8026dc385d3e0b4
           })}
           type="text" 
           id="email"
