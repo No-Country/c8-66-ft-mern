@@ -11,11 +11,14 @@ const defaultValues = {
 
 const Register = () => {
   const { register, handleSubmit,formState:{errors}, reset } = useForm();
-const [eyes, setEyes] = useState(false)
-const [eyesRepeat, setEyesRepeat] = useState(false)
-const [repeatPass, setrepeatPass] = useState(false)
+  const [eyes, setEyes] = useState(false)
+  const [eyesRepeat, setEyesRepeat] = useState(false)
+  const [repeatPass, setrepeatPass] = useState(false)
+  const [respuestaEmail, setRespuestaEmail] = useState("")
 
   const createUser =(data)=>{
+
+
 
     const url = `http://localhost:4000/api/v1/users`;
     axios.post(url, data)
@@ -23,7 +26,7 @@ const [repeatPass, setrepeatPass] = useState(false)
         console.log(res.data);
       })
       .catch((err) => 
-           console.log(err)
+      setRespuestaEmail(err.response.data.message)
       )
   }
 
@@ -87,7 +90,7 @@ const showRepeatPass = ()=>{
         <input 
           {...register("email",{
             required: true,
-             pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i 
           })}
           type="text" 
           id="email"
@@ -95,6 +98,7 @@ const showRepeatPass = ()=>{
         />
         {errors.email?.type === 'required' && <p>El email es requerido</p>}
         {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>}
+        <p>{respuestaEmail && respuestaEmail}</p>
       </section>
       <section>
         <label htmlFor="password">Contraseña</label>
