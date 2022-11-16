@@ -12,6 +12,10 @@ const app = express();
 // Enable Express app to receive JSON data
 app.use(express.json());
 
+// ADD cors
+const cors = require('cors');
+app.use(cors());
+
 // Define endpoints
 app.use('/api/v1/users', usersRouter);
 
