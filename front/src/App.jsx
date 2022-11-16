@@ -4,6 +4,10 @@ import './styles/styles.css'
 import Header from './components/shared/Header'
 import Home from './components/routes/Home'
 import { Route, Routes } from 'react-router-dom'
+import Shipping from './components/routes/Shipping'
+import BranchOfficeses from './components/routes/BranchOffices'
+import Questions from './components/routes/Questions'
+
 
 
 function App() {
@@ -15,6 +19,9 @@ function App() {
        <Route path='/' element={<Home/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/login' element={<Login/>} />      
+        <Route path='/shipping' element={<Shipping/>} />      
+        <Route path='/branchOffices' element={<BranchOfficeses/>} />      
+        <Route path='/questions' element={<Questions/>} />        
       </Routes>
 
      </div>

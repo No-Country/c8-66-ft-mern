@@ -5,7 +5,8 @@ import { useForm } from "react-hook-form";
 const defaultValues = {
   name: "",
   email: "",
-  password: ""
+  password: "",
+  phone
 }
 
 const Register = () => {
@@ -13,27 +14,28 @@ const Register = () => {
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
 const [repeatPass, setrepeatPass] = useState(false)
+
   const createUser =(data)=>{
 
-    const url = `url`;
+
+    const url = `localhost:4000/api/v1/users/`;
     axios.post(url, data)
       .then((res) => {
         console.log(res.data);
       })
       .catch((err) => 
-           alert("El usuario no se a podido crear")
+           alert(err.message)
       )
   }
 
 const submit = (data)=>{
-  // console.log(data);
   if (data.password == data.repeat_password) {
     createUser(data)
   }
  else{
   setrepeatPass(true)
  }
- 
+ delete data.repeat_password 
 }
 const showPass = ()=>{
     setEyes(!eyes)
@@ -65,18 +67,30 @@ const showRepeatPass = ()=>{
         {errors.name?.type === 'required' && <p>El nombre es requerido</p>}
         </section>
         <section>
+        <label htmlFor="phone">telefono</label>
+        <input
+          {...register("phone",{
+            required: true
+          })}
+          type="text"
+          id="phone"
+          placeholder="telefono"
+        />
+        {errors.name?.type === 'required' && <p>El telefono es requerido</p>}
+        </section>
+        <section>
         <label htmlFor="email">Email</label>
         <input 
           {...register("email",{
             required: true,
-            // pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
           })}
-          type="email" 
+          type="text" 
           id="email"
           placeholder="email"
         />
         {errors.email?.type === 'required' && <p>El email es requerido</p>}
-        {/* {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>} */}
+        {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>}
       </section>
       <section>
         <label htmlFor="password">Contraseña</label>
@@ -97,13 +111,13 @@ const showRepeatPass = ()=>{
        <span onClick={showRepeatPass}>
        {eyesRepeat ?  <i className="fa-solid fa-eye">  </i> : <i className="fa-solid fa-eye-slash"></i>}
        </span>
-       {/* {errors.repeat_password?.type === 'required' && <p>Repetir la contraseña es requerido</p>} */}
+       {errors.repeat_password?.type === 'required' && <p>Este campo es requerido</p>}
        {repeatPass ?  <p>las contraseñas no coinciden </p> : <p></p> }
       </section>
       <section className="register_checkbox">
         <input type="checkbox" id="checkbox" />
         <label htmlFor="checkbox">Acepto términos y condiciones</label>
-        {errors.repeat_password?.type === 'required' && <p>Acepte los términos y condiciones</p>}
+        {/* {errors.checkbox?.type === 'required' && <p>Acepte los términos y condiciones</p>} */}
       </section>
       <button className="login__btn"> Resgistrarme</button>
     </form>
