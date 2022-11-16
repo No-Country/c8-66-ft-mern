@@ -13,12 +13,15 @@ const Register = () => {
 const [eyes, setEyes] = useState(false)
 const [eyesRepeat, setEyesRepeat] = useState(false)
 const [repeatPass, setrepeatPass] = useState(false)
-  const createUser =(data)=>{
 
-    const url = `url`;
+
+
+  const createUser =(data)=>{
+    let dataFinal= delete data.repeat_password
+    const url = `localhost:4000/api/v1/users/`;
     axios.post(url, data)
       .then((res) => {
-        console.log(res.data);
+        console.log("final",res.data);
       })
       .catch((err) => 
            alert("El usuario no se a podido crear")
@@ -26,7 +29,7 @@ const [repeatPass, setrepeatPass] = useState(false)
   }
 
 const submit = (data)=>{
-  // console.log(data);
+  // console.log("final",data);
   if (data.password == data.repeat_password) {
     createUser(data)
   }
@@ -69,14 +72,14 @@ const showRepeatPass = ()=>{
         <input 
           {...register("email",{
             required: true,
-            // pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
+             pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i
           })}
-          type="email" 
+          type="text" 
           id="email"
           placeholder="email"
         />
         {errors.email?.type === 'required' && <p>El email es requerido</p>}
-        {/* {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>} */}
+        {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>}
       </section>
       <section>
         <label htmlFor="password">Contraseña</label>
