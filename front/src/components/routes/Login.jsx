@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import axios from "axios";
+
 
 const Login = () => {
   const {
@@ -26,7 +26,7 @@ const Login = () => {
       .post(url, data)
       .then((res) => {
         setUser(res.data.data)
-        console.log(res.data.data.token)
+        console.log(user)
         localStorage.setItem('token',res.data.data.token)
       })
       .catch((err) =>
@@ -37,9 +37,7 @@ const Login = () => {
         login(data)
   };
 
-  const handleClick = () => {
-    localStorage.removeItem('token')
-  }
+
 
   const showPass = () => {
     setEyes(!eyes);
@@ -89,7 +87,6 @@ const Login = () => {
         )}
       </section>
       <button className="login__btn"> Loguearme</button>
-      <button onClick={handleClick} className='form-logout__btn'>Logout</button>
     </form>
   );
 };

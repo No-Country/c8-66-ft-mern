@@ -14,7 +14,7 @@ const Register = () => {
   const [eyes, setEyes] = useState(false)
   const [eyesRepeat, setEyesRepeat] = useState(false)
   const [repeatPass, setrepeatPass] = useState(false)
-  const [respuestaEmail, setRespuestaEmail] = useState("")
+  // const [respuestaEmail, setRespuestaEmail] = useState("")
 
   const createUser =(data)=>{
 
@@ -25,8 +25,8 @@ const Register = () => {
       .then((res) => {
         console.log(res.data);
       })
-      .catch((err) => 
-      setRespuestaEmail(err.response.data.message)
+      .catch((err) => console.log(err)
+      // setRespuestaEmail(err.response.data.message)
       )
   }
 
@@ -95,7 +95,7 @@ const showRepeatPass = ()=>{
         />
         {errors.email?.type === 'required' && <p>El email es requerido</p>}
         {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>}
-        <p>{respuestaEmail && respuestaEmail}</p>
+        {/* <p>{respuestaEmail && respuestaEmail}</p> */}
       </section>
       <section>
         <label htmlFor="password">Contraseña</label>
