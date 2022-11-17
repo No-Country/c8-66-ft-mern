@@ -8,8 +8,10 @@ const { globalErrorHandler } = require('./controllers/error.controller');
 
 // Init our Express app
 const app = express();
+const cors = require('cors')
 
 // Enable Express app to receive JSON data
+app.use(cors())
 app.use(express.json());
 
 // Define endpoints
