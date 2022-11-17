@@ -1,4 +1,4 @@
-const { User } = require('../database/models/index');
+const { User } = require('../database/user.model');
 
 const EmailIsUnique = async (req, res, next) => {
     let email = req.body.email;
@@ -8,7 +8,7 @@ const EmailIsUnique = async (req, res, next) => {
     }).then(user => {
         if(user){
             //Email invalido
-            return res.status(404).json({msg: 'Email is already regisred'});
+            return res.status(400).json({msg: 'Email is already regisred'});
         } else {
             next();
         }
