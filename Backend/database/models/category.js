@@ -1,7 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
-  class Ubigeo extends Model {
+  class Category extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -9,26 +9,18 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Ubigeo.hasMany(models.Shipping);
-      Ubigeo.hasMany(models.User);
-      Ubigeo.hasMany(models.Branch);
+      Category.hasMany(models.Shipping);
     }
   }
-  Ubigeo.init(
+  Category.init(
     {
-      country: DataTypes.STRING,
-      ubigeo_id: DataTypes.STRING,
-      region: DataTypes.STRING,
-      province: DataTypes.STRING,
-      district: DataTypes.STRING,
-      latitude: DataTypes.FLOAT,
-      longitude: DataTypes.FLOAT,
+      description: DataTypes.STRING,
       status: DataTypes.STRING,
     },
     {
       sequelize,
-      modelName: "Ubigeo",
+      modelName: "Category",
     }
   );
-  return Ubigeo;
+  return Category;
 };
