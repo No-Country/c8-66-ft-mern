@@ -2,11 +2,43 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 
 const Home = () => {
+
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+  } = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      password: "",
+    },
+  });
+
+
+  const infoEnvio = (data) => {
+    const url = `url`;
+    axios
+      .post(url, data)
+      .then((res) => {
+       
+      })
+      .catch((err) =>
+      console.log(err))
+  };
+
+  const onSubmit = (data) => {
+    console.log(data)
+  }
+
+
   return (
     <div>
       <h2>¡Conocé el estado de tu envío!</h2>
-      <select>
-      <option disabled selected>Tipo de envío</option>
+      <select placeholder=''>
+        <option value= "des">Despachado</option>
+        <option value= "via" >En viaje</option>
+        <option value= "ent">Entregado</option>
       </select>
       <input
       type = 'text'
@@ -20,27 +52,40 @@ const Home = () => {
        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg=="/>
        
        <h3>¡Cotiza tu envío en dos simples pasos!</h3>
-       <form>
+       
+       <form onSubmit={handleSubmit(onSubmit)}>
         <h2>Informacion del envío</h2>
           <section>
-            <label>identificacion</label>
+            <label>Identificacion</label>
             <input  
             type = 'text'
-            placeholder="Nombre completo / Razon social"></input>
+            placeholder="Nombre completo / Razon social"
+            {...register("nombre",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El nombre es requerido</p>}
           </section>
 
           <section>
             <label>Desde</label>
             <input  
             type = 'text'
-            placeholder="Origen"></input>
+            placeholder="Origen"
+            {...register("origen",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El origen es requerido</p>}
           </section>
 
           <section>
             <label>Hasta</label>
             <input  
             type = 'text'
-            placeholder="Destino"></input>
+            placeholder="Destino"
+            {...register("destino",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El destino es requerido</p>}
           </section>
 
           <h2>Detalle del paquete</h2>
@@ -48,24 +93,38 @@ const Home = () => {
             <label>Correo electronico</label>
             <input  
             type = 'text'
-            placeholder="Email"></input>
+            placeholder="Email"
+            {...register("email",{
+              required: true,
+              pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
+            })}></input>
+             {errors.email?.type === "required" && <p>El email es requerido</p>}
+             {errors.email?.type === "pattern" && (
+          <p>Debe ingresar un email valido</p>
+        )}
           </section>
 
           <section>
             <input  
             type = 'text'
-            placeholder="Ciudad de origen"></input>
+            placeholder="Ciudad de origen"
+            {...register("ciudadOrigen",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>La ciudad de origen es requerida</p>}
           </section>
           
           <section>
             <input  
             type = 'text'
-            placeholder="Ciudad de destino"></input>
+            placeholder="Ciudad de destino"
+            {...register("ciudadDestino",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>La ciudad de destino es requerida</p>}
           </section>
-          <h3>Siguiente paso
-          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKZJREFUSEvtlMENwjAQBMcd0AmUkHRAR6EEOqGEUAJ0QgdE90NRZN8uOC/8tmbkvfUVOp/Smc9f0EzYiegCXIFXkw7yDAI+AQ9gzEjUFxyAO3DMSlRBpCJJHIEkcQVpSU3wzrTk487m4H8peALDulnfRjQDJ2ATHq9zBdGkJtwVpOGOQII7gjNwq2W+bp4zg5DEuuiy7MSv4bcoLXIiSsOdIUvwXQQLDaAoGREMQ18AAAAASUVORK5CYII="/>
-          </h3>
 
+          <button className="login__btn">Ingresar</button>
        </form>
 
        <h3>¿Ya conoces los planes personalizados que tenemos para vos?</h3>
