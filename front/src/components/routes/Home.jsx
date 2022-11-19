@@ -125,7 +125,7 @@ const Home = () => {
              {errors.email?.type === "required" && <p>La ciudad de destino es requerida</p>}
           </section>
 
-          <button className="login__btn">Ingresar</button>
+          <button className="login__btn">Siguiente paso</button>
        </form>
 
        <h3>¿Ya conoces los planes personalizados que tenemos para vos?</h3>
