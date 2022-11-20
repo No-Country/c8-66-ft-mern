@@ -34,8 +34,8 @@ const Home = () => {
 
 
   return (
-    <div>
-      <h2>¡Conocé el estado de tu envío!</h2>
+    <div className="general">
+      <h2 class="titulo1">¡Conocé el estado de tu envío!</h2>
       <select placeholder=''>
         <option value= "des">Despachado</option>
         <option value= "via" >En viaje</option>

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, {useState } from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate} from "react-router-dom";
 
 const defaultValues = {
   name: "",
@@ -14,7 +15,9 @@ const Register = () => {
   const [eyes, setEyes] = useState(false)
   const [eyesRepeat, setEyesRepeat] = useState(false)
   const [repeatPass, setrepeatPass] = useState(false)
-  // const [respuestaEmail, setRespuestaEmail] = useState("")
+  const [respuestaEmail, setRespuestaEmail] = useState("")
+  const history = useNavigate();
+
 
   const createUser =(data)=>{
 
@@ -28,6 +31,7 @@ const Register = () => {
       .catch((err) => console.log(err)
       // setRespuestaEmail(err.response.data.message)
       )
+      history('/')
   }
 
 const submit = (data)=>{
