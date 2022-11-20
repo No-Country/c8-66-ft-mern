@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import {Link, useNavigate} from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Login = () => {
@@ -18,6 +19,7 @@ const Login = () => {
   });
   const [eyes, setEyes] = useState(false);
   const [user, setUser] = useState([]);
+  const history = useNavigate();
 
   const login = (data) => {
     const url = `http://localhost:4000/api/v1/users/login`;
@@ -30,6 +32,7 @@ const Login = () => {
       })
       .catch((err) =>
       console.log(err))
+      history('/')
   };
 
   const onSubmit = (data) => {   
