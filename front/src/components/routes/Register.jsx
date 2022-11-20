@@ -18,6 +18,7 @@ const Register = () => {
   const [respuestaEmail, setRespuestaEmail] = useState("")
   const history = useNavigate();
 
+
   const createUser =(data)=>{
 
 
@@ -27,20 +28,17 @@ const Register = () => {
       .then((res) => {
         console.log(res.data);
       })
-      .catch((err) => 
-      setRespuestaEmail(err.response.data.message)
+      .catch((err) => console.log(err)
+      // setRespuestaEmail(err.response.data.message)
       )
       history('/')
   }
 
 const submit = (data)=>{
-
   if (data.password == data.repeat_password) {
-  
       createUser(data)
     }
    
-  
  else{
   setrepeatPass(true)
  }
@@ -101,7 +99,7 @@ const showRepeatPass = ()=>{
         />
         {errors.email?.type === 'required' && <p>El email es requerido</p>}
         {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>}
-        <p>{respuestaEmail && respuestaEmail}</p>
+        {/* <p>{respuestaEmail && respuestaEmail}</p> */}
       </section>
       <section>
         <label htmlFor="password">Contraseña</label>
@@ -114,7 +112,6 @@ const showRepeatPass = ()=>{
        </span>
        {errors.password?.type === 'required' && <p>Este campo es requerido</p>}
        {errors.password?.type === 'pattern' && <p className="small_letter">La contraseña debe tener Mínimo 8 caracteres, al menos una letra y un número</p>}
-       
       </section>
       <section>
         <label htmlFor="repeat_password">Repetir contraseña</label>

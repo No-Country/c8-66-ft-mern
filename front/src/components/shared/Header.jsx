@@ -2,6 +2,10 @@ import React from 'react'
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const handleClick = () => {
+    localStorage.removeItem('token')
+  }
+
   return (
            
     <header className="header">
@@ -40,6 +44,7 @@ const Header = () => {
             <i> Preguntas Frecuentes</i>
           </NavLink>
         </li>  
+        <button onClick={handleClick} className='form-logout__btn'>Logout</button>
       </ul>
     </header>
   )
