@@ -52,8 +52,7 @@ const submit = (data)=>{
           id="email"
           placeholder="email"
         />
-        {errors.email?.type === 'required' && <p>El email es requerido</p>}
-        {errors.email?.type === 'pattern' && <p>Debe ingresar un email valido</p>}
+        {errors.email?.type === 'required' && <p>Campo requerido</p>}
       </section>
 
       <section>
@@ -84,7 +83,7 @@ const submit = (data)=>{
       </section>
 
         <section>
-        <input 
+        <textarea  
           {...register("comments",{
             required: true,
           })}
@@ -92,7 +91,6 @@ const submit = (data)=>{
           id="comments"
           placeholder="Quieres hacer una aclaración?"
         />
-        {errors.postal_code?.type === 'required' && <p>Campo requerido</p>}
       </section>
     </form>
   )

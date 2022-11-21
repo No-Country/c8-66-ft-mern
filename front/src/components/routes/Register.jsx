@@ -20,9 +20,6 @@ const Register = () => {
 
 
   const createUser =(data)=>{
-
-
-
     const url = `http://localhost:4000/api/v1/users`;
     axios.post(url, data)
       .then((res) => {
