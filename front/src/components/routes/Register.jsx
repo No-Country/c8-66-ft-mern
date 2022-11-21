@@ -39,7 +39,6 @@ const submit = (data)=>{
   setrepeatPass(true)
  }
  delete data.repeat_password 
- console.log(data);
 }
 const showPass = ()=>{
     setEyes(!eyes)
