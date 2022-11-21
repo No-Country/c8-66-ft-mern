@@ -20,9 +20,6 @@ const Register = () => {
 
 
   const createUser =(data)=>{
-
-
-
     const url = `http://localhost:4000/api/v1/users`;
     axios.post(url, data)
       .then((res) => {
@@ -43,7 +40,6 @@ const submit = (data)=>{
   setrepeatPass(true)
  }
  delete data.repeat_password 
- console.log(data);
 }
 const showPass = ()=>{
     setEyes(!eyes)
