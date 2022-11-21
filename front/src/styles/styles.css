@@ -60,4 +60,8 @@ form .login__btn {
 form .login__btn:hover {
   filter: brightness(1.05);
   transition: filter 100ms ease;
+}
+
+.home {
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */
