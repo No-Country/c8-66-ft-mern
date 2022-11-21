@@ -1,4 +1,4 @@
-form {
+.register_form {
   width: 100%;
   max-width: 350px;
   background-color: white;
@@ -9,43 +9,43 @@ form {
   flex-direction: column;
   gap: 0.3em;
 }
-form .title {
+.register_form .title {
   align-items: center;
 }
-form h2 {
+.register_form h2 {
   margin-bottom: 20px;
 }
-form section {
+.register_form section {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 20px;
   position: relative;
 }
-form section input {
+.register_form section input {
   padding: 6px 8px;
   padding-right: 30px;
   border: 1px solid rgba(204, 204, 204, 0.9098039216);
   border-radius: 5px;
 }
-form section span {
+.register_form section span {
   right: 5px;
   bottom: 10%;
   position: absolute;
 }
-form section p {
+.register_form section p {
   position: absolute;
   bottom: -40px;
   color: rgb(247, 75, 75);
 }
-form section .small_letter {
+.register_form section .small_letter {
   font-size: 12px;
 }
-form .register_checkbox {
+.register_form .register_checkbox {
   display: flex;
   flex-direction: row;
 }
-form .login__btn {
+.register_form .login__btn {
   width: 100%;
   padding: 10px 15px;
   color: white;
@@ -57,7 +57,7 @@ form .login__btn {
   cursor: pointer;
   font-size: 15px;
 }
-form .login__btn:hover {
+.register_form .login__btn:hover {
   filter: brightness(1.05);
   transition: filter 100ms ease;
 }
