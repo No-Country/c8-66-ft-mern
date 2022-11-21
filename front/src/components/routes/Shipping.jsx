@@ -49,9 +49,37 @@ const Shipping = () => {
       </article>
       <div>
         <SendForm/>
+        <br />
         <SendForm/>
       </div>
+
+      <main>
+            <div>
+              <div>0</div>
+              <hr />
+              <div>0</div>
+            </div>
+            <div>
+              <section>
+                <h3>
+                  Datos del paquete
+                  <p>Cuentanos que quieres envíar</p>
+                </h3>
+              </section>
+              <section>
+                <h3>
+                  Método pago
+                  <p>Con tarjetas o efectivo</p>
+                </h3>
+              </section>
+            </div>
+          </main>
+
+          <div>
+
+          </div>
     </div>
+
   );
 };
 
