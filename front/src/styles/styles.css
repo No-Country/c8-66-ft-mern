@@ -88,11 +88,25 @@
   margin: 30px;
 }
 .home .contenedorTarjeta {
-  margin: 30px;
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 15px;
 }
-.home .contenedorTarjeta .tarjeta {
+.home .contenedorTarjeta .tarjeta1 {
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 30px;
+  margin-left: 300px;
+}
+.home .contenedorTarjeta .tarjeta1 .iconos1 {
+  height: 50px;
+  padding: 15px;
+}
+.home .contenedorTarjeta .tarjeta2 {
   height: 150px;
   width: 150px;
   padding: 15px;
@@ -100,7 +114,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 30px;
 }
-.home .contenedorTarjeta .tarjeta .iconos1 {
+.home .contenedorTarjeta .tarjeta2 .iconos1 {
   height: 50px;
   padding: 15px;
 }

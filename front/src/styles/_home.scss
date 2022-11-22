@@ -23,23 +23,38 @@
         margin: 30px;
     }
     .contenedorTarjeta{
-        margin: 30px;
+        margin: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        .tarjeta{
+        padding: 15px;
+        .tarjeta1{
             height: 150px;
             width: 150px;;
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px #0003;
             margin: 30px;
+            margin-left: 300px;
             .iconos1{
                 height: 50px;
                 padding: 15px;
             }
         }
+            .tarjeta2{
+                height: 150px;
+                width: 150px;;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #0003;
+                margin: 30px; 
+                .iconos1{
+                    height: 50px;
+                    padding: 15px;
+                }
+            }   
+           
+        }
         
-    }
     .login__btn1{
         width: 15%;
         padding: 10px 15px;
