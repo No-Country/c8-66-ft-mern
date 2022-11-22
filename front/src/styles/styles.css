@@ -62,6 +62,10 @@
   transition: filter 100ms ease;
 }
 
+.home {
+  align-items: center;
+}
+
 .off {
   display: none;
 }
