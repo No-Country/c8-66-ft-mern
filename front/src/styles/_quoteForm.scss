@@ -1,13 +1,16 @@
 form {
-    width: 100%;
-    max-width: 350px;
+    align-items: center;
+    width: 500px;
+    max-width: 500px;
     background-color: white;
-    padding: 20px;
+    padding: 70px;
     border-radius: 10px;
     box-shadow: 0 0 10px #0003;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: column;
-    gap: 0.3em;
+    gap: 1.3em;
+    margin-left: 200px;
   
     .title{
     align-items: center;

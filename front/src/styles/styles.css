@@ -67,7 +67,12 @@
 }
 .home .titulo1 {
   text-align: left;
-  padding-left: 100px;
+  padding-left: 200px;
+  padding-top: 100px;
+}
+.home .titulo2 {
+  text-align: left;
+  padding-left: 200px;
 }
 .home .select {
   align-self: left;
@@ -84,6 +89,8 @@
 }
 .home .contenedorTarjeta {
   margin: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .home .contenedorTarjeta .tarjeta {
   height: 150px;
@@ -97,17 +104,43 @@
   height: 50px;
   padding: 15px;
 }
+.home .login__btn1 {
+  width: 15%;
+  padding: 10px 15px;
+  color: white;
+  background-color: #7652d2;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: filter 100ms ease;
+  cursor: pointer;
+  font-size: 15px;
+}
+.home .login__btn:hover {
+  filter: brightness(1.05);
+  transition: filter 100ms ease;
+}
+.home ul {
+  font-size: 30px;
+  list-style-type: circle;
+  background-color: white;
+  text-align: left;
+  padding-left: 150px;
+}
 
 form {
-  width: 100%;
-  max-width: 350px;
+  align-items: center;
+  width: 500px;
+  max-width: 500px;
   background-color: white;
-  padding: 20px;
+  padding: 70px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 1.3em;
+  margin-left: 200px;
 }
 form .title {
   align-items: center;
@@ -160,4 +193,58 @@ form .login__btn {
 form .login__btn:hover {
   filter: brightness(1.05);
   transition: filter 100ms ease;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #f4f2f2;
+  border: none;
+  color: #646464;
+  padding: 0.7rem 1rem;
+  border-radius: 30px;
+  width: 12em;
+  transition: all ease-in-out 0.5s;
+  margin-right: -2rem;
+}
+
+.search__input:hover, .search__input:focus {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.0745098039);
+}
+
+.search__input:focus {
+  outline: none;
+  background-color: #f0eeee;
+}
+
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #ccc;
+}
+
+.search__input:focus + .search__button {
+  background-color: #f0eeee;
+}
+
+.search__button {
+  border: none;
+  background-color: #f4f2f2;
+  margin-top: 0.1em;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: #b4b4b4;
 }/*# sourceMappingURL=styles.css.map */
