@@ -1,42 +1,32 @@
-const { db, DataTypes } = require("../utils/database.util");
+const { DataTypes } = require('sequelize');
+const { db } = require('../utils/database');
 
-const Shipping = db.define("shippings", {
+const Shipping = db.define('shipping', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
+    allowNull: false,
     autoIncrement: true,
-    allowNull: true,
+    unique: true,
   },
   user_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  title: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  address: {
-    type: DataTypes.STRING,
     allowNull: false,
   },
   ubigeo_id_origin: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  ubigeo_id_destiny: {
+  destiny_name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  price: {
-    type: DataTypes.INTEGER,
+  destiny_address: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
-  status_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-  },
-  shipping_date: {
-    type: DataTypes.DataTypes,
+  ubigeo_id_destiny: {
+    type: DataTypes.STRING,
     allowNull: false,
   },
   category_id: {
@@ -45,16 +35,35 @@ const Shipping = db.define("shippings", {
   },
   branch_id: {
     type: DataTypes.INTEGER,
+  },
+  shipping_date: {
+    type: DataTypes.DATE,
     allowNull: false,
   },
-  date: {
-    type: DataTypes.DataTypes,
+  price: {
+    type: DataTypes.INTEGER,
     allowNull: false,
+  },
+  high_size: {
+    type: DataTypes.INTEGER,
+  },
+  width_size: {
+    type: DataTypes.INTEGER,
+  },
+  large_size: {
+    type: DataTypes.INTEGER,
+  },
+  weight: {
+    type: DataTypes.FLOAT,
+    defaultValue: 'active',
+  },
+  special_cares: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
   },
   status: {
     type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: "active",
+    defaultValue: 'active',
   },
 });
 

@@ -1,31 +1,27 @@
-require('dotenv').config();
-
 const { app } = require('./app');
 
-// Utils
+// Models
 const { initModels } = require('./database/initModels');
-const { db } = require('./utils/database.util');
 
-//dotenv.config({ path: './config.env' });
+// Utils
+const { db } = require('./utils/database');
 
-const startServer = async () => {
-	try {
-		await db.authenticate();
+// Authenticate database credentials
+db.authenticate()
+  .then(() => console.log('---Database authenticated---'))
+  .catch(err => console.log(err));
 
-		// Establish the relations between models
-		initModels();
+// Establish models relations
+initModels();
 
-		await db.sync();
+// Sync sequelize models
+db.sync() //{ force: true }
+  .then(() => console.log('-----Database synced-----'))
+  .catch(err => console.log(err));
 
-		// Set server to listen
-		const PORT = 4000;
+//spin up server
+const PORT = process.env.PORT || 4000;
 
-		app.listen(PORT, () => {
-			console.log('Express app running!');
-		});
-	} catch (error) {
-		console.log(error);
-	}
-};
-
-startServer();
+app.listen(PORT, () => {
+  console.log(`Express app running on port: ${PORT}`);
+});

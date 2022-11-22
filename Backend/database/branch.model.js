@@ -1,6 +1,7 @@
-const { db, DataTypes } = require("../utils/database.util");
+const { DataTypes } = require('sequelize');
+const { db } = require('../utils/database');
 
-const Branch = db.define("branchs", {
+const Branch = db.define('branch', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -9,16 +10,13 @@ const Branch = db.define("branchs", {
   },
   address: {
     type: DataTypes.STRING,
-    allowNull: false,
-  },
-  ubigeo_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
+    allowNull: true,
+    unique: true,
   },
   status: {
     type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: "active",
+    defaultValue: 'active',
   },
 });
 
