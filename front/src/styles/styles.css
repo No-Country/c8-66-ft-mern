@@ -60,4 +60,12 @@
 .register_form .login__btn:hover {
   filter: brightness(1.05);
   transition: filter 100ms ease;
+}
+
+.off {
+  display: none;
+}
+
+.on {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
