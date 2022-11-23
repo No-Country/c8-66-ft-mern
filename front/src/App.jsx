@@ -2,6 +2,7 @@ import Register from './components/routes/Register'
 import Login from './components/routes/Login'
 import './styles/styles.css'
 import Header from './components/shared/Header'
+import Footer from './components/shared/Footer'
 import Home from './components/routes/Home'
 import { Route, Routes } from 'react-router-dom'
 import Shipping from './components/routes/Shipping'
@@ -23,7 +24,7 @@ function App() {
         <Route path='/branchOffices' element={<BranchOfficeses/>} />      
         <Route path='/questions' element={<Questions/>} />        
       </Routes>
-
+      <Footer/>
      </div>
   )
 }
