@@ -29,6 +29,7 @@ const PackageForm = () => {
 
   return (
     <form onSubmit={handleSubmit(submit)} className="pack_form">
+      <div>
       <section>
         <select
           {...register("want_send", {
@@ -124,6 +125,45 @@ const PackageForm = () => {
           placeholder="Quieres hacer una aclaración?"
         />
       </section>
+      </div>
+      <div>
+  <section>
+        <h4>
+  {dimensions ? dimensions : "-"}
+</h4>
+<h4>
+  precio de acuerdo al tipo de envio
+</h4>
+        </section>
+<hr />
+<section>
+        <h4>
+          Envío
+</h4>
+<h4>
+    precio del envio
+</h4>
+        </section>
+        <hr />
+<section>
+        <h3>
+          Total
+</h3>
+<h4>
+   precio total
+</h4>
+        </section>
+
+<section>
+<h3> Quieres pagar con</h3>
+<section className="checkbox">
+        <input type="radio" id="checkbox" name = "checkbox" value = "efectivo"/>
+        <label htmlFor="checkbox">Efectivo en surcursal</label>
+        <input type="radio" id="checkbox" name = "checkbox" value = "tarjeta"/>
+        <label htmlFor="checkbox">Débito / Crédito</label>
+      </section>
+</section>
+      </div>
     </form>
   );
 };

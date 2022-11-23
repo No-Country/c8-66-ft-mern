@@ -5,6 +5,7 @@ import AddressClient from "./AddressClient";
 
 const SendForm = (data) => {
   const [toggleAddress, setToggleAddress] = useState();
+  const [surcursales, setSurcursales] = useState([])
   const {
     register,
     handleSubmit,
@@ -24,6 +25,12 @@ const SendForm = (data) => {
   const submit = (data) => {
     postForm(data);
   };
+
+  const getAllSurcursales = ()=>{
+    const url = ""
+    axios.get(url)
+    .then(res=>setSurcursales(res.data))
+  }
 
   const handleChange = () => {
     setToggleAddress(event.target.value);
@@ -81,7 +88,18 @@ const SendForm = (data) => {
         </select>
         {errors.order_option?.type === "required" && <p>Campo requerido</p>}
       </section>
-      <div className={toggleAddress === "surcursal" ? "off" : "on"}>
+{
+  toggleAddress ===  "domicilio" ?
+      <h4> aqui va el map de surcursales</h4>
+// surcursales?.map=(surcursal)=>{
+//   <option key={surcursal.surcursal
+//   } value={surcursal.surcursal}>
+//    {surcursal.surcursal}
+//  </option>
+// }
+:
+      <div>
+      <AddressClient/>
         <section>
           <input
             {...register("address", {
@@ -104,7 +122,9 @@ const SendForm = (data) => {
           />
           {errors.postal_code?.type === "required" && <p>Campo requerido</p>}
         </section>
-      </div>
+      </div> 
+}
+
 
       <section>
         <textarea
@@ -117,7 +137,6 @@ const SendForm = (data) => {
         />
       </section>
 
-      <AddressClient/>
     </form>
   );
 };

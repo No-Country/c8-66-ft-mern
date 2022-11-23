@@ -4,8 +4,8 @@ import SendForm from "../shipping/SendForm";
 
 const Shipping = () => {
   return (
-    <div>
-      <main>
+    <div className="shipping">
+      <header className="shipping_header">
         <section>
           <h2>¡Cotiza y envía tus paquetes de la manera más sencilla!</h2>
           <h3>¿Ya conoces nuestra opción pick up?</h3>
@@ -18,7 +18,7 @@ const Shipping = () => {
         <section>
           <p>img</p>|
         </section>
-      </main>
+      </header>
       <article>
         <h2>¿Qué quieres enviar?</h2>
         <section>
@@ -78,6 +78,7 @@ const Shipping = () => {
 
           <div>
 <PackageForm/>
+
           </div>
     </div>
 
