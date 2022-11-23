@@ -74,11 +74,21 @@
   text-align: left;
   padding-left: 200px;
 }
+.home .titulo3 {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 100px;
+}
+.home .titulo4 {
+  text-align: center;
+}
 .home .select {
   align-self: left;
 }
 .home .inLine {
-  display: inline;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
 }
 .home .iconos {
   height: 50px;
@@ -86,6 +96,12 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: 30px;
+}
+.home .iconos2 {
+  height: 60px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 500px;
 }
 .home .contenedorTarjeta {
   margin: 10px;
@@ -130,7 +146,42 @@
   cursor: pointer;
   font-size: 15px;
 }
+.home .login__btn2 {
+  width: 180px;
+  height: 40px;
+  padding: 10px 15px;
+  margin-top: 30px;
+  color: white;
+  background-color: #7652d2;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: filter 100ms ease;
+  cursor: pointer;
+  font-size: 15px;
+}
+.home .login__btn3 {
+  width: 15%;
+  margin-top: 150px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #7652d2;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: filter 100ms ease;
+  cursor: pointer;
+  font-size: 15px;
+}
 .home .login__btn:hover {
+  filter: brightness(1.05);
+  transition: filter 100ms ease;
+}
+.home .login__btn1:hover {
+  filter: brightness(1.05);
+  transition: filter 100ms ease;
+}
+.home .login__btn2:hover {
   filter: brightness(1.05);
   transition: filter 100ms ease;
 }
@@ -140,6 +191,28 @@
   background-color: white;
   text-align: left;
   padding-left: 150px;
+}
+.home .lista {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 15px;
+}
+.home .lista .iconos3 {
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-direction: column;
+}
+.home .lista .textoInterior {
+  width: 300px;
+  margin-right: 700px;
+}
+.home .lista .textoInterior1 {
+  width: 300px;
+  margin-right: 650px;
 }
 
 form {
@@ -210,7 +283,6 @@ form .login__btn:hover {
 }
 
 .search {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
