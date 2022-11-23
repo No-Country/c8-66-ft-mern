@@ -1,0 +1,28 @@
+
+.tituloFooter{
+    text-align: center;
+     margin-top: 40px;
+    padding-top: 100px;
+}
+.contenedor{
+    // margin: 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    flex-direction: column;
+    padding: 1px;
+    .tarjeta1{
+        height: 80px;
+        width: 80px;
+        text-align: center;
+        padding: 1px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #0003;
+        margin: 3px;
+        margin-left: 190px;
+        .iconos1{
+            height: 50px;
+            padding: 15px;
+        }
+    }
+}
