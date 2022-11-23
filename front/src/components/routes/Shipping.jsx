@@ -1,4 +1,5 @@
 import React from "react";
+import PackageForm from "../shipping/PackageForm";
 import SendForm from "../shipping/SendForm";
 
 const Shipping = () => {
@@ -76,7 +77,7 @@ const Shipping = () => {
           </main>
 
           <div>
-
+<PackageForm/>
           </div>
     </div>
 

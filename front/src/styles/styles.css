@@ -333,4 +333,12 @@ form .login__btn:hover {
   height: 1.3em;
   width: 1.3em;
   fill: #b4b4b4;
+}
+
+.off {
+  display: none;
+}
+
+.on {
+  display: block;
 }/*# sourceMappingURL=styles.css.map */
