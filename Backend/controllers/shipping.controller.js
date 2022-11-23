@@ -65,10 +65,52 @@ const createShipping = catchAsync(async (req, res, next) => {
     large_size,
     weight,
     special_cares
-  })
+  });
+
+  if(shipping){
+    res.status(201).json({
+      status: 'success',
+      data: shipping
+    });
+  }else{
+    res.status(400).json({
+      status: 'shipping creation error',
+    });
+  }
+});
+
+const updateShipping = catchAsync(async (req,res,next)=>{
+  const { id, user_id, ubigeo_id_origin, destiny_name, destiny_address, ubigeo_id_destiny, category_id, branch_id,
+    shipping_date, price, high_size, width_size, large_size, weight, special_cares } = req.body;
+
+  const shipping = Shipping.findByPk(id);
+
+  if(shipping){
+    await shipping.update({
+      user_id, 
+      ubigeo_id_origin, 
+      destiny_name, 
+      destiny_address, 
+      ubigeo_id_destiny, 
+      category_id, 
+      branch_id,
+      shipping_date, 
+      price, 
+      high_size, 
+      width_size,
+      large_size,
+      weight,
+      special_cares
+    });
+
+    res.status(200).json({ status:'success' });
+  } else {
+    res.status(404).json({ status:'shipping not found' });
+  }
 });
 
 module.exports = {
   getPrice,
-  createShipping
+  createShipping,
+  updateShipping
 };
