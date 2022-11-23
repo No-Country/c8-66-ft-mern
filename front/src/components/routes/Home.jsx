@@ -88,45 +88,28 @@ const Home = () => {
 
        <h1 className="titulo1">¡Cotiza tu envío en dos simples pasos!</h1>
        
-       <form  onSubmit={handleSubmit(onSubmit)}>
+       <form className='formDoble' onSubmit={handleSubmit(onSubmit)}>
         <h2>Informacion del envío</h2>
-          <section>
-            <label>Identificacion</label>
-            <input  
+
+        <h2 className='detalle'>Detalle del paquete</h2>
+
+        <section>
+            <label className='detalle1'>Identificacion</label>
+            <input
+            className='detalle2'  
             type = 'text'
             placeholder="Nombre completo / Razon social"
             {...register("nombre",{
               required: true
             })}></input>
              {errors.email?.type === "required" && <p>El nombre es requerido</p>}
-          </section>
+          </section>  
+         
 
-          <section>
-            <label>Desde</label>
-            <input  
-            type = 'text'
-            placeholder="Origen"
-            {...register("origen",{
-              required: true
-            })}></input>
-             {errors.email?.type === "required" && <p>El origen es requerido</p>}
-          </section>
-
-          <section>
-            <label>Hasta</label>
-            <input  
-            type = 'text'
-            placeholder="Destino"
-            {...register("destino",{
-              required: true
-            })}></input>
-             {errors.email?.type === "required" && <p>El destino es requerido</p>}
-          </section>
-
-          <h2>Detalle del paquete</h2>
-          <section>
-            <label>Correo electronico</label>
-            <input  
+        <section>
+            <label className='detalle1'>Correo electronico</label>
+            <input 
+            className='detalle2' 
             type = 'text'
             placeholder="Email"
             {...register("email",{
@@ -140,17 +123,45 @@ const Home = () => {
           </section>
 
           <section>
+            <label className='detalle1'>Desde</label>
+            <input 
+            className='detalle2' 
+            type = 'text'
+            placeholder="Origen"
+            {...register("origen",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El origen es requerido</p>}
+          </section>
+
+          <section>
+          <label className='detalle1'>Desde</label>
             <input  
+            className='detalle2'
             type = 'text'
             placeholder="Ciudad de origen"
             {...register("ciudadOrigen",{
               required: true
             })}></input>
              {errors.email?.type === "required" && <p>La ciudad de origen es requerida</p>}
-          </section>
-          
+          </section>   
+
           <section>
-            <input  
+            <label className='detalle1'>Hasta</label>
+            <input 
+            className='detalle2' 
+            type = 'text'
+            placeholder="Destino"
+            {...register("destino",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El destino es requerido</p>}
+          </section>
+
+          <section>
+          <label className='detalle1'>Hasta</label>
+            <input 
+            className='detalle2' 
             type = 'text'
             placeholder="Ciudad de destino"
             {...register("ciudadDestino",{
