@@ -10,11 +10,13 @@ const { AppError } = require('../utils/appError');
 
 //const { Branch } = require('../database/branch.model');
 const { Ubigeo } = require('../database/ubigeo.model');
+const { Shipping } = require('../database/shipping.model');
 
 // utils
 const { catchAsync } = require('../utils/catchAsync');
 const sequelize = require('sequelize');
 const { Distancia } = require('../utils/distancia');
+const { now } = require('sequelize/types/utils');
 
 const getPrice = catchAsync(async (req, res, next) => {
   const { ubigeo_id_origin, ubigeo_id_destiny } = req.body;
@@ -45,6 +47,74 @@ const getPrice = catchAsync(async (req, res, next) => {
   });
 });
 
+const createShipping = catchAsync(async (req, res, next) => {
+  const { user_id, ubigeo_id_origin, destiny_name, destiny_address, ubigeo_id_destiny, category_id, branch_id,
+          shipping_date, price, high_size, width_size, large_size, weight, special_cares } = req.body;
+  
+  const shipping = await Shipping.create({
+    user_id, 
+    ubigeo_id_origin, 
+    destiny_name, 
+    destiny_address, 
+    ubigeo_id_destiny, 
+    category_id, 
+    branch_id,
+    shipping_date, 
+    price, 
+    high_size, 
+    width_size,
+    large_size,
+    weight,
+    special_cares
+  });
+
+  if(shipping){
+    res.status(201).json({
+      status: 'success',
+      data: shipping
+    });
+  }else{
+    res.status(400).json({
+      status: 'shipping creation error',
+    });
+  }
+});
+
+const updateShipping = catchAsync(async (req,res,next)=>{
+  const { id, user_id, ubigeo_id_origin, destiny_name, destiny_address,destiny_email, destiny_phone, ubigeo_id_destiny, category_id, branch_id,
+    price, high_size, width_size, large_size, weight,zip_code, special_cares } = req.body;
+
+  const shipping = Shipping.findByPk(id);
+
+  if(shipping){
+    await shipping.update({
+      user_id,
+      ubigeo_id_origin,
+      destiny_name,
+      destiny_address,
+      ubigeo_id_destiny,
+      destiny_email,
+      destiny_phone,
+      category_id,
+      branch_id,
+      shipping_date: Date.now(), 
+      price,
+      high_size,
+      width_size,
+      large_size,
+      weight,
+      zip_code,
+      special_cares
+    });
+
+    res.status(200).json({ status:'success' });
+  } else {
+    res.status(404).json({ status:'shipping not found' });
+  }
+});
+
 module.exports = {
   getPrice,
+  createShipping,
+  updateShipping
 };
