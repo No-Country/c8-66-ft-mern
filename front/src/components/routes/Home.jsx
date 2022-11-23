@@ -226,11 +226,13 @@ const Home = () => {
         <button className='login__btn3'>Registrate ahora</button>
 
         <div className='card'>
-          <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
-          <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
-          <button className='boton'>Preguntas frecuentes</button>
+          <div className='subCard'>
+          <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
+            <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
+            <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
+            <button className='boton'>Preguntas frecuentes</button>
+           </div>
         </div>
-
 
 
         <h2>Nuestras redes</h2>

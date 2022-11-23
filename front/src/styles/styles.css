@@ -236,9 +236,8 @@
   margin-right: 650px;
 }
 .home .card {
-  text-align: center;
-  width: 800px;
-  height: 200px;
+  width: 850px;
+  height: 214px;
   margin-left: 250px;
   background-color: white;
   -webkit-backface-visibility: hidden;
@@ -270,6 +269,16 @@
   transition: filter 100ms ease;
   cursor: pointer;
   font-size: 15px;
+}
+.home .card .imagenCard {
+  position: absolute;
+  width: 28%;
+  height: 35%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-left: 60px;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 
 .formDoble {
