@@ -16,6 +16,7 @@ const { Shipping } = require('../database/shipping.model');
 const { catchAsync } = require('../utils/catchAsync');
 const sequelize = require('sequelize');
 const { Distancia } = require('../utils/distancia');
+const { now } = require('sequelize/types/utils');
 
 const getPrice = catchAsync(async (req, res, next) => {
   const { ubigeo_id_origin, ubigeo_id_destiny } = req.body;
@@ -80,26 +81,29 @@ const createShipping = catchAsync(async (req, res, next) => {
 });
 
 const updateShipping = catchAsync(async (req,res,next)=>{
-  const { id, user_id, ubigeo_id_origin, destiny_name, destiny_address, ubigeo_id_destiny, category_id, branch_id,
-    shipping_date, price, high_size, width_size, large_size, weight, special_cares } = req.body;
+  const { id, user_id, ubigeo_id_origin, destiny_name, destiny_address,destiny_email, destiny_phone, ubigeo_id_destiny, category_id, branch_id,
+    price, high_size, width_size, large_size, weight,zip_code, special_cares } = req.body;
 
   const shipping = Shipping.findByPk(id);
 
   if(shipping){
     await shipping.update({
-      user_id, 
-      ubigeo_id_origin, 
-      destiny_name, 
-      destiny_address, 
-      ubigeo_id_destiny, 
-      category_id, 
+      user_id,
+      ubigeo_id_origin,
+      destiny_name,
+      destiny_address,
+      ubigeo_id_destiny,
+      destiny_email,
+      destiny_phone,
+      category_id,
       branch_id,
-      shipping_date, 
-      price, 
-      high_size, 
+      shipping_date: Date.now(), 
+      price,
+      high_size,
       width_size,
       large_size,
       weight,
+      zip_code,
       special_cares
     });
 
