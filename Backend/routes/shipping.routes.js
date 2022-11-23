@@ -14,11 +14,9 @@ const {
 
 // controllers functions
 const {
-  // createBranch,
-  // getAllBranch,
-  // deleteBranchById,
-  // updateBranch,
   getPrice,
+  createShipping,
+  updateShipping
 } = require('../controllers/shipping.controller');
 
 //router declaration
@@ -30,8 +28,8 @@ router.get('/price', getPrice);
 // Protecting below endpoints
 //usersRouter.use(protectSession);
 
-// create category
-//router.post('/', createBranch);
+// create shipping
+router.post('/', createShipping);
 
 // get all category
 //router.get('/', getAllBranch);
@@ -39,7 +37,7 @@ router.get('/price', getPrice);
 // delete category by id
 //router.delete('/:id', branchExistsParams, deleteBranchById);
 
-//  update category
-//router.patch('/', branchExists, updateBranch);
+//  update shipping
+router.patch('/', updateShipping);
 
 module.exports = { shippingRouter: router };
