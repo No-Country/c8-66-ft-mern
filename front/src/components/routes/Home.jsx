@@ -226,9 +226,9 @@ const Home = () => {
         <button className='login__btn3'>Registrate ahora</button>
 
         <div className='card'>
-        <h2>¿Nesecitas ayuda?</h2>
-        <h4>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
-        <button className='login__btn1'>Preguntas frecuentes</button>
+          <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
+          <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
+          <button className='boton'>Preguntas frecuentes</button>
         </div>
 
 
