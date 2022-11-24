@@ -58,53 +58,58 @@ const Home = () => {
     <div/>
        <h1 className="titulo3">¿Qué querés enviar?</h1>
        <h4 className='titulo4'>Múltiples servicios para tus múltiples nesecidades</h4>
+        
+        <div className='contenedorTarjeta'>
+        <div>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbVJREFUSEu1lYExBEEQRf9FgAjIABGQASJABIgAESACREAGyIAMZIAIqLfV/6qva3btKjdVVzfTO9O/+//umZmWPGZL9q8pALuSziVtSDqW9DwmuDEAOMTxUXEIwJmk1yGgIYBVSSeSLsLBV5pjWwn7naRLSe8toD6A04gaEI8DSY+xwO49mD4lXUu6ifn8UAXYl3QVPLPpXhLcr8cJaIF/Rwt9ZHMY3wECmHPdyABEtxf2lzhoITmUaSFaaMEhgyD4vhNrdNmuAN+JDhzjIFcKtOAEXUwLa2hxhfG/EHzOwACIOSQgtCCso4UubIx8tvPdAlgbISDZ3EpCMw8yhrqPTH8LwLY+AU1VrrAcrJnozaBWVhXQEbsQnkrBTAawQzoZWhiUKjowFhzW9RBFid75tDrjA5VGNbnifs0gd2wFaQHkPYj+0CcyzbEZH1t90KLDzmsfvEnaqmXKGp4ptb4+qBnUm5Y+oOutT/M98EXGRgO5Y13j9Eq9aQmMn6+PLruh67rVB659nHjOxUYAk67rLBxcEpmvhtwHZPnnB6dWEEKaW7T6tyez1Q+jbWPe5NHOWht/ACgGaxmb7/TKAAAAAElFTkSuQmCC"className='iconos'/>
+        <h3>Encomienda</h3>
+        </div>
+
+        <div>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR1JREFUSEvdleFNw0AMhb9MABsAG8AEwAawAZ2gMAl0ArpB2QCYAEaADdoJQB+ypVNIyjVRhFT/SZSz37OffU7DxNZMjM9+EVwAj8DxSNk+gBnwIk4pkQdHI8EzXKyTNsFXnJ4B7wOJToG3iP1JvqwgCdZR4tOOJFch8eFfBIn7ANxVkug7b/n2ViDofTjbqGvAqrrMbFeAA6KVsb0EHqil4AcBftnRF32eAUk2QWLvUuqtBGZjoH04j+xugUXxnlW+AuqfVVYTlL1IfZfx8SaeEkpc2s4EBpuh4EqmKYkkXZM2iEBQNS8r6LsrgwkqJ7a+ybWAbb//q8AxyyYOzT7jPnMrl7vI22gTx25UwZ2wX+t6bNad8fv1y5xEom9+ED0ZymZNKwAAAABJRU5ErkJggg=="className='iconos'/>
+        <h3>Sobre</h3>
+        </div>
+        
+        <div>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMVJREFUSEvtleERAUEMRt9VgArowKgAneiMUpRAB3SgAybmzqy93CZ27WDG/dxLvpfNl7s0VH6ayvpogBWwBWYJ+AFYAxerQA1wAqZWIuCCaIBrKz7Uvu69hJmQEsARmFuQEsAE2FuQEoDkji2IBxB7EnoQz4J4sggPcwDSlmViyp40PQDHxN5D1On7CkCq51J5V2T2DaoD/h70OvDKh/UWk3/PA9lSI2/ZUdw53oRDK3Pn3Gqhvohv2r/r4/wjSz+zO3raDTzEPRmj6DYvAAAAAElFTkSuQmCC" className='iconos'/>
+        <h3>Carta documento</h3>
+        </div>
+
+        <div>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPJJREFUSEvtldsRwUAUhr9UgAqUgEoogQ6oIDqhBDqhAypABcyf2TVn4uQikZeMfcrsnvPf9pKEjkfSMT79IlgAKTBtGdsF2AAH4diItDBuCR7bT8AsT/AMq0dg3pDI9mbirYNIoDnFtQcGNYkewDLEYnFcghFwB4aBpMqNVAs89tyCqEIHKlzFTSpxY1ULU653Qdg7HS+imIpOgYg8N3nVAhaBHYUObJHnRuvZEXRUf03gudGc9sdT3ZhAjdGNvm3WRQetVkQ1T6lb9ieoTO8jol8+duf4KtuLpouyBSaV2soLrsDae65b4vrt/fpldhLRC6AYNhngkXrwAAAAAElFTkSuQmCC"className='iconos'/>
+        <h3>Sobre internacional</h3>
+        </div>
+        
+        <div>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg=="className='iconos'/>
-       
+        <h3>E-commerce</h3>
+        </div>
+        </div>
+
        <h1 className="titulo1">¡Cotiza tu envío en dos simples pasos!</h1>
        
-       <form  onSubmit={handleSubmit(onSubmit)} className="quoteForm">
+       <form className='formDoble' onSubmit={handleSubmit(onSubmit)}>
         <h2>Informacion del envío</h2>
-          <section>
-            <label>Identificacion</label>
-            <input  
+
+        <h2 className='detalle'>Detalle del paquete</h2>
+
+        <section>
+            <label className='detalle1'>Identificacion</label>
+            <input
+            className='detalle2'  
             type = 'text'
             placeholder="Nombre completo / Razon social"
             {...register("nombre",{
               required: true
             })}></input>
              {errors.email?.type === "required" && <p>El nombre es requerido</p>}
-          </section>
+          </section>  
+         
 
-          <section>
-            <label>Desde</label>
-            <input  
-            type = 'text'
-            placeholder="Origen"
-            {...register("origen",{
-              required: true
-            })}></input>
-             {errors.email?.type === "required" && <p>El origen es requerido</p>}
-          </section>
-
-          <section>
-            <label>Hasta</label>
-            <input  
-            type = 'text'
-            placeholder="Destino"
-            {...register("destino",{
-              required: true
-            })}></input>
-             {errors.email?.type === "required" && <p>El destino es requerido</p>}
-          </section>
-
-          <h2>Detalle del paquete</h2>
-          <section>
-            <label>Correo electronico</label>
-            <input  
+        <section>
+            <label className='detalle1'>Correo electronico</label>
+            <input 
+            className='detalle2' 
             type = 'text'
             placeholder="Email"
             {...register("email",{
@@ -118,17 +123,45 @@ const Home = () => {
           </section>
 
           <section>
+            <label className='detalle1'>Desde</label>
+            <input 
+            className='detalle2' 
+            type = 'text'
+            placeholder="Origen"
+            {...register("origen",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El origen es requerido</p>}
+          </section>
+
+          <section>
+          <label className='detalle1'>Desde</label>
             <input  
+            className='detalle2'
             type = 'text'
             placeholder="Ciudad de origen"
             {...register("ciudadOrigen",{
               required: true
             })}></input>
              {errors.email?.type === "required" && <p>La ciudad de origen es requerida</p>}
-          </section>
-          
+          </section>   
+
           <section>
-            <input  
+            <label className='detalle1'>Hasta</label>
+            <input 
+            className='detalle2' 
+            type = 'text'
+            placeholder="Destino"
+            {...register("destino",{
+              required: true
+            })}></input>
+             {errors.email?.type === "required" && <p>El destino es requerido</p>}
+          </section>
+
+          <section>
+          <label className='detalle1'>Hasta</label>
+            <input 
+            className='detalle2' 
             type = 'text'
             placeholder="Ciudad de destino"
             {...register("ciudadDestino",{
@@ -142,7 +175,7 @@ const Home = () => {
 
        <h1 className="titulo1">¿Ya conoces los planes personalizados que tenemos para vos?</h1>
 
-      <div className='contenedorTarjeta'>
+      <div className='contenedorTarjeta1'>
        <div className='tarjeta1'>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg=="className='iconos1'/>
         <h2 >Pimes</h2>
@@ -192,16 +225,14 @@ const Home = () => {
 
         <button className='login__btn3'>Registrate ahora</button>
 
-        <h2>¿Nesecitas ayuda?</h2>
-        <h4>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
-        <button className='login__btn1'>Preguntas frecuentes</button>
-
-        <h2>Nuestras redes</h2>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUdJREFUSEvdleExBEEQhb+LgAzIABEgAkTgRIAIEAEhyAARkAGXAREgAuq7mrmanZuZ29uq/XNTdX92ut/r97qnb8LIZzIyPptHsA38rLDNmEvgFNgHPoFH4C7k+f05YuQWGWzAR4PkDTgs3Jsj4TXwUCLw8j0oOAMEyk+MqfFLMgsE8yJzBX9JplUoO7VMdU8Ndb/BgUVxOYHenWQAfvOnfQfAfYPgJRAsQlICm7cbwHYGvg8V36a5OcH3QOCY1mlwqQfaMLR68bSwM4F5D5wSG7Q1QMlXsLiTWloVTsp53qwehEv2lCzy2xHw2gMwDbF61S9tgdqycxJu1iA5rjzM5jZ1bH1s2tU6F2EXFWNqCrQpLrQauK/2qgWe90BQK97rYY0vVnDHunlKCqah0TYtkrnAbGC6NlZhz+837x+tl+x1gka36B/CnzgZFPaBJAAAAABJRU5ErkJggg=="/>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUxJREFUSEu1lYFNwzAQRV8nYATKBMAE7QgwAXQCYALoBLQTABMAGzAC3QA2gAlAP7Ktw7V9DlJOsiIl9r3z+ftnxsQxmzg/PYBLYAGchKGa3sN4AV5bRbYAZ8A9MHd2+QHcAILtRQ2wAa5Gtk9rBPoTJcB/ksekW+DaEnKA2vLcqPwzJLDtuANuzZpz264coH4eVgDf4ZA1x0YO0PejOMECpJaHRvVPgObEWAZ16alhI+3CAh6BiwZgDahahdfKVIwFSNvHnYC8Lfky5TrVSwv4cWRpd+ABUu4egHfb38JZ5PUN6+zimoI8wBdwkGXfRVvpOWQPUGpt8ZA9mY45gxUgVe65aeui9QJ025NBjrGKXkDTKrSrmtn1AFyzi2Io3WoPkFvJkMv74Wg30fxqgJLDJtV6EtREqUtmpgs1KKPyrmgEPQDHQdqfJwf8ArJlSRlOmzLXAAAAAElFTkSuQmCC"/>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXRJREFUSEvFlbsuRFEUhr9pNFPQaDRDLy4vwLwBSokErQTxBHgDxNQukSh5AzyBywugVqmU5Je15WTZ+5x9ZnIyuztnr/X/a/3rsls0fFoN4zM0gjlgF+gCkxVZvgH3wDHw5G1jGWwAZ31KtwmcF309gSJ/7BM8uM0XM/EEYl+vQfAJLJuU++Z3AUiF3+MJpGcnQSBHaTxmdVEg+lbEIrkxP2FMpQi+I+DPBiDHcbv/ACSnMh41UhH/w/UZxAgUzQSwBiwCsnkAroCvRM3+cKsIgp49YMtldwpsA7fAkrvLJtgDLi3iaQfyAswCB0AocG2JDoET4A6YcQShwAMRBIk0pTuO4AhQhgNJJEy14QiwCiwYiYp8DbQtu+SGqCqyHNWeK5E9oz2l3i+2Z2UNygZNUoRlphnQcMWO5kb30UmuuypiBKWrQqv5NRFZ7u/SZSeQRtd1iFKZqL9VyNTyC7bv9uCobbMenFwpsuyG9iZnRZdj9AO5y0cZdyMG3QAAAABJRU5ErkJggg=="/>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbRJREFUSEvNleExBEEQRt9lQATIQAbIgAgQASJABIiADMiAiwARkAEioN5V99aYnZ37dVXXVVNXtzvTX/fr7tkZK7bZiv2zFgL7wDGwG+sbeANegHn8ToLoZbAN3AMK/BRON0JoL7w+AaeAwiObEjDaZ1ggvAWuJkI8B27C+VErm5aAEX5E1IcRea8XDOYB2AJ26kxaAqYsFpesFXR9dlQUeQU8ayaD1QK58TqwWAcPytfoepa4FFBoYbWAvM+AzXCah9xrIUXRs1/gDvBcU8DW08SjlQL/IptQqc+PMpCzm07CgYgsuIjMaplJwJkZ9taIFLCwdk9aZiEeMfXMdr4s0dcCoxTDm86NzN8LIIfQYso8h8z/NorvmzXIItsxdVvmO5250kl2nA59rkgiHtUgmZeHSiQWXwx5TXiF5Lzo1KvloJzo1qBNYSqFDMRlvTIb5+W96MAmIh+OenlJYWVu5GLNbIYjdQZ2z2MU8isOWIuykHnY68OhtMv0M3LuxqlJbgUtOsVEYtQ5jH4T5N+8q2oBmeaw6dD/sjbKbD8j97nLjsmaNUmuxSdz2fXQfb/yDP4AZJloGU7UfncAAAAASUVORK5CYII="/>
-
+        <div className='card'>
+          <div className='subCard'>
+          <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
+            <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
+            <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
+            <button className='boton'>Preguntas frecuentes</button>
+           </div>
+        </div>
     </div>
   )
 }

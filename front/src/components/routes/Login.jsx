@@ -47,8 +47,8 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='login__form'>
-      <h2 >Login</h2>
+    <form onSubmit={handleSubmit(onSubmit)} className='register_form'>
+      <h2 >Login</h2>login__form
       <section className='login__section'>
         <label  className='login__label'
         htmlFor="email">Email</label>

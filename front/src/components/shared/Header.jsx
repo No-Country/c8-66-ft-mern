@@ -10,42 +10,57 @@ const Header = () => {
            
     <header className="header">
       <NavLink to="/">
-        <h1 className="header__logo">Encomiendas</h1>
+        <h1 className="header">Encomiendas</h1>
       </NavLink>
-      <ul className="header__list">
-        <li className="header__item">
+      <div className="contenedor">
+       
           <NavLink
-            to="/login"
-          >
-            <i>login</i>
+            to="/login">
+               <div className="componente">
+                  <h3>login</h3>
+                </div>
           </NavLink>
-        </li>
-        <li className="header__item">
+        
+        
           <NavLink
             to="/register">
-            <i> register</i>
+              <div className="componente">
+                <h3>register</h3>
+                </div>
           </NavLink>
-        </li>  
-        <li className="header__item">
+
+        
           <NavLink
             to="/shipping">
-            <i> Envios Online</i>
-          </NavLink>
-        </li>  
-        <li className="header__item">
+              <div className="componente">
+                <h3>Envios Online</h3>
+              </div>
+            </NavLink>
+        
+        
           <NavLink
             to="/branchOffices">
-            <i> Sucursales</i>
+              <div className="componente">
+                <h3>Sucursales</h3>
+              </div> 
           </NavLink>
-        </li>  
-        <li className="header__item">
+          
+        
           <NavLink
             to="/questions">
-            <i> Preguntas Frecuentes</i>
-          </NavLink>
-        </li>  
-        <button onClick={handleClick} className='form-logout__btn'>Logout</button>
-      </ul>
+              <div className="componente">
+                  <h3>Preguntas Frecuentes</h3>
+              </div>    
+          </NavLink>   
+
+          <NavLink>
+              <div className="componente">
+                  <h3 onClick={handleClick}>Logout</h3>
+              </div>    
+          </NavLink>        
+        </div>
+        {/* <button  className="botonHeader">Logout</button> */}
+      
     </header>
   )
 }
