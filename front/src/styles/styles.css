@@ -731,7 +731,7 @@ button {
   height: 80px;
   width: 80px;
   text-align: center;
-  padding: 1px;
+  padding: 8px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -739,8 +739,12 @@ button {
   margin-left: 50px;
 }
 .contenedor2 .tarjeta1 .iconos1 {
-  height: 50px;
+  height: 70px;
   padding: 15px;
+}
+.contenedor2 .tarjeta1 .textoFooter {
+  padding: 20px;
+  padding-left: 1px;
 }
 
 .header {
