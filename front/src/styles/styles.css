@@ -428,13 +428,15 @@
   padding-top: 100px;
 }
 
-.contenedor {
+.contenedor2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   flex-direction: column;
   padding: 1px;
+  margin: 80px;
+  margin-right: 10px;
 }
-.contenedor .tarjeta1 {
+.contenedor2 .tarjeta1 {
   height: 80px;
   width: 80px;
   text-align: center;
@@ -445,7 +447,7 @@
   margin: 3px;
   margin-left: 50px;
 }
-.contenedor .tarjeta1 .iconos1 {
+.contenedor2 .tarjeta1 .iconos1 {
   height: 50px;
   padding: 15px;
 }
