@@ -4,12 +4,14 @@
      margin-top: 40px;
     padding-top: 100px;
 }
-.contenedor{
+.contenedor2{
     // margin: 1px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     flex-direction: column;
     padding: 1px;
+    margin: 80px;
+    margin-right: 10px;
     
     .tarjeta1{
         height: 80px;
