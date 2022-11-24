@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 
+// Routers
+const { usersRouter } = require('./routes/users.routes');
+const shippingHistoryRouter = require('./routes/shippingHistory.routes');
 const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');
@@ -28,6 +31,9 @@ app.use(cors());
 //Enable incoming JSON data
 app.use(express.json());
 
+// Define endpoints
+app.use('/api/v1/users', usersRouter);
+app.use('/api/v1/history', shippingHistoryRouter);
 //add security helmet
 app.use(helmet());
 
