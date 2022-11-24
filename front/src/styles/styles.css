@@ -454,20 +454,28 @@
   text-align: justify;
   margin-top: 4px;
   padding-top: 10px;
+  border-bottom: rgba(10, 9, 9, 0.908);
 }
 
 .contenedor {
+  width: 500px;
+  background-color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   flex-direction: column;
-  padding: 10px;
+  margin-left: 600px;
 }
-.contenedor .componentes {
-  padding: 100px;
-  border: 10px;
-  margin: 100px;
+.contenedor .componente {
+  height: 50px;
+  width: 110px;
+  text-align: center;
+  margin: 3px;
+  margin-right: 1px;
+  margin-left: 1px;
 }
 .contenedor .botonHeader {
+  margin-left: 50px;
+  margin-top: 50px;
   width: 150px;
   padding: 10px 15px;
   color: white;

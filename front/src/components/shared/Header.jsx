@@ -13,39 +13,54 @@ const Header = () => {
         <h1 className="header">Encomiendas</h1>
       </NavLink>
       <div className="contenedor">
-        <div className="componente">
+       
           <NavLink
-            to="/login"
-          >
-            <i>login</i>
+            to="/login">
+               <div className="componente">
+                  <h3>login</h3>
+                </div>
           </NavLink>
-        </div>
-        <div className="componente">
+        
+        
           <NavLink
             to="/register">
-            <i> register</i>
+              <div className="componente">
+                <h3>register</h3>
+                </div>
           </NavLink>
-        </div>  
-        <div className="componente">
+
+        
           <NavLink
             to="/shipping">
-            <i> Envios Online</i>
-          </NavLink>
-        </div>  
-        <div className="componente">
+              <div className="componente">
+                <h3>Envios Online</h3>
+              </div>
+            </NavLink>
+        
+        
           <NavLink
             to="/branchOffices">
-            <i> Sucursales</i>
+              <div className="componente">
+                <h3>Sucursales</h3>
+              </div> 
           </NavLink>
-        </div>  
-        <div className="componente">
+          
+        
           <NavLink
             to="/questions">
-            <i> Preguntas Frecuentes</i>
-          </NavLink>
+              <div className="componente">
+                  <h3>Preguntas Frecuentes</h3>
+              </div>    
+          </NavLink>   
+
+          <NavLink>
+              <div className="componente">
+                  <h3 onClick={handleClick}>Logout</h3>
+              </div>    
+          </NavLink>        
         </div>
-        <button onClick={handleClick} className="botonHeader">Logout</button>
-      </div>
+        {/* <button  className="botonHeader">Logout</button> */}
+      
     </header>
   )
 }
