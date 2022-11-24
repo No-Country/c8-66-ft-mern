@@ -20,6 +20,7 @@ const { db } = require('./utils/database');
 
 //Init express app
 const app = express();
+const cors = require('cors')
 
 // Enable CORS
 app.use(cors());
