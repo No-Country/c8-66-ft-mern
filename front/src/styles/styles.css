@@ -122,8 +122,8 @@
   margin: 30px;
   margin-left: 300px;
 }
-.home .contenedorTarjeta .tarjeta1 .iconos1 {
-  height: 50px;
+.home .contenedorTarjeta .iconos {
+  height: 70px;
   padding: 15px;
 }
 .home .contenedorTarjeta1 {
@@ -142,7 +142,7 @@
   margin-left: 300px;
 }
 .home .contenedorTarjeta1 .tarjeta1 .iconos1 {
-  height: 50px;
+  height: 90px;
   padding: 15px;
 }
 .home .contenedorTarjeta1 .tarjeta2 {
@@ -154,7 +154,7 @@
   margin: 30px;
 }
 .home .contenedorTarjeta1 .tarjeta2 .iconos1 {
-  height: 50px;
+  height: 90px;
   padding: 15px;
 }
 .home .login__btn1 {
