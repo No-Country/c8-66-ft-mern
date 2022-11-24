@@ -1,5 +1,4 @@
 import React from "react";
-import PackageForm from "../shipping/PackageForm";
 import SendForm from "../shipping/SendForm";
 
 const Shipping = () => {
@@ -7,81 +6,62 @@ const Shipping = () => {
     <div className="shipping">
       <header className="shipping_header">
         <section>
-          <h2>¡Cotiza y envía tus paquetes de la manera más sencilla!</h2>
-          <h3>¿Ya conoces nuestra opción pick up?</h3>
-          <h3>
-            ¡Coordina dia y horario para que retiremos tu envío por tu
-            dirección!
-          </h3>
+          <div className="container-icon-user">
+            <div className="icon_user">
+              <i className="fa-solid fa-user"></i>
+            </div>
+            <p>PERSONAS</p>
+          </div>
+          <main>
+            <h2>¡Cotiza y envía tus paquetes de la manera más sencilla!</h2>
+            <h3>¿Ya conoces nuestra opción pick up?</h3>
+            <h3>
+              ¡Coordina dia y horario para que retiremos tu envío por tu
+              dirección!
+            </h3>
+          </main>
         </section>
         <hr />
         <section>
-          <p>img</p>|
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ejemplo.png"
+            alt=""
+          />
         </section>
       </header>
-      <article>
+      <div className="tilte-form">
         <h2>¿Qué quieres enviar?</h2>
+      </div>
+      <article className="container_form">
         <section>
           <header>
             <h3>Envío manual</h3>
           </header>
-          <main>
-            <div>
-              <div>0</div>
-              <hr />
-              <div>0</div>
-            </div>
-            <div>
-              <section>
-                <h3>
-                  Origen del envío
-                  <p>Completá tus datos</p>
-                </h3>
-              </section>
-              <section>
-                <h3>
-                  Destino del envío
-                  <p>Completá los datos del destinatario</p>
-                </h3>
-              </section>
-            </div>
+          <main className="header-style_title relative">
+            <span></span>
+            <section className="container-title">
+              <div className="circle"></div>
+              <h3>Origen del envío</h3>
+              <p>Completá tus datos</p>
+            </section>
+            <section className="container-title">
+              <div className="circle"></div>
+
+              <h3>Destino del envío</h3>
+              <p>Completá los datos del destinatario</p>
+            </section>
           </main>
         </section>
+
+
+      
+        <div className="client_form">
+          <SendForm />
+    
+        </div>
       </article>
-      <div>
-        <SendForm/>
-        <br />
-        <SendForm/>
-      </div>
 
-      <main>
-            <div>
-              <div>0</div>
-              <hr />
-              <div>0</div>
-            </div>
-            <div>
-              <section>
-                <h3>
-                  Datos del paquete
-                  <p>Cuentanos que quieres envíar</p>
-                </h3>
-              </section>
-              <section>
-                <h3>
-                  Método pago
-                  <p>Con tarjetas o efectivo</p>
-                </h3>
-              </section>
-            </div>
-          </main>
-
-          <div>
-<PackageForm/>
-
-          </div>
     </div>
-
   );
 };
 

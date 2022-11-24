@@ -66,7 +66,7 @@ const Home = () => {
        
        <h1 className="titulo1">¡Cotiza tu envío en dos simples pasos!</h1>
        
-       <form  onSubmit={handleSubmit(onSubmit)}>
+       <form  onSubmit={handleSubmit(onSubmit)} className="quoteForm">
         <h2>Informacion del envío</h2>
           <section>
             <label>Identificacion</label>
