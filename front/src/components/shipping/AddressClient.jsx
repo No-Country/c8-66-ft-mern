@@ -54,18 +54,15 @@ const handleProvince = () => {
     seProvinceSelect(event.target.value);
   };
 
-console.log(provinceSelect);
-
-
   return (
     <div>
 <select
           id="country"
           onChange={handleCountry}
         > 
-          <option hidden selected>  pais </option>
+          <option hidden selected>  País </option>
            {countries?.map((country) =>           
-           <option key={country.country
+           <option key={country.id
            } value={country.country}>
             {country.country}
           </option>)}   
@@ -77,7 +74,7 @@ console.log(provinceSelect);
         > 
           <option hidden selected>Región</option>
            {regions?.map((region) =>           
-           <option key={region.region
+           <option key={region.id
            } value={region.region}>
             {region.region}
           </option>)}   
@@ -86,9 +83,9 @@ console.log(provinceSelect);
           id="province"
           onChange={handleProvince}
         > 
-          <option hidden selected>provincia</option>
+          <option hidden selected>Provincia</option>
            {provinces?.map((province) =>           
-           <option key={province.province
+           <option key={province.id
            } value={province.province}>
             {province.province}
           </option>)}   

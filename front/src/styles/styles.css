@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,900&display=swap");
 .register_form {
   margin-left: 400px;
   margin-top: 100px;
@@ -414,12 +415,302 @@
   fill: #b4b4b4;
 }
 
+.shipping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.shipping .shipping_header {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.shipping .shipping_header > section {
+  width: 50%;
+}
+.shipping .shipping_header .container-icon-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5%;
+  padding-bottom: 20px;
+  color: rgba(59, 59, 59, 0.89);
+}
+.shipping .shipping_header .container-icon-user p {
+  font-size: 12px;
+}
+.shipping .shipping_header .container-icon-user .icon_user {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  border-style: dashed solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shipping .shipping_header .container-icon-user .icon_user .fa-user {
+  font-size: 20px;
+}
+.shipping .shipping_header main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  position: relative;
+  background-image: url("../img/Ellipse.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
+  gap: 10%;
+  padding: 40px;
+}
+.shipping .shipping_header main h2 {
+  font-family: Poppins;
+  color: black;
+  font-size: 40px;
+  text-align: center;
+}
+.shipping .shipping_header main h3 {
+  color: rgba(68, 68, 68, 0.63);
+  font-size: 25px;
+  text-align: center;
+}
+.shipping .shipping_header main :nth-child(2) {
+  font-weight: bold;
+  color: rgb(126, 126, 126);
+}
+.shipping .shipping_header main :nth-child(3) {
+  letter-spacing: 2px;
+  width: 100%;
+}
+.shipping .shipping_header hr {
+  width: 3px;
+  background-color: rgb(211, 211, 211);
+  height: 100%;
+}
+.shipping .shipping_header :nth-child(3) {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shipping .shipping_header :nth-child(3) img {
+  width: 80%;
+}
+.shipping .tilte-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.shipping .tilte-form h2 {
+  font-size: 40px;
+}
+.shipping .container_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 0 15px 15px 15px;
+  border: solid rgba(143, 142, 142, 0.637) 3px;
+  width: 80%;
+  border-radius: 30px;
+  position: relative;
+}
+.shipping .container_form > section {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.shipping .container_form > section > header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  background-color: rgba(88, 88, 88, 0.226);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.shipping .container_form > section > header > h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.client_form {
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.header-style_title {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.header-style_title span {
+  top: 15%;
+  position: absolute;
+  background: #d9d9d9;
+  width: 39%;
+  height: 1px;
+  position: absolute;
+  left: 28%;
+}
+.header-style_title .container-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: rgba(68, 68, 68, 0.63);
+}
+.header-style_title .container-title .circle {
+  width: 25px;
+  height: 25px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+.header-style_title .container-title h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header-style_title .container-title p {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.form_cointainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+}
+.form_cointainer input, .form_cointainer select, .form_cointainer textarea {
+  padding: 15px;
+  margin: 15px 0 15px 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  border: solid rgba(179, 179, 179, 0.788) 1px;
+  align-items: center;
+  font-size: 17px;
+  border-radius: 15px;
+  transition: filter 0.2s;
+}
+.form_cointainer input:hover, .form_cointainer select:hover, .form_cointainer textarea:hover {
+  filter: drop-shadow(0px 0px 3px #888888);
+  cursor: pointer;
+}
+.form_cointainer .phone_email {
+  display: flex;
+  gap: 10px;
+}
+.form_cointainer .address_code {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+}
+.form_cointainer textarea {
+  height: 100px;
+  padding: 20px;
+  font-size: 19px;
+}
+.form_cointainer .container_price, .form_cointainer .package_form {
+  margin-bottom: 60px;
+}
+.form_cointainer .container_price {
+  display: flex;
+  flex-direction: column;
+}
+.form_cointainer .container_price :nth-child(2), .form_cointainer .container_price :nth-child(4), .form_cointainer .container_price :nth-child(6) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form_cointainer .container_price :nth-child(2) h4, .form_cointainer .container_price :nth-child(2) h3, .form_cointainer .container_price :nth-child(4) h4, .form_cointainer .container_price :nth-child(4) h3, .form_cointainer .container_price :nth-child(6) h4, .form_cointainer .container_price :nth-child(6) h3 {
+  font-size: 18px;
+  padding-left: 80px;
+  margin: 20px;
+}
+.form_cointainer .container_price :nth-child(2) h3, .form_cointainer .container_price :nth-child(4) h3, .form_cointainer .container_price :nth-child(6) h3 {
+  font-size: 24px;
+}
+.form_cointainer .container_price hr {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.form_cointainer .container_price .container_checkbox {
+  margin-top: 50px;
+}
+.form_cointainer .container_price .container_checkbox h3 {
+  padding-left: 80px;
+}
+.form_cointainer .container_price .container_checkbox .checkbox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_cointainer .container_price .container_checkbox .checkbox div {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button {
+  border: none;
+}
+
+.input_icon {
+  position: absolute;
+  align-self: center;
+  border-radius: 20px;
+  color: white;
+  padding: 30px;
+  height: 40px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter 0.5s, width 0.2s, height 0.2s;
+  font-size: 20px;
+  bottom: 0;
+  left: 35%;
+  cursor: pointer;
+}
+
+.input_icon:hover {
+  filter: brightness(60%);
+}
+
+.input_icon:active {
+  filter: brightness(10%);
+}
+
 .off {
   display: none;
 }
 
 .on {
   display: block;
+}
+
+.required {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .tituloFooter {
@@ -474,4 +765,9 @@
   margin: 3px;
   margin-right: 1px;
   margin-left: 1px;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=styles.css.map */
