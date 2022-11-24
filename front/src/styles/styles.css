@@ -287,11 +287,10 @@
 .formDoble {
   align-items: center;
   width: 700px;
-  height: 350px;
+  height: 450px;
   background-color: rgb(221, 221, 237);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
