@@ -628,15 +628,57 @@
 .form_cointainer .container_price, .form_cointainer .package_form {
   margin-bottom: 60px;
 }
-.form_cointainer button {
+.form_cointainer .container_price {
+  display: flex;
+  flex-direction: column;
+}
+.form_cointainer .container_price :nth-child(2), .form_cointainer .container_price :nth-child(4), .form_cointainer .container_price :nth-child(6) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.form_cointainer .container_price :nth-child(2) h4, .form_cointainer .container_price :nth-child(2) h3, .form_cointainer .container_price :nth-child(4) h4, .form_cointainer .container_price :nth-child(4) h3, .form_cointainer .container_price :nth-child(6) h4, .form_cointainer .container_price :nth-child(6) h3 {
+  font-size: 18px;
+  padding-left: 80px;
+  margin: 20px;
+}
+.form_cointainer .container_price :nth-child(2) h3, .form_cointainer .container_price :nth-child(4) h3, .form_cointainer .container_price :nth-child(6) h3 {
+  font-size: 24px;
+}
+.form_cointainer .container_price hr {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.form_cointainer .container_price .container_checkbox {
+  margin-top: 50px;
+}
+.form_cointainer .container_price .container_checkbox h3 {
+  padding-left: 80px;
+}
+.form_cointainer .container_price .container_checkbox .checkbox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_cointainer .container_price .container_checkbox .checkbox div {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button {
   border: none;
 }
-.form_cointainer .input_icon {
+
+.input_icon {
   position: absolute;
   align-self: center;
   border-radius: 20px;
   color: white;
-  padding: 15px;
+  padding: 30px;
   height: 40px;
   background-color: rgb(0, 0, 0);
   display: flex;
@@ -646,11 +688,14 @@
   font-size: 20px;
   bottom: 0;
   left: 35%;
+  cursor: pointer;
 }
-.form_cointainer .input_icon:hover {
+
+.input_icon:hover {
   filter: brightness(60%);
 }
-.form_cointainer .input_icon:active {
+
+.input_icon:active {
   filter: brightness(10%);
 }
 
@@ -660,6 +705,12 @@
 
 .on {
   display: block;
+}
+
+.required {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .tituloFooter {
