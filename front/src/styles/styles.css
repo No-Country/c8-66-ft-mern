@@ -68,10 +68,17 @@
 .home {
   text-align: center;
 }
+.home .inicioHome {
+  background-image: url("../../public/img/Imagen principal.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 600px;
+}
 .home .titulo1 {
   text-align: left;
   padding-left: 200px;
   padding-top: 100px;
+  margin-bottom: 20px;
 }
 .home .titulo2 {
   text-align: left;
@@ -122,8 +129,8 @@
   margin: 30px;
   margin-left: 300px;
 }
-.home .contenedorTarjeta .tarjeta1 .iconos1 {
-  height: 50px;
+.home .contenedorTarjeta .iconos {
+  height: 70px;
   padding: 15px;
 }
 .home .contenedorTarjeta1 {
@@ -142,7 +149,7 @@
   margin-left: 300px;
 }
 .home .contenedorTarjeta1 .tarjeta1 .iconos1 {
-  height: 50px;
+  height: 90px;
   padding: 15px;
 }
 .home .contenedorTarjeta1 .tarjeta2 {
@@ -154,7 +161,7 @@
   margin: 30px;
 }
 .home .contenedorTarjeta1 .tarjeta2 .iconos1 {
-  height: 50px;
+  height: 90px;
   padding: 15px;
 }
 .home .login__btn1 {
@@ -287,11 +294,10 @@
 .formDoble {
   align-items: center;
   width: 700px;
-  height: 350px;
+  height: 450px;
   background-color: rgb(221, 221, 237);
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex-direction: column;
@@ -362,23 +368,36 @@
   transition: filter 100ms ease;
 }
 
+.search1 {
+  padding-top: 250px;
+  padding-right: 490px;
+}
+
 .search {
+  display: inline-block;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  position: relative;
 }
 
 .search__input {
   font-family: inherit;
-  font-size: inherit;
+  font-size: 20px;
   background-color: #f4f2f2;
   border: none;
   color: #646464;
-  padding: 0.7rem 1rem;
-  border-radius: 30px;
-  width: 12em;
+  padding: 20px 0px 20px 20px;
+  width: 300px;
   transition: all ease-in-out 0.5s;
   margin-right: -2rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.br_button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .search__input:hover, .search__input:focus {
@@ -401,8 +420,14 @@
 
 .search__button {
   border: none;
-  background-color: #f4f2f2;
-  margin-top: 0.1em;
+  background-color: #24105F;
+  height: 20%;
+  position: absolute;
+  width: 70px;
+  right: -32px;
+  font-size: 28px;
+  color: white;
+  padding-left: 10px;
 }
 
 .search__button:hover {
@@ -731,7 +756,7 @@ button {
   height: 80px;
   width: 80px;
   text-align: center;
-  padding: 1px;
+  padding: 8px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -739,8 +764,12 @@ button {
   margin-left: 50px;
 }
 .contenedor2 .tarjeta1 .iconos1 {
-  height: 50px;
+  height: 70px;
   padding: 15px;
+}
+.contenedor2 .tarjeta1 .textoFooter {
+  padding: 20px;
+  padding-left: 1px;
 }
 
 .header {
@@ -770,4 +799,6 @@ button {
 * {
   margin: 0;
   box-sizing: border-box;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Rectangle 4 *//*# sourceMappingURL=styles.css.map */

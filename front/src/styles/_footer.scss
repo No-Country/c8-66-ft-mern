@@ -17,15 +17,19 @@
         height: 80px;
         width: 80px;
         text-align: center;
-        padding: 1px;
+        padding: 8px;
         border: none;
         border-radius: 10px;
         box-shadow: 0 0 10px #0003;
         margin: 3px;
         margin-left: 50px;
         .iconos1{
-            height: 50px;
+            height: 70px;
             padding: 15px;
+        }
+        .textoFooter{
+           padding: 20px;
+           padding-left: 1px;
         }
     }
 }
