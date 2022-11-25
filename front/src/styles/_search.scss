@@ -1,3 +1,8 @@
+.search1{
+  padding-top: 250px;
+  padding-right: 490px;
+}
+
 .search {
     display: inline-block;
     align-items: center;
@@ -5,6 +10,7 @@
     text-align: center;
     position: relative;
   }
+
   
   .search__input {
     font-family: inherit;
@@ -24,6 +30,7 @@
   .br_button{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    
   }
   
   .search__input:hover, .search__input:focus {
@@ -46,13 +53,15 @@
   
   .search__button {
     border: none;
-    background-color: blue ;
-    height: 100%;
+    background-color: #24105F ;
+    height: 20%;
     position: absolute;
     width: 70px;
     right: -32px;
     font-size: 28px;
     color: white;
+    padding-left: 10px;
+    
 
     
 
@@ -68,3 +77,5 @@
     width: 1.3em;
     fill: #b4b4b4;
   }
+
+  
