@@ -12,10 +12,10 @@ const SendForm = (data) => {
   // const [OriginUbigeo, setOriginUbigeo] = useState();
 
   // //* destiny ubigeo
-  // const [destinyUbigeo, setDestinyUbigeo] = useState();
+  const [destinyUbigeo, setDestinyUbigeo] = useState();
 
   const [surcursales, setSurcursales] = useState();
-
+  
   const getAllSurcursales = () => {
     const url = "http://3.89.23.42:4000/api/v1/branch";
     axios.get(url).then((res) => setSurcursales(res.data.branch));
@@ -27,9 +27,9 @@ const SendForm = (data) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
+      formState: { errors },
+      reset,
+    } = useForm();
 
   const postForm = (data) => {
     const url = `http://localhost:4000/api/v1/shipping`;
@@ -40,6 +40,7 @@ const SendForm = (data) => {
       })
       .catch((err) => console.log(err));
   };
+
   const submit = (data) => {
     postForm(data);
   };
@@ -66,7 +67,9 @@ const SendForm = (data) => {
             id="origin_name"
             placeholder="Nombre y Apellido / Razón Social"
           />
-          {errors.origin_name?.type === "required" && <p className="required">Campo requerido</p>}
+            {errors.origin_name?.type === "required" && (
+              <p className="required">Campo requerido</p>
+            )}
         </section>
         <div className="phone_email">
           <section>
@@ -78,7 +81,9 @@ const SendForm = (data) => {
               id="origin_phone"
               placeholder="94232234"
             />
-            {errors.origin_phone?.type === "required" && <p className="required">Campo requerido</p>}
+              {errors.origin_phone?.type === "required" && (
+                <p className="required">Campo requerido</p>
+              )}
           </section>
           <section>
             <input
@@ -90,7 +95,9 @@ const SendForm = (data) => {
               id="origin_email"
               placeholder="email"
             />
-            {errors.origin_email?.type === "required" && <p className="required">Campo requerido</p>}
+              {errors.origin_email?.type === "required" && (
+                <p className="required">Campo requerido</p>
+              )}
           </section>
         </div>
 
@@ -108,7 +115,9 @@ const SendForm = (data) => {
             <option value="domicilio">Pick up en mi domicilio</option>
             <option value="surcursal">En una surcursal</option>
           </select>
-          {errors.order_option?.type === "required" && <p className="required">Campo requerido</p>}
+            {errors.order_option?.type === "required" && (
+              <p className="required">Campo requerido</p>
+            )}
         </section>
 
         {toggleAddressOrigin === "surcursal" ? (
@@ -140,7 +149,9 @@ const SendForm = (data) => {
                   id="address"
                   placeholder="direccion de retiro del envio"
                 />
-                {errors.address?.type === "required" && <p className="required">Campo requerido</p>}
+                  {errors.address?.type === "required" && (
+                    <p className="required">Campo requerido</p>
+                  )}
               </section>
               <section>
                 <input
@@ -151,7 +162,9 @@ const SendForm = (data) => {
                   id="zip_code"
                   placeholder="Codigo Postal"
                 />
-                {errors.zip_code?.type === "required" && <p className="required">Campo requerido</p>}
+                  {errors.zip_code?.type === "required" && (
+                    <p className="required">Campo requerido</p>
+                  )}
               </section>
             </div>
           </div>
@@ -177,7 +190,9 @@ const SendForm = (data) => {
             id="destiny_name"
             placeholder="Nombre y Apellido del destinatario"
           />
-          {errors.destiny_name?.type === "required" && <p className="required">Campo requerido</p>}
+            {errors.destiny_name?.type === "required" && (
+              <p className="required">Campo requerido</p>
+            )}
         </section>
         <div className="phone_email">
           <section>
@@ -189,9 +204,9 @@ const SendForm = (data) => {
               id="destiny_phone"
               placeholder="94232234"
             />
-            {errors.destiny_phone?.type === "required" && (
-              <p className="required">Campo requerido</p>
-            )}
+              {errors.destiny_phone?.type === "required" && (
+                <p className="required">Campo requerido</p>
+              )}
           </section>
           <section>
             <input
@@ -203,9 +218,9 @@ const SendForm = (data) => {
               id="destiny_email"
               placeholder="email"
             />
-            {errors.destiny_email?.type === "required" && (
-              <p className="required">Campo requerido</p>
-            )}
+              {errors.destiny_email?.type === "required" && (
+                <p className="required">Campo requerido</p>
+              )}
           </section>
         </div>
 
@@ -223,7 +238,9 @@ const SendForm = (data) => {
             <option value="domicilio">Pick up en mi domicilio</option>
             <option value="surcursal">En una surcursal</option>
           </select>
-          {errors.order_option?.type === "required" && <p className="required">Campo requerido</p>}
+            {errors.order_option?.type === "required" && (
+              <p className="required">Campo requerido</p>
+            )}
         </section>
 
         {toggleAddressDestiny === "surcursal" ? (
@@ -236,7 +253,11 @@ const SendForm = (data) => {
               Surcursales
             </option>
             {surcursales?.map((surcur) => (
-              <option key={surcur.id} value={surcur.ubigeo.id}>
+              <option
+                key={surcur.id}
+                value={surcur.ubigeo.id}
+                onChange={selectBranchId}
+              >
                 {surcur.address}
               </option>
             ))}
@@ -255,7 +276,9 @@ const SendForm = (data) => {
                   id="address"
                   placeholder="direccion de retiro del envio"
                 />
-                {errors.address?.type === "required" && <p className="required">Campo requerido</p>}
+                  {errors.address?.type === "required" && (
+                    <p className="required">Campo requerido</p>
+                  )}
               </section>
               <section>
                 <input
@@ -266,7 +289,9 @@ const SendForm = (data) => {
                   id="zip_code"
                   placeholder="Codigo Postal"
                 />
-                {errors.zip_code?.type === "required" && <p className="required">Campo requerido</p>}
+                  {errors.zip_code?.type === "required" && (
+                    <p className="required">Campo requerido</p>
+                  )}
               </section>
             </div>
           </div>
@@ -311,7 +336,9 @@ const SendForm = (data) => {
             <option value="sobre internacional">Sobre internacional</option>
             <option value="e-commerce">E-commerce</option>
           </select>
-          {errors.want_send?.type === "required" && <p className="required">Campo requerido</p>}
+            {errors.want_send?.type === "required" && (
+              <p className="required">Campo requerido</p>
+            )}
         </section>
         <div
           className={
@@ -330,7 +357,9 @@ const SendForm = (data) => {
                 id="high_size"
                 placeholder="Alto (cm)*"
               />
-              {errors.high_size?.type === "required" && <p className="required">Campo requerido</p>}
+                {errors.high_size?.type === "required" && (
+                  <p className="required">Campo requerido</p>
+                )}
             </section>
             <section>
               <input
@@ -341,7 +370,9 @@ const SendForm = (data) => {
                 id="width_size "
                 placeholder="Ancho (cm)*"
               />
-              {errors.width_size?.type === "required" && <p className="required">Campo requerido</p>}
+                {errors.width_size?.type === "required" && (
+                  <p className="required">Campo requerido</p>
+                )}
             </section>
           </div>
           <div>
@@ -354,7 +385,9 @@ const SendForm = (data) => {
                 id="large_size "
                 placeholder="largo (cm)"
               />
-              {errors.large_size?.type === "required" && <p className="required">Campo requerido</p>}
+                {errors.large_size?.type === "required" && (
+                  <p className="required">Campo requerido</p>
+                )}
             </section>
             <section>
               <input
@@ -365,7 +398,9 @@ const SendForm = (data) => {
                 id="weight "
                 placeholder="Peso estimado (KG)"
               />
-              {errors.weight?.type === "required" && <p className="required">Campo requerido</p>}
+                {errors.weight?.type === "required" && (
+                  <p className="required">Campo requerido</p>
+                )}
             </section>
           </div>
         </div>
@@ -383,7 +418,9 @@ const SendForm = (data) => {
             <option value={true}>si</option>
             <option value={false}>no</option>
           </select>
-          {errors.special_cares?.type === "required" && <p className="required">Campo requerido</p>}
+            {errors.special_cares?.type === "required" && (
+              <p className="required">Campo requerido</p>
+            )}
         </section>
         <section>
           <textarea
