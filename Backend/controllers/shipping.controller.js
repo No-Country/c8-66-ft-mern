@@ -16,7 +16,6 @@ const { Shipping } = require('../database/shipping.model');
 const { catchAsync } = require('../utils/catchAsync');
 const sequelize = require('sequelize');
 const { Distancia } = require('../utils/distancia');
-const { now } = require('sequelize/types/utils');
 
 const getPrice = catchAsync(async (req, res, next) => {
   const { ubigeo_id_origin, ubigeo_id_destiny } = req.body;

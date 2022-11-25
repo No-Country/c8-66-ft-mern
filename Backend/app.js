@@ -2,9 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 
-// Routers
-const { usersRouter } = require('./routes/users.routes');
-const shippingHistoryRouter = require('./routes/shippingHistory.routes');
 const helmet = require('helmet');
 const compression = require('compression');
 const morgan = require('morgan');
@@ -18,12 +15,12 @@ const { ubigeoRouter } = require('./routes/ubigeo.routes');
 const { categoryRouter } = require('./routes/category.routes');
 const { branchRouter } = require('./routes/branch.routes');
 const { shippingRouter } = require('./routes/shipping.routes');
+const { shippingHistoryRouter } = require('./routes/shippingHistory.routes');
 
 const { db } = require('./utils/database');
 
 //Init express app
 const app = express();
-const cors = require('cors')
 
 // Enable CORS
 app.use(cors());

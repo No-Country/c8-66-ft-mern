@@ -1,11 +1,11 @@
 const express = require('express');
-const router = Router();
+const shippingHistoryRouter = express.Router();
 
 // Controllers
 const {
 	showHistory
 } = require('../controllers/shippingHistory.controller');
 
-router.get('/:shipping_id',showHistory);
+shippingHistoryRouter.get('/:shipping_id',showHistory);
 
-module.exports = router;
+module.exports = { shippingHistoryRouter };
