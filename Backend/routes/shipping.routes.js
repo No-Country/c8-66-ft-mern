@@ -29,16 +29,16 @@ router.get(
 );
 
 // Protecting below endpoints
-//usersRouter.use(protectSession);
+usersRouter.use(protectSession);
 
 // create shipping
 router.post('/', createShipping);
 
 // get all category
-//router.get('/', getAllBranch);
+router.get('/', getAllBranch);
 
 // delete category by id
-//router.delete('/:id', branchExistsParams, deleteBranchById);
+router.delete('/:id', branchExistsParams, deleteBranchById);
 
 //  update shipping
 router.patch('/', updateShipping);
