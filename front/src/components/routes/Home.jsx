@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div/>
+    {/* <div> */}
        <h1 className="titulo3">¿Qué querés enviar?</h1>
        <h4 className='titulo4'>Múltiples servicios para tus múltiples nesecidades</h4>
         

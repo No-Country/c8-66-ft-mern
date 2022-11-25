@@ -368,6 +368,11 @@
   transition: filter 100ms ease;
 }
 
+.search1 {
+  padding-top: 250px;
+  padding-right: 490px;
+}
+
 .search {
   display: inline-block;
   align-items: center;
@@ -415,13 +420,14 @@
 
 .search__button {
   border: none;
-  background-color: blue;
-  height: 100%;
+  background-color: #24105F;
+  height: 20%;
   position: absolute;
   width: 70px;
   right: -32px;
   font-size: 28px;
   color: white;
+  padding-left: 10px;
 }
 
 .search__button:hover {
@@ -793,4 +799,6 @@ button {
 * {
   margin: 0;
   box-sizing: border-box;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+/* Rectangle 4 *//*# sourceMappingURL=styles.css.map */
