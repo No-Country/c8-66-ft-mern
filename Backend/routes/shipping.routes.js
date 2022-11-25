@@ -16,14 +16,17 @@ const {
 const {
   getPrice,
   createShipping,
-  updateShipping
+  updateShipping,
 } = require('../controllers/shipping.controller');
 
 //router declaration
 const router = express.Router();
 
 // get price
-router.get('/price', getPrice);
+router.get(
+  '/price/:ubigeo_origin/:ubigeo_destiny/:height/:width/:large/:weight',
+  getPrice
+);
 
 // Protecting below endpoints
 //usersRouter.use(protectSession);
