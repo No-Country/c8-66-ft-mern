@@ -29,10 +29,10 @@ const router = express.Router();
 // create category
 router.post('/', createBranch);
 
-// get all category
+// get all branch
 router.get('/', getAllBranch);
 
-// delete category by id
+// delete branch by id
 router.delete('/:id', branchExistsParams, deleteBranchById);
 
 //  update category
