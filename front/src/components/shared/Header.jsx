@@ -13,23 +13,8 @@ const Header = () => {
         <h1 className="header">Encomiendas</h1>
       </NavLink>
       <div className="contenedor">
-       
-          <NavLink
-            to="/login">
-               <div className="componente">
-                  <h3>login</h3>
-                </div>
-          </NavLink>
-        
-        
-          <NavLink
-            to="/register">
-              <div className="componente">
-                <h3>register</h3>
-                </div>
-          </NavLink>
 
-        
+                
           <NavLink
             to="/shipping">
               <div className="componente">
@@ -52,14 +37,19 @@ const Header = () => {
                   <h3>Preguntas Frecuentes</h3>
               </div>    
           </NavLink>   
-
+       
+          <NavLink
+            to="/getInto">
+               <div className="componente">
+                  <h3>Ingresar</h3>
+                </div>
+          </NavLink>
           <NavLink>
               <div className="componente">
                   <h3 onClick={handleClick}>Logout</h3>
               </div>    
           </NavLink>        
         </div>
-        {/* <button  className="botonHeader">Logout</button> */}
       
     </header>
   )

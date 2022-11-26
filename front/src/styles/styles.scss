@@ -7,12 +7,21 @@
 @import 'shipping';
 @import 'footer';
 @import 'header';
+@import 'getInto';
 
 *{
     margin: 0;
     box-sizing: border-box;
 }
 
+
+::-webkit-input-placeholder { color: rgb(194, 194, 194); } /* WebKit */
+
+
+textarea:focus, input:focus, input[type]:focus {
+    outline: 0 none;
+
+}
 /* Rectangle 4 */
 
 
