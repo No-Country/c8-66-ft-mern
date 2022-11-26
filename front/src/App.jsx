@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom'
 import Shipping from './components/routes/Shipping'
 import BranchOfficeses from './components/routes/BranchOffices'
 import Questions from './components/routes/Questions'
+import Getinto from './components/routes/Getinto'
 
 
 
@@ -18,6 +19,7 @@ function App() {
        <Header/>
        <Routes>       
        <Route  path='/' element={<Home/>} />
+        <Route path='/getInto' element={<Getinto/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/login' element={<Login/>} />      
         <Route path='/shipping' element={<Shipping/>} />      

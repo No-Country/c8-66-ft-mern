@@ -1,68 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,900&display=swap");
-.register_form {
-  margin-left: 400px;
-  margin-top: 100px;
-  width: 100%;
-  max-width: 350px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.container-input_form {
   display: flex;
   flex-direction: column;
-  gap: 0.3em;
+  gap: 8px;
 }
-.register_form .title {
-  align-items: center;
+.container-input_form input {
+  width: 110%;
+  border: solid rgba(179, 179, 179, 0.788) 2px;
+  border-radius: 15px;
+  transition: filter 0.2s;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 60px 10px 60px;
+  font-size: 14px;
 }
-.register_form h2 {
-  margin-bottom: 20px;
+.container-input_form input:hover {
+  filter: drop-shadow(0px 0px 3px #888888);
 }
-.register_form section {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-bottom: 20px;
+.container-input_form input:focus, .container-input_form select:focus, .container-input_form textarea:focus {
+  filter: drop-shadow(0px 0px 3px #888888);
+}
+.container-input_form .input-pass {
   position: relative;
 }
-.register_form section input {
-  padding: 6px 8px;
-  padding-right: 30px;
-  border: 1px solid rgba(204, 204, 204, 0.9098039216);
-  border-radius: 5px;
-}
-.register_form section span {
-  right: 5px;
-  bottom: 10%;
+.container-input_form .input-pass span {
   position: absolute;
+  transform: scale(1.3);
+  color: gray;
+  right: -10px;
+  top: 15px;
 }
-.register_form section p {
-  position: absolute;
-  bottom: -40px;
-  color: rgb(247, 75, 75);
+.container-input_form .register_checkbox {
+  display: flex;
+  justify-content: start;
 }
-.register_form section .small_letter {
+.container-input_form .register_checkbox input {
+  width: 80px;
+}
+
+.w-btn {
+  width: 110%;
+}
+
+.register_checkbox {
+  margin: 10px;
+}
+.register_checkbox label {
+  cursor: pointer;
+}
+
+.small_letter {
+  padding-left: 20px;
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.op_lettler {
+  opacity: 0;
   font-size: 12px;
 }
-.register_form .register_checkbox {
+
+.data_login {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
 }
-.register_form .login__btn {
+.data_login input {
+  margin: 15px 0 15px 0;
   width: 100%;
-  padding: 10px 15px;
-  color: white;
-  background-color: #7652d2;
-  border: none;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: filter 100ms ease;
+  padding: 15px 40px 15px 40px;
+  border: solid rgba(179, 179, 179, 0.788) 2px;
+  border-radius: 15px;
+  transition: filter 0.2s;
+  letter-spacing: 1px;
+  font-size: 14px;
   cursor: pointer;
-  font-size: 15px;
 }
-.register_form .login__btn:hover {
-  filter: brightness(1.05);
-  transition: filter 100ms ease;
+.data_login input:hover {
+  filter: drop-shadow(0px 0px 3px #888888);
+}
+.data_login input:focus, .data_login select:focus, .data_login textarea:focus {
+  filter: drop-shadow(0px 0px 3px #888888);
+}
+.data_login span {
+  position: absolute;
+  transform: scale(1.5);
+  top: 30px;
+  right: 15px;
+  color: gray;
+}
+
+.footer_login a {
+  color: rgba(68, 68, 68, 0.63);
+  font-size: 15px;
+  cursor: pointer;
+}
+.footer_login a:hover {
+  text-decoration: underline;
+}
+
+.alert-p {
+  padding-left: 20px;
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .home {
@@ -168,7 +211,7 @@
   width: 15%;
   padding: 10px 15px;
   color: white;
-  background-color: #7652d2;
+  background-color: #24105F;
   border: none;
   font-weight: 500;
   border-radius: 5px;
@@ -182,7 +225,7 @@
   padding: 10px 15px;
   margin-top: 30px;
   color: white;
-  background-color: #7652d2;
+  background-color: #24105F;
   border: none;
   font-weight: 500;
   border-radius: 5px;
@@ -196,7 +239,7 @@
   margin-bottom: 100px;
   padding: 10px 15px;
   color: white;
-  background-color: #7652d2;
+  background-color: #24105F;
   border: none;
   font-weight: 500;
   border-radius: 5px;
@@ -272,7 +315,7 @@
   margin-top: 5px;
   padding: 10px;
   color: white;
-  background-color: #7652d2;
+  background-color: #24105F;
   border: none;
   font-weight: 500;
   border-radius: 5px;
@@ -355,7 +398,7 @@
   margin-left: 170px;
   padding: 10px 15px;
   color: white;
-  background-color: #7652d2;
+  background-color: #24105F;
   border: none;
   font-weight: 500;
   border-radius: 5px;
@@ -455,29 +498,6 @@
 .shipping .shipping_header > section {
   width: 50%;
 }
-.shipping .shipping_header .container-icon-user {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 5%;
-  padding-bottom: 20px;
-  color: rgba(59, 59, 59, 0.89);
-}
-.shipping .shipping_header .container-icon-user p {
-  font-size: 12px;
-}
-.shipping .shipping_header .container-icon-user .icon_user {
-  height: 30px;
-  width: 30px;
-  position: relative;
-  border-style: dashed solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.shipping .shipping_header .container-icon-user .icon_user .fa-user {
-  font-size: 20px;
-}
 .shipping .shipping_header main {
   display: flex;
   flex-direction: column;
@@ -565,6 +585,9 @@
   font-size: 20px;
   letter-spacing: 2px;
 }
+.shipping .container-icon-user {
+  margin: 5%;
+}
 
 .client_form {
   position: relative;
@@ -611,6 +634,29 @@
   font-size: 18px;
 }
 
+.container-icon-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  color: rgb(101, 151, 209);
+  letter-spacing: 2px;
+}
+.container-icon-user p {
+  font-size: 12px;
+}
+.container-icon-user .icon_user {
+  height: 30px;
+  width: 30px;
+  border-style: dashed solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-icon-user .icon_user .fa-user {
+  font-size: 20px;
+}
+
 .form_cointainer {
   position: relative;
   display: grid;
@@ -635,6 +681,9 @@
 .form_cointainer input:hover, .form_cointainer select:hover, .form_cointainer textarea:hover {
   filter: drop-shadow(0px 0px 3px #888888);
   cursor: pointer;
+}
+.form_cointainer input:focus, .form_cointainer select:focus, .form_cointainer textarea:focus {
+  filter: drop-shadow(0px 0px 3px #888888);
 }
 .form_cointainer .phone_email {
   display: flex;
@@ -796,9 +845,96 @@ button {
   margin-left: 1px;
 }
 
+.get-into {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+}
+.get-into .header-img img {
+  min-width: 500px;
+  width: 85%;
+}
+.get-into .container-info_get-into {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  gap: 20px;
+}
+.get-into .container-info_get-into .container-icon-user {
+  position: absolute;
+  top: 0;
+  left: -5%;
+}
+.get-into .container-info_get-into .title-get_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.get-into .container-info_get-into .title-get_info h2 {
+  font-size: 40px;
+  letter-spacing: 0.08em;
+  line-height: 68px;
+  font-weight: bold;
+}
+.get-into .container-info_get-into .title-get_info h3 {
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: rgba(54, 54, 54, 0.768627451);
+}
+.get-into .container-info_get-into .w8-btn {
+  width: 80%;
+}
+.get-into .container-info_get-into .stl_button {
+  background-color: #24105F;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 40px;
+  transition: filter 0.2s, transform 0.2s;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+}
+.get-into .container-info_get-into .stl_button:hover {
+  filter: drop-shadow(0 0 3px rgb(12, 5, 80));
+}
+.get-into .container-info_get-into .stl_button:active {
+  transform: scale(0.99);
+  transition: transform 0.2s;
+}
+.get-into .container-info_get-into .hrs_styles {
+  margin-top: 10px;
+  display: grid;
+  gap: 40px;
+  width: 80%;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.get-into .container-info_get-into .hrs_styles hr {
+  border-radius: 10%;
+  height: 3px;
+}
+.get-into .container-info_get-into .color-gray {
+  color: rgba(54, 54, 54, 0.768627451);
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(194, 194, 194);
+} /* WebKit */
+textarea:focus, input:focus, input[type]:focus {
+  outline: 0 none;
 }
 
 /* Rectangle 4 *//*# sourceMappingURL=styles.css.map */

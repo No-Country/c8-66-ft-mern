@@ -1,0 +1,89 @@
+$colorLetterGray: #363636c4;
+$colorButton:#24105F;
+
+
+.get-into{
+width: 100vw;
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+// overflow-y: hidden;
+    .header-img{
+        img{
+            min-width: 500px;
+           width: 85%;
+        }
+    }
+
+    .container-info_get-into{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px;
+        gap: 20px;
+        .container-icon-user{
+            position: absolute;
+            top: 0;
+            left: -5%;
+        }
+        .title-get_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            h2{
+                font-size: 40px;
+                letter-spacing: 0.08em;
+                line-height: 68px;
+                font-weight: bold;
+            }
+            h3{
+                font-size: 18px;
+                letter-spacing: 0.08em;
+                color: $colorLetterGray;
+            }
+        }
+        .w8-btn{
+            width: 80%;
+
+        }
+        .stl_button{
+            background-color:$colorButton;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffff;
+            border-radius: 40px;
+            transition: filter 0.2s , transform 0.2s ;
+            text-decoration: none;
+            letter-spacing: 0.8px;
+            cursor: pointer;
+
+        }
+        .stl_button:hover{
+            filter: drop-shadow( 0 0 3px rgb(12, 5, 80));
+        }
+        .stl_button:active{
+            transform: scale(.99);
+            transition: transform 0.2s ;
+        }
+        .hrs_styles{
+            margin-top: 10px;
+            display: grid;
+            gap: 40px;
+            width: 80%;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            hr{
+                border-radius: 10%;
+                height: 3px;
+            }
+        }
+        .color-gray{
+            color: $colorLetterGray;
+        }
+    }
+}
