@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState } from "react";
 import { useForm } from "react-hook-form";
 import "../../styles/shipping2.css"
-import estado from "../../assets/estado.png"
+import estado from "../../assets/estado.PNG"
 
   const defaultValues = {
     name: "",
