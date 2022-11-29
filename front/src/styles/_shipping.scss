@@ -6,11 +6,13 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
   .shipping_header {
     display: flex;
     width: 100vw;
     height: 100vh;
     position: relative;
+
 
     > section {
       width: 50%;

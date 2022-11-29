@@ -1,12 +1,11 @@
 $colorLetterGray: #363636c4;
 $colorButton:#24105F;
 
-
 .get-into{
 width: 100vw;
 display: grid;
 grid-template-columns: 0.9fr 1.1fr;
-// overflow-y: hidden;
+overflow-x: hidden;
     .header-img{
         img{
             min-width: 500px;
@@ -15,6 +14,7 @@ grid-template-columns: 0.9fr 1.1fr;
     }
 
     .container-info_get-into{
+        margin-top: 10px;
         position: relative;
         display: flex;
         flex-direction: column;
