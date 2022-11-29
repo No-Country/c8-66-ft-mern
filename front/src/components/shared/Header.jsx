@@ -1,5 +1,9 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import "../../styles/header2.css"
+
+import logo from "../../assets/logo.png"
+
 
 const Header = () => {
   const handleClick = () => {
@@ -7,45 +11,53 @@ const Header = () => {
   }
 
   return (
-           
-    <header className="header">
-      <NavLink to="/">
-        <h1 className="header__logo">Encomiendas</h1>
-      </NavLink>
-      <ul className="header__list">
-        <li className="header__item">
-          <NavLink
+    <header>
+    <div className='nav_container'>
+      <div>
+        <NavLink
             to="/login"
-          >
-            <i>login</i>
-          </NavLink>
-        </li>
-        <li className="header__item">
-          <NavLink
-            to="/register">
-            <i> register</i>
-          </NavLink>
-        </li>  
-        <li className="header__item">
-          <NavLink
-            to="/shipping">
-            <i> Envios Online</i>
-          </NavLink>
-        </li>  
-        <li className="header__item">
-          <NavLink
-            to="/branchOffices">
-            <i> Sucursales</i>
-          </NavLink>
-        </li>  
-        <li className="header__item">
-          <NavLink
-            to="/questions">
-            <i> Preguntas Frecuentes</i>
-          </NavLink>
-        </li>  
-        <button onClick={handleClick} className='form-logout__btn'>Logout</button>
-      </ul>
+        >
+            <p>login</p>
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
+          to="/register">
+          <p> register</p>
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
+          to="/shipping">
+          <p> Envios Online</p>
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
+          to="/branchOffices">
+          <p> Sucursales</p>
+        </NavLink>
+      </div>
+      <div>
+        <NavLink
+          to="/questions">
+          <p> Preguntas Frecuentes</p>
+        </NavLink>
+      </div>
+      <div>
+      <button onClick={handleClick} className='form-logout_btn'>Logout</button>
+      </div>
+
+    </div>
+    <div className='logo_container'>
+    <NavLink to="/">
+        <img className='header_logo' src={logo} alt="logo"/>
+      </NavLink>
+    </div>
+    
+
+
+      
     </header>
   )
 }

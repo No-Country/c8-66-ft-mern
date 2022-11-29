@@ -1,0 +1,63 @@
+
+
+.phone_container{
+    display: flex;
+}
+
+.cod_area_container{
+    width: 30%;
+    margin-right: 5px;
+}
+.telefono_container{
+    width: 70%;
+}
+
+.registrar_btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.container_shipping {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button_form_container{
+    margin: 20px;
+}
+
+@media screen and (min-width: 400px){   
+    .forms_containter{
+        display:flex;
+        flex-direction: column;
+    }
+    .estado{
+        width: 200px;
+        height: 20px;
+    }
+    .register_form{
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 800px){    
+    .forms_containter{
+        display: flex;
+        flex-direction: row;
+    }
+    .estado{
+        width: 400px;
+        height: 40px;
+    }
+
+    .register_form{
+        margin: 10px;
+    }
+}

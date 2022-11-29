@@ -1,0 +1,40 @@
+
+
+
+
+@media screen and (min-width: 400px){
+
+    .container_register{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+}
+
+@media screen and (min-width: 860px){
+
+    .container_register{
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+}
+
+@media screen and (min-width: 1440px){
+
+    .container_register{
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+}
