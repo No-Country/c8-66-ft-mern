@@ -11,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.belongsTo(models.Ubigeo,{foreignKey:'ubigeo_id'})
+      User.hasMany(models.Shipping);
+      User.belongsTo(models.Ubigeo, {foreignKey:"ubigeo_id"})
+
     }
   }
   User.init({
@@ -20,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     role: DataTypes.STRING,
+    ubigeo_id: DataTypes.INTEGER,
     status: DataTypes.STRING
   }, {
     sequelize,

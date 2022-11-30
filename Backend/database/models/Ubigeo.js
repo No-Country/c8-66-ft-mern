@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Ubigeo extends Model {
     /**
@@ -11,21 +9,26 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Ubigeo.hasMany(models.Shipping);
       Ubigeo.hasMany(models.User);
+      Ubigeo.hasMany(models.Branch);
     }
   }
-  Ubigeo.init({
-    ubigeo_id: DataTypes.INTEGER,
-    country: DataTypes.STRING,
-    province: DataTypes.STRING,
-    region: DataTypes.STRING,
-    district: DataTypes.STRING,
-    latitude: DataTypes.INTEGER,
-    longitude: DataTypes.STRING,
-    status: DataTypes.STRING
-  }, {
-    sequelize,
-    modelName: 'Ubigeo',
-  });
+  Ubigeo.init(
+    {
+      country: DataTypes.STRING,
+      ubigeo_id: DataTypes.STRING,
+      region: DataTypes.STRING,
+      province: DataTypes.STRING,
+      district: DataTypes.STRING,
+      latitude: DataTypes.FLOAT,
+      longitude: DataTypes.FLOAT,
+      status: DataTypes.STRING,
+    },
+    {
+      sequelize,
+      modelName: "Ubigeo",
+    }
+  );
   return Ubigeo;
 };

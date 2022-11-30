@@ -1,25 +1,27 @@
-const { db, DataTypes } = require("../utils/database.util");
+const { DataTypes } = require('sequelize');
+const { db } = require('../utils/database');
 
-const Ubigeo = db.define("ubigeos", {
+const Ubigeo = db.define('ubigeo', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
+    allowNull: false,
     autoIncrement: true,
-    allowNull: false,
-  },
-  ubigeo_id: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
   },
   country: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  providence: {
+  ubigeo: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  },
+  region: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  region: {
+  province: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -28,17 +30,16 @@ const Ubigeo = db.define("ubigeos", {
     allowNull: false,
   },
   latitude: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.FLOAT,
     allowNull: false,
   },
-  longitude: {
-    type: DataTypes.INTEGER,
+  longuitude: {
+    type: DataTypes.FLOAT,
     allowNull: false,
   },
   status: {
     type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: "active",
+    defaultValue: 'active',
   },
 });
 
