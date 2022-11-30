@@ -1,6 +1,7 @@
-const { db, DataTypes } = require("../utils/database.util");
+const { DataTypes } = require('sequelize');
+const { db } = require('../utils/database');
 
-const User = db.define("user", {
+const User = db.define('user', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -28,12 +29,12 @@ const User = db.define("user", {
   role: {
     type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: "normal",
+    defaultValue: 'normal',
   },
   status: {
     type: DataTypes.STRING,
     allowNull: false,
-    defaultValue: "active",
+    defaultValue: 'active',
   },
 });
 
