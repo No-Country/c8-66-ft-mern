@@ -17,6 +17,22 @@ const Shipping = db.define('shipping', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  origin_name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  origin_address: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  origin_email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  origin_phone: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   destiny_name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -77,6 +93,12 @@ const Shipping = db.define('shipping', {
     type: DataTypes.STRING,
     defaultValue: 'active',
   },
+  origin_comment: {
+    type: DataTypes.STRING,
+  },
+  destiny_comment: {
+    type: DataTypes.STRING
+  }
 });
 
 module.exports = { Shipping };

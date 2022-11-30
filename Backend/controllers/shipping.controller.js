@@ -47,14 +47,21 @@ const getPrice = catchAsync(async (req, res, next) => {
 });
 
 const createShipping = catchAsync(async (req, res, next) => {
-  const { user_id, ubigeo_id_origin, destiny_name, destiny_address, ubigeo_id_destiny, category_id, branch_id,
-          shipping_date, price, high_size, width_size, large_size, weight, special_cares } = req.body;
+  const { user_id, ubigeo_id_origin, destiny_name, destiny_address,destiny_email, destiny_phone, ubigeo_id_destiny, category_id, branch_id,
+          origin_name, origin_address,origin_email, origin_phone,
+          shipping_date, price, high_size, width_size, large_size, weight, special_cares, origin_comment, destiny_comment } = req.body;
   
   const shipping = await Shipping.create({
     user_id, 
     ubigeo_id_origin, 
     destiny_name, 
     destiny_address, 
+    destiny_email,
+    destiny_phone,
+    origin_name,
+    origin_address,
+    origin_email,
+    origin_phone,
     ubigeo_id_destiny, 
     category_id, 
     branch_id,
@@ -64,7 +71,9 @@ const createShipping = catchAsync(async (req, res, next) => {
     width_size,
     large_size,
     weight,
-    special_cares
+    special_cares,
+    origin_comment,
+    destiny_comment
   });
 
   if(shipping){
