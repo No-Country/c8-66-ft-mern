@@ -5,7 +5,7 @@ const Shipping = () => {
   return (
     <div className="shipping">
       <header className="shipping_header">
-        <section>
+        <section >
           <div className="container-icon-user">
             <div className="icon_user">
               <i className="fa-solid fa-user"></i>
@@ -14,20 +14,33 @@ const Shipping = () => {
           </div>
           <main>
             <h2>¡Cotiza y envía tus paquetes de la manera más sencilla!</h2>
-            <h3>¿Ya conoces nuestra opción pick up?</h3>
-            <h3>
-              ¡Coordina dia y horario para que retiremos tu envío por tu
-              dirección!
-            </h3>
+
           </main>
         </section>
-        <hr />
-        <section>
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ejemplo.png"
+        <section className="right-header">
+<div>
+<h2>¿Ya conoces nuestra opción pick up?</h2>
+          <div className="container_points">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <h3>¡AHORA ES MÁS FACIL!</h3>
+            <h4>¡Coordina dia y horarío para que retiremos tu envío por tu dirección!</h4>
+</div>
+<div>
+  <span>
+
+  </span>
+</div>
+                      {/* <img
+            src="../Fotoenvios.png"
             alt=""
-          />
-        </section>
+          /> */}
+            </section>
+            
+
       </header>
       <div className="tilte-form">
         <h2>¿Qué quieres enviar?</h2>
