@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;1,900&display=swap");
 $colorletlerGray: rgba(68, 68, 68, 0.63);
+$colorCircles: #193081;
 
 .shipping {
   display: flex;
@@ -7,6 +8,7 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
   justify-content: center;
   flex-direction: column;
   overflow-x: hidden;
+  margin-top: 100px;
   .shipping_header {
     display: flex;
     width: 100vw;
@@ -18,12 +20,63 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
       width: 50%;
     }
  
-
+    .right-header{
+  display: grid;
+  background-image: url('../Fotoenvios.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  grid-template-columns: 0.9fr 1.1fr;
+  padding-top: 50px;
+  padding-left: 50px;
+      >div{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+        h2,h3,h4{
+text-align: center;
+        }
+        h2{
+          font-size: 30px;
+          color: #193081;
+          letter-spacing: 1px;
+          font-weight: bold;
+        }
+        h3{
+          font-size: 16px;
+          color: #4B5781;
+        }
+        h4{
+        font-size: 13px;
+        font-weight: bold;
+          color: #000;
+        }
+      }
+      .container_points{
+        display: flex;
+        gap: 10px;
+        span{
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+        }
+        :nth-child(1){
+          background-color:  #24105F;
+        }
+        :nth-child(2){
+          background-color: #193081;
+        }
+        :nth-child(3){
+          background-color:  #2D469E;
+        }
+        :nth-child(4){
+          background-color: #3B5AC9
+          ;
+        }
+      }
+    }
     main {
-      display: flex;
-      flex-direction: column;
       height: 100%;
-      align-items: center;
       position: relative;
       background-image: url("../img/Ellipse.png");
       background-repeat: no-repeat;
@@ -32,10 +85,12 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
       padding: 40px;
 
       h2 {
+        margin-top: 10%;
         font-family: Poppins;
         color: black;
         font-size: 40px;
         text-align: center;
+        
       }
       h3 {
         color: $colorletlerGray;
@@ -113,7 +168,7 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
     }
   }
   .container-icon-user{
-    margin: 5%;
+    margin-left: 50px;
   }
 }
 .client_form{
@@ -131,7 +186,7 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
   span {
     top: 15%;
     position: absolute;
-    background: #d9d9d9;
+    background: $colorCircles;
     width: 39%;
     height: 1px;
     position: absolute;
@@ -147,7 +202,7 @@ $colorletlerGray: rgba(68, 68, 68, 0.63);
     .circle {
       width: 25px;
       height: 25px;
-      background: #d9d9d9;
+      background-color: $colorCircles;
       border-radius: 50%;
     }
     h3{
@@ -294,7 +349,7 @@ border-radius: 20px;
 color: white;
   padding: 30px;
     height: 40px;
-    background-color: rgb(0, 0, 0);
+    background-color: #24105F; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,8 +366,6 @@ color: white;
     filter: brightness(10%);
   
 }
-
-
 
 .off {
   display: none;

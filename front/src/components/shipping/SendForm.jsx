@@ -3,13 +3,37 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import AddressClient from "./AddressClient";
 
+// const defaulValues = {
+  //   user_id, 
+  //   ubigeo_id_origin, 
+  //   destiny_name, 
+  //   destiny_address, 
+  //   destiny_email,
+  //   destiny_phone,
+  //   origin_name,
+  //   origin_address,
+  //   origin_email,
+  //   origin_phone,
+  //   ubigeo_id_destiny, 
+  //   category_id, 
+  //   branch_id,
+  //   shipping_date, 
+  //   price, 
+  //   high_size, 
+  //   width_size,
+  //   large_size,
+  //   weight,
+  //   special_cares,
+  //   origin_comment,
+  //   destiny_comment
+  // }
 const SendForm = (data) => {
   const [toggleAddressOrigin, setToggleAddressOrigin] = useState();
   const [toggleAddressDestiny, setToggleAddressDestiny] = useState();
   const [dimensions, setDimenstions] = useState();
 
   // //* origin ubigeo
-  // const [OriginUbigeo, setOriginUbigeo] = useState();
+  const [OriginUbigeo, setOriginUbigeo] = useState();
 
   // //* destiny ubigeo
   const [destinyUbigeo, setDestinyUbigeo] = useState();
@@ -17,7 +41,7 @@ const SendForm = (data) => {
   const [surcursales, setSurcursales] = useState();
   
   const getAllSurcursales = () => {
-    const url = "http://3.89.23.42:4000/api/v1/branch";
+    const url = "http://3.89.23.42:4001/api/v1/branch";
     axios.get(url).then((res) => setSurcursales(res.data.branch));
   };
   useEffect(() => {
@@ -32,7 +56,7 @@ const SendForm = (data) => {
     } = useForm();
 
   const postForm = (data) => {
-    const url = `http://localhost:4000/api/v1/shipping`;
+    const url = `http://localhost:4001/api/v1/shipping`;
     axios
       .post(url, data)
       .then((res) => {
@@ -43,6 +67,7 @@ const SendForm = (data) => {
 
   const submit = (data) => {
     postForm(data);
+    console.log(data)
   };
 
   const handleChangeAddresOrigin = () => {
@@ -142,7 +167,7 @@ const SendForm = (data) => {
             <div className="address_code">
               <section>
                 <input
-                  {...register("address", {
+                  {...register("origin_address", {
                     required: true,
                   })}
                   type="text"
@@ -155,7 +180,7 @@ const SendForm = (data) => {
               </section>
               <section>
                 <input
-                  {...register("zip_code", {
+                  {...register("origin_zip_code", {
                     required: true,
                   })}
                   type="text"
@@ -171,7 +196,7 @@ const SendForm = (data) => {
         )}
         <section>
           <textarea
-            {...register("comments", {
+            {...register("origin_comment", {
               required: true,
             })}
             type="text"
@@ -182,6 +207,7 @@ const SendForm = (data) => {
       </div>
       <div className="destiny_data">
         <section>
+          
           <input
             {...register("destiny_name", {
               required: true,
@@ -251,12 +277,12 @@ const SendForm = (data) => {
           >
             <option hidden selected>
               Surcursales
-            </option>
+            </option>S
             {surcursales?.map((surcur) => (
               <option
                 key={surcur.id}
                 value={surcur.ubigeo.id}
-                onChange={selectBranchId}
+                // onChange={selectBranchId}
               >
                 {surcur.address}
               </option>
@@ -264,17 +290,17 @@ const SendForm = (data) => {
           </select>
         ) : (
           <div>
-            <AddressClient />
+            <AddressClient setOriginUbigeo={setOriginUbigeo} />
 
             <div className="address_code">
               <section>
                 <input
-                  {...register("address", {
+                  {...register("destiny_address", {
                     required: true,
                   })}
                   type="text"
                   id="address"
-                  placeholder="direccion de retiro del envio"
+                  placeholder="direccion de entrega del envio"
                 />
                   {errors.address?.type === "required" && (
                     <p className="required">Campo requerido</p>
@@ -282,7 +308,7 @@ const SendForm = (data) => {
               </section>
               <section>
                 <input
-                  {...register("zip_code", {
+                  {...register("destiny_zip_code", {
                     required: true,
                   })}
                   type="text"
@@ -298,7 +324,7 @@ const SendForm = (data) => {
         )}
         <section>
           <textarea
-            {...register("comments", {
+            {...register(" destiny_address", {
               required: true,
             })}
             type="text"
@@ -321,6 +347,7 @@ const SendForm = (data) => {
         </main>
         <section>
           <select
+          //todo edit
             {...register("want_send", {
               required: true,
             })}
@@ -353,7 +380,7 @@ const SendForm = (data) => {
                 {...register("high_size", {
                   required: true,
                 })}
-                type="text"
+                type="number"
                 id="high_size"
                 placeholder="Alto (cm)*"
               />
@@ -366,7 +393,7 @@ const SendForm = (data) => {
                 {...register("width_size", {
                   required: true,
                 })}
-                type="text"
+                type="number"
                 id="width_size "
                 placeholder="Ancho (cm)*"
               />
@@ -381,7 +408,7 @@ const SendForm = (data) => {
                 {...register("large_size", {
                   required: true,
                 })}
-                type="text"
+                type="number"
                 id="large_size "
                 placeholder="largo (cm)"
               />
@@ -394,7 +421,7 @@ const SendForm = (data) => {
                 {...register("weight", {
                   required: true,
                 })}
-                type="text"
+                type="number"
                 id="weight "
                 placeholder="Peso estimado (KG)"
               />
