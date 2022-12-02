@@ -19,12 +19,14 @@ overflow-x: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 50px;
         gap: 20px;
-        .container-icon-user{
+        padding-top: 120px;
+        .container-icon-user
+        {
+            margin-top: 80px;
             position: absolute;
             top: 0;
-            left: -5%;
+            left: 0;
         }
         .title-get_info{
             display: flex;

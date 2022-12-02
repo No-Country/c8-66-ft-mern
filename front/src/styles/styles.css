@@ -487,6 +487,7 @@
   justify-content: center;
   flex-direction: column;
   overflow-x: hidden;
+  margin-top: 100px;
 }
 .shipping .shipping_header {
   display: flex;
@@ -497,11 +498,62 @@
 .shipping .shipping_header > section {
   width: 50%;
 }
-.shipping .shipping_header main {
+.shipping .shipping_header .right-header {
+  display: grid;
+  background-image: url("../Fotoenvios.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  grid-template-columns: 0.9fr 1.1fr;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.shipping .shipping_header .right-header > div {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  gap: 50px;
   align-items: center;
+}
+.shipping .shipping_header .right-header > div h2, .shipping .shipping_header .right-header > div h3, .shipping .shipping_header .right-header > div h4 {
+  text-align: center;
+}
+.shipping .shipping_header .right-header > div h2 {
+  font-size: 30px;
+  color: #193081;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.shipping .shipping_header .right-header > div h3 {
+  font-size: 16px;
+  color: #4B5781;
+}
+.shipping .shipping_header .right-header > div h4 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #000;
+}
+.shipping .shipping_header .right-header .container_points {
+  display: flex;
+  gap: 10px;
+}
+.shipping .shipping_header .right-header .container_points span {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.shipping .shipping_header .right-header .container_points :nth-child(1) {
+  background-color: #24105F;
+}
+.shipping .shipping_header .right-header .container_points :nth-child(2) {
+  background-color: #193081;
+}
+.shipping .shipping_header .right-header .container_points :nth-child(3) {
+  background-color: #2D469E;
+}
+.shipping .shipping_header .right-header .container_points :nth-child(4) {
+  background-color: #3B5AC9;
+}
+.shipping .shipping_header main {
+  height: 100%;
   position: relative;
   background-image: url("../img/Ellipse.png");
   background-repeat: no-repeat;
@@ -510,6 +562,7 @@
   padding: 40px;
 }
 .shipping .shipping_header main h2 {
+  margin-top: 10%;
   font-family: Poppins;
   color: black;
   font-size: 40px;
@@ -585,7 +638,7 @@
   letter-spacing: 2px;
 }
 .shipping .container-icon-user {
-  margin: 5%;
+  margin-left: 50px;
 }
 
 .client_form {
@@ -605,7 +658,7 @@
 .header-style_title span {
   top: 15%;
   position: absolute;
-  background: #d9d9d9;
+  background: #193081;
   width: 39%;
   height: 1px;
   position: absolute;
@@ -621,7 +674,7 @@
 .header-style_title .container-title .circle {
   width: 25px;
   height: 25px;
-  background: #d9d9d9;
+  background-color: #193081;
   border-radius: 50%;
 }
 .header-style_title .container-title h3 {
@@ -753,7 +806,7 @@ button {
   color: white;
   padding: 30px;
   height: 40px;
-  background-color: rgb(0, 0, 0);
+  background-color: #24105F;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -897,13 +950,14 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
   gap: 20px;
+  padding-top: 120px;
 }
 .get-into .container-info_get-into .container-icon-user {
+  margin-top: 80px;
   position: absolute;
   top: 0;
-  left: -5%;
+  left: 0;
 }
 .get-into .container-info_get-into .title-get_info {
   display: flex;
