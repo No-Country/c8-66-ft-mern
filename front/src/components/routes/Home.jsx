@@ -37,7 +37,7 @@ const Home = () => {
   return (
     <div className="home">
       <div className='inicioHome'>
-      <h1 className="titulo1">¡Conocé el estado de tu envío!</h1>
+      <h1 className="titulo5">¡Conocé el estado de tu envío!</h1>
         <Search/>
     </div>
     {/* <div> */}
