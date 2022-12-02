@@ -49,7 +49,7 @@ const getAllProvinceSelectByRegion = ()=>{
     .catch(err=> console.log(err.message))
 }
 const getAllDistrictsByregion= ()=>{
-    const url = `hhttp://3.89.23.42:4000/api/v1/ubigeo/district/${regionSelect}/`
+    const url = `http://3.89.23.42:4000/api/v1/ubigeo/district/${provinceSelect}/`
     axios.get(url)
     .then(res=>setDistrict(res.data.ubigeo))
     .catch(err=> console.log(err.message))
