@@ -117,6 +117,12 @@
   background-repeat: no-repeat;
   height: 600px;
 }
+.home .titulo5 {
+  text-align: left;
+  padding-left: 150px;
+  padding-top: 360px;
+  margin-bottom: 20px;
+}
 .home .titulo1 {
   text-align: left;
   padding-left: 200px;
@@ -410,7 +416,7 @@
 }
 
 .search1 {
-  padding-top: 240px;
+  padding-top: 40px;
   padding-right: 490px;
 }
 
