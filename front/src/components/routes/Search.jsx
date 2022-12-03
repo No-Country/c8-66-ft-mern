@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -15,6 +17,7 @@ const Search = () => {
 
     const [input, setInput] = useState("")
     const [error, setError]= useState({})
+    const history = useNavigate();
 
     const handleInputChange = (e) =>{
         e.preventDefault();
@@ -39,6 +42,7 @@ const Search = () => {
         console.log(err))
         setInput('')
     }
+    history("/DetailSearch");
  };
 
 
@@ -64,11 +68,11 @@ const Search = () => {
             placeholder='Numero seguimiento'
             onChange={(e)=>handleInputChange(e)}
           />
-        <button className="search__button br_button"
-            type="submit"
-            onClick={(e)=>handleSubmit(e)}>
-            <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
+            <button className="search__button br_button"
+                type="submit"
+                onClick={(e)=>handleSubmit(e)}>
+                <i className="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
       </div>
     )

@@ -81,6 +81,7 @@ const SendForm = (data) => {
   };
 
   return (
+    <>
     <form onSubmit={handleSubmit(submit)} className="form_cointainer">
       <div className="origin_data">
         <section>
@@ -510,6 +511,7 @@ const SendForm = (data) => {
       </div>
       <button className="input_icon">ABONAR Y CONFIRMAR ENVIO</button>
     </form>
+    </>
   );
 };
 
