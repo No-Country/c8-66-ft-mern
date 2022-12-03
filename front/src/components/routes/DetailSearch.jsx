@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 
 const DetailSearch = () => {
     return(
-        <div>
-            <h1>¡Rastreá tu envio!</h1>
+        <div className="contenedorDetailSearch">
+            <h1 className="titulo">¡Rastreá tu envio!</h1>
             <h2>Conocé donde está tu paquete</h2>
             <h2>Modificá datos de envío</h2>
             <h2>¡Recibilo y disfruta!</h2>
@@ -47,12 +47,12 @@ const DetailSearch = () => {
             <h3>*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>
             <h3>Si sucede algún iconveniente, te avisaremos mediante un correo electrónico</h3>
             <div className='card'>
-          <div className='subCard'>
-          <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
-            <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
-            <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
-            <button className='boton'>Preguntas frecuentes</button>
-           </div>
+                <div className='subCard'>
+                <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
+                <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
+                <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
+                <button className='boton'>Preguntas frecuentes</button>
+            </div>
         </div>
         </div>
     )
