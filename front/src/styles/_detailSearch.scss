@@ -1,9 +1,43 @@
 .contenedorDetailSearch{
     text-align: center;
-    .titulo{
-        padding-top: 140px;
-        margin-bottom: 20px;
-        font-size: 60px;
+    
+    .ola {
+        height: 10%;
+        position: relative;
+        background-image: url("../../public/img/Rectangle\ 64.png");
+        // image-rendering: url("../../public/img/Vector.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        gap: 10%;
+        padding: 100px;
+        margin-top: 230px;
+        .titulo{
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+            font-size: 50px;
+        }
+       
+    }
+    .titulo1{
+        margin-top: 100px;
+    }
+    .lista{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 0.3fr 1fr;
+        padding-top: 10px;
+       
+        .vector{
+            margin-left: 200px;
+            padding: 20px;
+        }
+        .tituloLista{
+            text-align: left;
+            width: 500px;
+            padding: 20px;
+            padding-right: 100px;
+            color: #24105F;
+        }
     }
     .card{
         // text-align: center;

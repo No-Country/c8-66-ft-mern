@@ -1013,10 +1013,40 @@ button {
 .contenedorDetailSearch {
   text-align: center;
 }
-.contenedorDetailSearch .titulo {
-  padding-top: 140px;
-  margin-bottom: 20px;
-  font-size: 60px;
+.contenedorDetailSearch .ola {
+  height: 10%;
+  position: relative;
+  background-image: url("../../public/img/Rectangle 64.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  gap: 10%;
+  padding: 100px;
+  margin-top: 230px;
+}
+.contenedorDetailSearch .ola .titulo {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+.contenedorDetailSearch .titulo1 {
+  margin-top: 100px;
+}
+.contenedorDetailSearch .lista {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  padding-top: 10px;
+}
+.contenedorDetailSearch .lista .vector {
+  margin-left: 200px;
+  padding: 20px;
+}
+.contenedorDetailSearch .lista .tituloLista {
+  text-align: left;
+  width: 500px;
+  padding: 20px;
+  padding-right: 100px;
+  color: #24105F;
 }
 .contenedorDetailSearch .card {
   width: 850px;

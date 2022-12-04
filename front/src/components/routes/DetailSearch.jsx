@@ -5,12 +5,21 @@ const DetailSearch = () => {
     return(
         <div className="contenedorDetailSearch">
             <div className="icon_user"></div>
-            <h1 className="titulo">¡Rastreá tu envio!</h1>
-            <h2>Conocé donde está tu paquete</h2>
-            <h2>Modificá datos de envío</h2>
-            <h2>¡Recibilo y disfruta!</h2>
-            <h1>Informacion de tu paquete</h1>
+            <div className="ola">
+                <h1 className="titulo">¡Rastreá tu envio!</h1>
+            </div>
+                <div className="lista">
+                <img src="Vector.png" className="vector"/>
+                <h2 className="tituloLista">Conocé donde está tu paquete</h2>
+                <img src="Vector.png" className="vector"/>
+                <h2 className="tituloLista">Modificá datos de envío</h2>
+                <img src="Vector.png" className="vector"/>
+                <h2 className="tituloLista">¡Recibilo y disfruta!</h2>
+            </div>
+            
+            <h1 className="titulo1">Informacion de tu paquete</h1>
             <div>numero</div>
+
             <h1>Datos de tu paquete</h1>
             <form>
                 <h2>Datos de tu paquete</h2>
