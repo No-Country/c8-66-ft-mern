@@ -311,20 +311,21 @@
   padding-top: 30px;
 }
 .home .card .tituloCard1 {
+  font-size: 12px;
   margin-right: 500px;
   padding: 5px;
   padding-top: 0px;
-  width: 500px;
+  width: 400px;
 }
 .home .card .boton {
-  margin-right: 100px;
-  margin-top: 5px;
-  padding: 10px;
+  margin-right: 500px;
+  margin-top: 35px;
+  padding: 13px;
   color: white;
   background-color: #24105F;
   border: none;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 40px;
   transition: filter 100ms ease;
   cursor: pointer;
   font-size: 15px;
@@ -332,7 +333,7 @@
 .home .card .imagenCard {
   position: absolute;
   width: 28%;
-  height: 35%;
+  height: 31%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   margin-left: 60px;
@@ -1032,20 +1033,21 @@ button {
   padding-top: 30px;
 }
 .contenedorDetailSearch .card .tituloCard1 {
+  font-size: 12px;
   margin-right: 500px;
   padding: 5px;
   padding-top: 0px;
-  width: 500px;
+  width: 400px;
 }
 .contenedorDetailSearch .card .boton {
-  margin-right: 100px;
-  margin-top: 5px;
-  padding: 10px;
+  margin-right: 500px;
+  margin-top: 35px;
+  padding: 13px;
   color: white;
   background-color: #24105F;
   border: none;
   font-weight: 500;
-  border-radius: 5px;
+  border-radius: 40px;
   transition: filter 100ms ease;
   cursor: pointer;
   font-size: 15px;
@@ -1053,7 +1055,7 @@ button {
 .contenedorDetailSearch .card .imagenCard {
   position: absolute;
   width: 28%;
-  height: 35%;
+  height: 31%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   margin-left: 60px;

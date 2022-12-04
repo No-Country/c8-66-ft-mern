@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 const DetailSearch = () => {
     return(
         <div className="contenedorDetailSearch">
+            <div className="icon_user"></div>
             <h1 className="titulo">¡Rastreá tu envio!</h1>
             <h2>Conocé donde está tu paquete</h2>
             <h2>Modificá datos de envío</h2>
