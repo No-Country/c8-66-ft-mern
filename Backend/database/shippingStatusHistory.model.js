@@ -1,4 +1,5 @@
-const { db, DataTypes } = require("../utils/database.util");
+const { DataTypes } = require('sequelize');
+const { db } = require('../utils/database');
 
 const ShippingStatusHistory = db.define("shipping_status_history", {
   id: {

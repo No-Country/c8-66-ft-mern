@@ -1,10 +1,11 @@
 const express = require('express');
-const shippingHistoryRouter = express.Router();
 
 // Controllers
 const {
 	showHistory
 } = require('../controllers/shippingHistory.controller');
+
+const shippingHistoryRouter = express.Router();
 
 shippingHistoryRouter.get('/:shipping_id',showHistory);
 
