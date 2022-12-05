@@ -16,46 +16,61 @@ const DetailSearch = () => {
                 <img src="Vector.png" className="vector"/>
                 <h2 className="tituloLista">¡Recibilo y disfruta!</h2>
             </div>
-            
+
             <h1 className="titulo1">Informacion de tu paquete</h1>
             <div>numero</div>
 
-            <h1>Datos de tu paquete</h1>
-            <form>
-                <h2>Datos de tu paquete</h2>
-                <h2>Informacion del remitente</h2>
-                <section>
-                    <label>Nombre del remitente</label>
+            <h1 className="titulo2">Datos de tu paquete</h1>
+            <form className="formulario">
+                <h2 className="tituloGris">Informacion del remitente</h2>
+                <h2 className="tituloGris">Informacion del destinatario</h2>
+                <section className="subtitulo">
+                    <label >Nombre del remitente</label>
                     <input></input>
                 </section>
-                <section>
-                    <label>Dirección de retiro</label>
-                    <input></input>
-                </section>
-                <section>
-                    <label>Contacto</label>
-                    <input></input>
-                </section>
-
-                <h2>Informacion del destinatario</h2>
-                <section>
+                <section className="subtitulo">
                     <label>Nombre del destinatario</label>
                     <input></input>
                 </section>
-                <section>
+                <section className="subtitulo">
+                    <label>Dirección de retiro</label>
+                    <input></input>
+                </section>
+                <section className="subtitulo">
                     <label>Dirección de entrega</label>
                     <input></input>
                 </section>
-                <section>
-                    <label>Contacto del destinatario</label>
+
+                <section className="subtitulo">
+                    <label>Contacto</label>
+                    <div className="contacto">
                     <input></input>
+                    <input></input>
+                    <input></input>
+                    </div>
+                </section>
+               
+                <section className="subtitulo">
+                    <label>Contacto del destinatario</label>
+                    <div className="contacto">
+                    <input></input>
+                    <input></input>
+                    <input></input>
+                    </div>
                 </section>
             </form>
-            <h1>Estado de tu paquete</h1>
-            <h2>El paquete fue entregado</h2>
-            <h2>El paquete será entregad pronto</h2>
+
+            <h1 className="titulo3">Estado de tu paquete</h1>
+
+            <div className="lista2">
+            <img src="Paquete.png" className="elipce"/>
+            <h2 className="titulolista2">El paquete fue entregado</h2>
+            <img src="mdi_truck-check.png" className="elipce"/>
+            <h2 className="titulolista2">El paquete será entregad pronto</h2>
+            </div>
+
             <h3>*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>
-            <h3>Si sucede algún iconveniente, te avisaremos mediante un correo electrónico</h3>
+            <h3 className="titulo4">Si sucede algún iconveniente, te avisaremos mediante un correo electrónico</h3>
             <div className='card'>
                 <div className='subCard'>
                 <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>

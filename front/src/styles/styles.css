@@ -1037,16 +1037,97 @@ button {
   grid-template-columns: 0.3fr 1fr;
   padding-top: 10px;
 }
+.contenedorDetailSearch .lista .tituloLista {
+  text-align: left;
+  margin-top: 30px;
+  color: #24105F;
+}
 .contenedorDetailSearch .lista .vector {
   margin-left: 200px;
   padding: 20px;
 }
-.contenedorDetailSearch .lista .tituloLista {
+.contenedorDetailSearch .titulo2 {
   text-align: left;
-  width: 500px;
-  padding: 20px;
-  padding-right: 100px;
-  color: #24105F;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+.contenedorDetailSearch .formulario {
+  position: relative;
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  align-items: left;
+}
+.contenedorDetailSearch .formulario input, .contenedorDetailSearch .formulario select, .contenedorDetailSearch .formulario textarea {
+  padding: 15px;
+  margin: 15px 0 15px 0;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  border: solid rgba(179, 179, 179, 0.788) 1px;
+  align-items: center;
+  font-size: 17px;
+  border-radius: 15px;
+  transition: filter 0.2s;
+}
+.contenedorDetailSearch .formulario input:hover, .contenedorDetailSearch .formulario select:hover, .contenedorDetailSearch .formulario textarea:hover {
+  filter: drop-shadow(0px 0px 3px #888888);
+  cursor: pointer;
+}
+.contenedorDetailSearch .formulario input:focus, .contenedorDetailSearch .formulario select:focus, .contenedorDetailSearch .formulario textarea:focus {
+  filter: drop-shadow(0px 0px 3px #888888);
+}
+.contenedorDetailSearch .formulario .tituloGris {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 10px;
+  color: rgba(68, 68, 68, 0.63);
+}
+.contenedorDetailSearch .formulario .subtitulo {
+  text-align: left;
+}
+.contenedorDetailSearch .formulario .contacto {
+  gap: 15px;
+  display: grid;
+  grid-template-columns: 0.1fr 0.3fr 0.7fr;
+}
+.contenedorDetailSearch .formulario .contacto .subtitulo1 {
+  text-align: left;
+}
+.contenedorDetailSearch .titulo3 {
+  text-align: center;
+  margin-top: 100px;
+}
+.contenedorDetailSearch .lista2 {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 0.1fr 0.1fr;
+  padding-top: 100px;
+}
+.contenedorDetailSearch .lista2 .titulolista2 {
+  text-align: left;
+  width: 400px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+.contenedorDetailSearch .lista2 .elipce {
+  margin-left: 480px;
+  margin-bottom: 130px;
+  padding: 12px;
+  background-image: url("../../public/Ellipse 52.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.contenedorDetailSearch .titulo4 {
+  margin-bottom: 100px;
 }
 .contenedorDetailSearch .card {
   width: 850px;
@@ -1085,7 +1166,7 @@ button {
 .contenedorDetailSearch .card .imagenCard {
   position: absolute;
   width: 28%;
-  height: 31%;
+  height: 32%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   margin-left: 60px;
