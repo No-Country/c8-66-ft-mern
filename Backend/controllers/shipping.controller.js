@@ -11,6 +11,7 @@ const { AppError } = require('../utils/appError');
 //const { Branch } = require('../database/branch.model');
 const { Ubigeo } = require('../database/ubigeo.model');
 const { Shipping } = require('../database/shipping.model');
+const { ShippingStatusHistory } = require('../database/shippingStatusHistory.model');
 
 // utils
 const { catchAsync } = require('../utils/catchAsync');
@@ -100,6 +101,14 @@ const createShipping = catchAsync(async (req, res, next) => {
   });
 
   if(shipping){
+
+    // Status created
+    const savedStatus = await ShippingStatusHistory.create(
+      {
+        shipping_id: shipping.id,
+        status_id: 2 // CREATED
+      }
+    );
     res.status(201).json({
       status: 'success',
       data: shipping
