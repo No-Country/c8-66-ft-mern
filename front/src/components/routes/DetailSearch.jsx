@@ -4,6 +4,10 @@ import { useForm } from "react-hook-form";
 const DetailSearch = () => {
     return(
         <div className="contenedorDetailSearch">
+            <div className="persona" >
+            <img src="LogoPersona.png" className="logoPersona"/>
+            <img src="PERSONAS.png" className="PERSONA"/>
+            </div>
             <div className="icon_user"></div>
             <div className="ola">
                 <h1 className="titulo">¡Rastreá tu envio!</h1>

@@ -1013,6 +1013,26 @@ button {
 .contenedorDetailSearch {
   text-align: center;
 }
+.contenedorDetailSearch .persona {
+  margin-top: 100px;
+  text-align: left;
+  padding: 10px;
+}
+.contenedorDetailSearch .persona .logoPersona {
+  height: 30px;
+  width: 30px;
+  padding: 4px;
+  background-image: url("recuadroLogoPersona.png");
+  position: relative;
+}
+.contenedorDetailSearch .persona .PERSONA {
+  padding: 10px;
+  margin-top: 5px;
+}
+.contenedorDetailSearch .logoPersona {
+  height: 10px;
+  width: 10px;
+}
 .contenedorDetailSearch .ola {
   height: 10%;
   position: relative;
@@ -1021,9 +1041,10 @@ button {
   background-size: 100%;
   gap: 10%;
   padding: 100px;
-  margin-top: 230px;
+  margin-top: 100px;
 }
 .contenedorDetailSearch .ola .titulo {
+  margin-top: -100px;
   padding-bottom: 20px;
   margin-bottom: 10px;
   font-size: 50px;

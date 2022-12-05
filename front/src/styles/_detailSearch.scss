@@ -1,5 +1,25 @@
 .contenedorDetailSearch{
     text-align: center;
+    .persona{
+        margin-top: 100px;
+        text-align: left;
+        padding: 10px;
+        .logoPersona{
+            height: 30px;
+            width: 30px;
+            padding: 4px;
+            background-image: url("recuadroLogoPersona.png");
+            position: relative;
+        }
+        .PERSONA{
+            padding: 10px;
+            margin-top: 5px;
+        }
+    }
+    .logoPersona{
+        height: 10px;
+        width: 10px;
+    }
     
     .ola {
         height: 10%;
@@ -10,8 +30,9 @@
         background-size: 100%;
         gap: 10%;
         padding: 100px;
-        margin-top: 230px;
+        margin-top: 100px;
         .titulo{
+            margin-top: -100px;
             padding-bottom: 20px;
             margin-bottom: 10px;
             font-size: 50px;
