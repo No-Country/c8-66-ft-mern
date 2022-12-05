@@ -67,6 +67,7 @@ const DetailSearch = () => {
             <h2 className="titulolista2">El paquete fue entregado</h2>
             <img src="mdi_truck-check.png" className="elipce"/>
             <h2 className="titulolista2">El paquete será entregad pronto</h2>
+            <img src="Ellipse 54.png" className="elipce1"/>
             </div>
 
             <h3>*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>

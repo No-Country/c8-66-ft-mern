@@ -1126,6 +1126,11 @@ button {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.contenedorDetailSearch .lista2 .elipce1 {
+  margin-left: 470px;
+  margin-bottom: 130px;
+  padding: 12px;
+}
 .contenedorDetailSearch .titulo4 {
   margin-bottom: 100px;
 }
