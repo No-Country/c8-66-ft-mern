@@ -25,7 +25,6 @@
         height: 10%;
         position: relative;
         background-image: url("../../public/img/Rectangle\ 64.png");
-        // image-rendering: url("../../public/img/Vector.png");
         background-repeat: no-repeat;
         background-size: 100%;
         gap: 10%;
@@ -155,6 +154,10 @@
 .titulo4{
     margin-bottom: 100px;
 }
+.rectangulo{
+    background-color: #24105F;
+    padding-bottom: 100px;
+    
     .card{
         // text-align: center;
         width: 850px;
@@ -164,6 +167,7 @@
         backface-visibility: hidden;
         border-radius: 15px;
         box-shadow: 0 0 10px #0003;
+        
         // grid-template-columns: 1fr 1fr;
             .tituloCard{
                 margin-right: 500px;
@@ -194,12 +198,15 @@
        .imagenCard{
         position: absolute;
         width: 28%;
-        height: 32%;
+        height: 31.8%;
         backface-visibility: hidden;
         margin-left: 60px;
         border-radius: 10px;
         // overflow: hidden;
         transition: .5s;
        }
+}
+    
     }
+   
 }

@@ -76,12 +76,14 @@ const DetailSearch = () => {
 
             <h3>*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>
             <h3 className="titulo4">Si sucede algún iconveniente, te avisaremos mediante un correo electrónico</h3>
+            <div className="rectangulo">
             <div className='card'>
                 <div className='subCard'>
                 <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
                 <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
                 <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
                 <button className='boton'>Preguntas frecuentes</button>
+            </div>
             </div>
         </div>
         </div>
