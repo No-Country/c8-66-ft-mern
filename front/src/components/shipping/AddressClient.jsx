@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 // dotenv.config();
 
-const AddressClient = ({setOriginUbigeo}) => {
+const AddressClient = ({setUbigeo}) => {
 // peticiones get
   const [dataUbigeo, setDataUbigeo] = useState()
     const [countries, setCountries] = useState()
@@ -49,7 +49,7 @@ const getAllProvinceSelectByRegion = ()=>{
     .catch(err=> console.log(err.message))
 }
 const getAllDistrictsByregion= ()=>{
-    const url = `http://3.89.23.42:4000/api/v1/ubigeo/district/${provinceSelect}/`
+    const url = `http://3.89.23.42:4001/api/v1/ubigeo/district/${provinceSelect}/`
     axios.get(url)
     .then(res=>setDistrict(res.data.ubigeo))
     .catch(err=> console.log(err.message))
@@ -71,7 +71,7 @@ useEffect(() => {
 
 useEffect(() => {
   getAllDistrictsByregion()
-}, [regionSelect])
+}, [provinceSelect])
 
 
 const handleCountry = () => {
@@ -85,6 +85,7 @@ const handleProvince = () => {
   };
   const handleDistrict = ()=>{
     setDistrictSelect(event.target.value)
+    setUbigeo(event.target.value)
   }
 
   return (
@@ -130,7 +131,7 @@ const handleProvince = () => {
           <option hidden selected>Distrito</option>
            {district?.map((district) =>           
            <option key={district.id
-           } value={district.district}>
+           } value={district.id}>
             {district.district}
           </option>)}   
         </select>
