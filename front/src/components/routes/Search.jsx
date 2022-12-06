@@ -1,15 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios"
 
 
 
 
 const validacion = (input) =>{
+  console.log(input)
   let error = {}; 
-  if(!input || isNaN(input) !== true){
+  if(!input || isNaN(input)){
       error.input = "Se requiere un numero de envío valido"
   }
+  console.log(error)
   return error
 }
 
@@ -32,7 +35,7 @@ const Search = () => {
       if(Object.values(errorValidador).length !== 0){
         alert("Se requiere un numero de envío valido")
     }else{
-      const url = `url`;
+      const url = `http://localhost:4000/api/v1/status/${input}`;
       axios
         .get(url, input)
         .then((res) => {
@@ -42,7 +45,7 @@ const Search = () => {
         console.log(err))
         setInput('')
     }
-    history("/DetailSearch");
+     history("/DetailSearch");
  };
 
 
