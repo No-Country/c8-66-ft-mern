@@ -28,9 +28,6 @@ app.use(cors());
 //Enable incoming JSON data
 app.use(express.json());
 
-// Define endpoints
-app.use('/api/v1/users', usersRouter);
-app.use('/api/v1/history', shippingHistoryRouter);
 //add security helmet
 app.use(helmet());
 
@@ -58,6 +55,7 @@ app.use('/api/v1/ubigeo', ubigeoRouter);
 app.use('/api/v1/category', categoryRouter);
 app.use('/api/v1/branch', branchRouter);
 app.use('/api/v1/shipping', shippingRouter);
+app.use('/api/v1/status', shippingHistoryRouter);
 
 // Global error handler
 app.use('*', globalErrorHandler);
