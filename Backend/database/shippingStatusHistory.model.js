@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { db } = require('../utils/database');
 
-const ShippingStatusHistory = db.define("shipping_status_history", {
+const ShippingStatusHistory = db.define('shipping_status_history', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -10,16 +10,16 @@ const ShippingStatusHistory = db.define("shipping_status_history", {
   },
   shipping_id: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: true,
   },
   status_id: {
     type: DataTypes.INTEGER,
-    allowNull: false
+    allowNull: true,
   },
   shipping_status_date: {
     type: DataTypes.DATE,
-    allowNull: false
-  }
+    allowNull: true,
+  },
 });
 
 module.exports = { ShippingStatusHistory };
