@@ -17,6 +17,7 @@ const { ShippingStatusHistory } = require('../database/shippingStatusHistory.mod
 const { catchAsync } = require('../utils/catchAsync');
 const sequelize = require('sequelize');
 const { Distancia } = require('../utils/distancia');
+const { NOW } = require('sequelize');
 
 const getPrice = catchAsync(async (req, res, next) => {
   const { ubigeo_id_origin, ubigeo_id_destiny } = req.body;
@@ -106,7 +107,10 @@ const createShipping = catchAsync(async (req, res, next) => {
     const savedStatus = await ShippingStatusHistory.create(
       {
         shipping_id: shipping.id,
-        status_id: 2 // CREATED
+        shipping_status_date: sequelize.literal('CURRENT_TIMESTAMP'),
+        status_id: 1, // CREATED
+        shippingId: shipping.id,
+        statusId: 1,
       }
     );
     res.status(201).json({
