@@ -16,6 +16,7 @@ const { categoryRouter } = require('./routes/category.routes');
 const { branchRouter } = require('./routes/branch.routes');
 const { shippingRouter } = require('./routes/shipping.routes');
 const { shippingHistoryRouter } = require('./routes/shippingHistory.routes');
+const { shippingStatusRouter } = require('./routes/shippingStatus.routes');
 
 const { db } = require('./utils/database');
 
@@ -56,6 +57,7 @@ app.use('/api/v1/category', categoryRouter);
 app.use('/api/v1/branch', branchRouter);
 app.use('/api/v1/shipping', shippingRouter);
 app.use('/api/v1/status', shippingHistoryRouter);
+app.use('/api/v1/statusdesc', shippingStatusRouter);
 
 // Global error handler
 app.use('*', globalErrorHandler);

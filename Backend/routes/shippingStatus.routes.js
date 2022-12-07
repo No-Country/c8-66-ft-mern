@@ -9,6 +9,8 @@ const { showAllShippingStatus, showShippingById } = require('../controllers/ship
 shippingStatusRouter.get('/',showAllShippingStatus);
 
 // Show status by id
-shippingStatusRouter.get('/:id',showAllShippingStatus);
+shippingStatusRouter.get('/:id',showShippingById);
 
-module.exports = shippingStatusRouter;
+module.exports = { 
+    shippingStatusRouter
+}
