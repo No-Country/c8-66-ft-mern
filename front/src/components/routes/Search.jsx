@@ -1,13 +1,14 @@
 import React from "react";
-import { useState } from "react";
+import { useState  } from "react";
+import axios from "axios";
+import DetailSearch from "../routes/DetailSearch"
 import { useNavigate } from "react-router-dom";
-import axios from "axios"
+import { useEffect } from "react";
 
 
 
 
 const validacion = (input) =>{
-  console.log(input)
   let error = {}; 
   if(!input || isNaN(input)){
       error.input = "Se requiere un numero de envío valido"
@@ -17,42 +18,42 @@ const validacion = (input) =>{
 }
 
 const Search = () => {
-
+  
     const [input, setInput] = useState("")
     const [error, setError]= useState({})
-    const history = useNavigate();
+    const [info, setInfo]= useState()
+    // const [submit, setSubmit]=
+    const history = useNavigate()
 
-    const handleInputChange = (e) =>{
-        e.preventDefault();
-        setInput(e.target.value)
+  
+
+    const getShipping = () =>{
+      console.log("soy input",input)
+      const url = `http://3.89.23.42:4000/api/v1/status/${input}`;
+         axios.get(url)
+        .then(res =>{setInfo(res.data)})
+        .catch((err) =>console.log(err))
     }
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      setError()
-      setError(validacion(input))
-      const errorValidador = validacion(input)
-      if(Object.values(errorValidador).length !== 0){
-        alert("Se requiere un numero de envío valido")
-    }else{
-      const url = `http://localhost:4000/api/v1/status/${input}`;
-      axios
-        .get(url, input)
-        .then((res) => {
-          console.log(res.data);
-        })
-        .catch((err) =>
-        console.log(err))
-        setInput('')
-    }
-     history("/DetailSearch");
- };
-
-
-    const onSubmit = (data) => {
-        console.log(data)
+console.log("Soy info",info)
+    
+    const handleSubmit = (data) => {
+      data.preventDefault();
+      
+            setError()
+            setError(validacion(input))
+            const errorValidador = validacion(input)
+            if(Object.values(errorValidador).length !== 0){
+              alert("Se requiere un numero de envío valido")
+          }else{
+            getShipping()
+          }
+          
 };
 
+var value = 
+setTimeout(() => {
+  value = true;
+}, "3000")
 
     return(
         <div className='search'>
@@ -69,7 +70,7 @@ const Search = () => {
             value= {input}
             type="text"
             placeholder='Numero seguimiento'
-            onChange={(e)=>handleInputChange(e)}
+             onChange={(e)=>setInput(e.target.value)}
           />
             <button className="search__button br_button"
                 type="submit"

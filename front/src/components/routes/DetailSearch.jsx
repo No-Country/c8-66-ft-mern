@@ -1,7 +1,10 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 
-const DetailSearch = () => {
+const DetailSearch = (data) => {
+
+// const{info}=props
+console.log("Soy info detail",data)
+
     return(
         <div className="contenedorDetailSearch">
             <div className="persona" >

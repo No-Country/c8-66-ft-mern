@@ -20,7 +20,7 @@ const AddressClient = ({setOriginUbigeo}) => {
     const [districtSelect, setDistrictSelect] = useState()
 
 const getDataUbigeo = ()=>{
-    const url = "http://3.89.23.42:4001/api/v1/ubigeo/"
+    const url = "http://3.89.23.42:4000/api/v1/ubigeo/"
     axios.get(url)
     .then(res=>setDataUbigeo(res.data.ubigeo))
     .catch(err=> console.log(err.message))
@@ -30,20 +30,20 @@ const getDataUbigeo = ()=>{
 const getCountry = ()=>{
     const url =  
     // `${process.env.REACT_APP_API_MOTHER}${process.env.REACT_APP_URL_UBIGEO_COUNTRIES}` ||
-     'http://3.89.23.42:4001/api/v1/ubigeo/country'
+     'http://3.89.23.42:4000/api/v1/ubigeo/country'
     axios.get(url)
     .then(res=>setCountries(res.data.ubigeo))
     .catch(err=> console.log(err.message))
 
 }
 const getAllRegionsByCountry = ()=>{
-    const url = `http://3.89.23.42:4001/api/v1/ubigeo/region/${countrySelect}`
+    const url = `http://3.89.23.42:4000/api/v1/ubigeo/region/${countrySelect}`
     axios.get(url)
     .then(res=>setRegion(res.data.ubigeo))
     .catch(err=> console.log(err.message))
 }
 const getAllProvinceSelectByRegion = ()=>{
-    const url = `http://3.89.23.42:4001/api/v1/ubigeo/province/${regionSelect}/`
+    const url = `http://3.89.23.42:4000/api/v1/ubigeo/province/${regionSelect}/`
     axios.get(url)
     .then(res=>setProvinces(res.data.ubigeo))
     .catch(err=> console.log(err.message))
@@ -71,7 +71,7 @@ useEffect(() => {
 
 useEffect(() => {
   getAllDistrictsByregion()
-}, [regionSelect])
+}, [provinceSelect])
 
 
 const handleCountry = () => {
