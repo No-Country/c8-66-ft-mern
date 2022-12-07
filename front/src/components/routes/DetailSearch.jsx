@@ -1,6 +1,9 @@
 import React from "react";
+import {useDispatch, useSelector} from 'react-redux';
 
 const DetailSearch = (data) => {
+    const shipping = useSelector((state)=>state.getShipping);
+    console.log(shipping)
 
 // const{info}=props
 console.log("Soy info detail",data)

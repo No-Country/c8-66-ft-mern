@@ -4,6 +4,9 @@ import axios from "axios";
 import DetailSearch from "../routes/DetailSearch"
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import {useDispatch, useSelector} from 'react-redux';
+import { setShipping } from "../../store/slices/shipping.slice";
+// import { getShipping } from "../../redux/actions";
 
 
 
@@ -18,42 +21,40 @@ const validacion = (input) =>{
 }
 
 const Search = () => {
-  
+    const dispatch = useDispatch();
     const [input, setInput] = useState("")
     const [error, setError]= useState({})
     const [info, setInfo]= useState()
+    const state = useSelector((state)=>state)
     // const [submit, setSubmit]=
     const history = useNavigate()
 
   
 
-    const getShipping = () =>{
-      console.log("soy input",input)
-      const url = `http://3.89.23.42:4000/api/v1/status/${input}`;
-         axios.get(url)
-        .then(res =>{setInfo(res.data)})
-        .catch((err) =>console.log(err))
-    }
+    
 console.log("Soy info",info)
     
     const handleSubmit = (data) => {
       data.preventDefault();
-      
             setError()
             setError(validacion(input))
             const errorValidador = validacion(input)
             if(Object.values(errorValidador).length !== 0){
               alert("Se requiere un numero de envío valido")
           }else{
-            getShipping()
-          }
-          
-};
 
-var value = 
-setTimeout(() => {
-  value = true;
-}, "3000")
+            const url = `http://3.89.23.42:4000/api/v1/status/${input}`;
+            axios.get(url).then((res)=>{
+              dispatch(setShipping(res.data.shipping))
+              setInfo(res.data)
+            })
+          
+          //  .catch((err) =>console.log(err))
+       }  
+        history("/DetailSearch");
+    };
+
+
 
     return(
         <div className='search'>
