@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 // Models
 const { ShippingStatusHistory } = require('../database/shippingStatusHistory.model');
 const { Shipping } = require('../database/shipping.model');
