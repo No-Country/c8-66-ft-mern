@@ -11,11 +11,13 @@ const { AppError } = require('../utils/appError');
 //const { Branch } = require('../database/branch.model');
 const { Ubigeo } = require('../database/ubigeo.model');
 const { Shipping } = require('../database/shipping.model');
+const { ShippingStatusHistory } = require('../database/shippingStatusHistory.model');
 
 // utils
 const { catchAsync } = require('../utils/catchAsync');
 const sequelize = require('sequelize');
 const { Distancia } = require('../utils/distancia');
+const { NOW } = require('sequelize');
 
 const getPrice = catchAsync(async (req, res, next) => {
   const { ubigeo_id_origin, ubigeo_id_destiny } = req.body;
@@ -100,6 +102,17 @@ const createShipping = catchAsync(async (req, res, next) => {
   });
 
   if(shipping){
+
+    // Status created
+    const savedStatus = await ShippingStatusHistory.create(
+      {
+        shipping_id: shipping.id,
+        shipping_status_date: sequelize.literal('CURRENT_TIMESTAMP'),
+        status_id: 1, // CREATED
+        shippingId: shipping.id,
+        statusId: 1,
+      }
+    );
     res.status(201).json({
       status: 'success',
       data: shipping
