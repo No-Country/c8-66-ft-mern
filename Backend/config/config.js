@@ -1,4 +1,4 @@
-require('dotenv').config({path:'./config.env'});
+require('dotenv').config({path:'../config.env'});
 
 //Config DB
 const host = process.env.DB_HOST;
