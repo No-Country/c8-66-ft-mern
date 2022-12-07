@@ -18,6 +18,7 @@ const Shipping = () => {
           </main>
         </section>
         <section className="right-header">
+          <img className="img-mobile" src="../img/shipping-img-mobile.png" alt="" />
 <div>
 <h2>¿Ya conoces nuestra opción pick up?</h2>
           <div className="container_points">
@@ -30,14 +31,7 @@ const Shipping = () => {
             <h4>¡Coordina dia y horarío para que retiremos tu envío por tu dirección!</h4>
 </div>
 <div>
-  <span>
-
-  </span>
 </div>
-                      {/* <img
-            src="../Fotoenvios.png"
-            alt=""
-          /> */}
             </section>
             
 
@@ -57,7 +51,7 @@ const Shipping = () => {
               <h3>Origen del envío</h3>
               <p>Completá tus datos</p>
             </section>
-            <section className="container-title">
+            <section className="container-title position_title">
               <div className="circle"></div>
 
               <h3>Destino del envío</h3>

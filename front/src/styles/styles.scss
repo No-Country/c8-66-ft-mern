@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,500&family=The+Nautigal:wght@700&display=swap');
 @import 'register'; 
 @import 'login';
 @import 'home'; 
@@ -8,10 +8,14 @@
 @import 'footer';
 @import 'header';
 @import 'getInto';
+@import 'detailSearch';
 
 *{
     margin: 0;
     box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+// font-family: 'The Nautigal', cursive;
     
 }
 
