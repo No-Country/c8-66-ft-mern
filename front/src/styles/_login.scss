@@ -52,3 +52,8 @@ padding: 15px 40px 15px 40px;    // background-color: rgb(219, 219, 219);
     font-weight: bold;
   
 }
+@media  (max-width:1080px){
+  .alert-p{
+    font-size: 10px;
+  }
+}
