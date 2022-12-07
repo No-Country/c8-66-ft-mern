@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const {
@@ -21,9 +21,12 @@ const Login = () => {
   const [user, setUser] = useState();
   const history = useNavigate();
 
+  const dispatch = useDispatch();
+  
   const login = (data) => {
     const url = `http://localhost:4000/api/v1/users/login`;
     axios.post(url, data).then((res) => {
+      dispatch(setUserLogin(res.data.data))
       setUser(res.data.data);
       localStorage.setItem("token", res.data.data.token);
       history("/");
