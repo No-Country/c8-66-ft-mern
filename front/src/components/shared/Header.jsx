@@ -19,7 +19,7 @@ const Header = () => {
   const handleHamClick = () => {
     navbar.current.classList.toggle('header__nav--close')
   }
-  console.log(userName);
+  // console.log(userName.name);
   return (
     <header className="header_app">
     <NavLink className='header__logo-navlink' to="/">
@@ -28,6 +28,7 @@ const Header = () => {
     <i className="fa-solid fa-bars header__menu-ham" onClick={handleHamClick}></i>
     <nav ref={navbar} className="header__nav header__nav--close">
     <i className="fa-solid fa-x" onClick={handleHamClick}></i>
+    <h2 className="name_user">Hola {userName.name && userName.name}!</h2>
       <ul className="header__list">
 
         <li className="header__item">
@@ -35,6 +36,7 @@ const Header = () => {
             className={({isActive}) => isActive ? 'header__navlink active-link' : 'header__navlink'}
             to="/shipping"
           >
+<i className="fa-solid fa-boxes-packing"></i>
             Envios Online
           </NavLink>
         </li>
@@ -43,24 +45,18 @@ const Header = () => {
             className={({isActive}) => isActive ? 'header__navlink active-link' :'header__navlink'}
             to="/branchOffices"
           >
+            <i className="fa-solid fa-store"></i>
             Sucursales
           </NavLink>
         </li>
 
-        <li>
-        <NavLink 
-            className={({isActive}) => isActive ? 'header__navlink active-link ': 'header__navlink'} 
-            to="/questions"
-          >
-            Preguntas Frecuentes
-          </NavLink>
-        </li>
+  
         <li>
         <NavLink 
             className={({isActive}) => isActive ? 'header__navlink active-link ': 'header__navlink'} 
             to="/people-link"
           >
-            Personas
+<i className="fa-solid fa-users"></i>            Personas
           </NavLink>
         </li>
         <li className="header__item">
@@ -69,6 +65,7 @@ const Header = () => {
          className={({isActive}) => isActive ? 'header__navlink active-link ': 'header__navlink'} 
          to="/getInto"
        >
+        <i className="fa-solid fa-right-to-bracket"></i>
          Ingresar
        </NavLink>
         ) : (
@@ -77,7 +74,16 @@ const Header = () => {
           </NavLink>
         )}
         </li>
-   
+        <li>
+        <NavLink 
+            className={({isActive}) => isActive ? 'header__navlink active-link ': 'header__navlink'} 
+            to="/questions"
+          >
+                 <i className="fa-solid fa-circle-question"></i>
+            Preguntas Frecuentes
+       
+          </NavLink>
+        </li>
 
       </ul>
     </nav>
