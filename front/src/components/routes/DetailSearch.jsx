@@ -1,9 +1,10 @@
 import React from "react";
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
 const DetailSearch = (data) => {
     const shipping = useSelector((state)=>state.getShipping);
-    console.log(shipping)
+    console.log( "Soy shipping detail",shipping)
+    
 
 // const{info}=props
 console.log("Soy info detail",data)
@@ -28,7 +29,7 @@ console.log("Soy info detail",data)
             </div>
 
             <h1 className="titulo1">Informacion de tu paquete</h1>
-            <div>numero</div>
+            <div>Numero de envío: {shipping.id}</div>
 
             <h1 className="titulo2">Datos de tu paquete</h1>
             <form className="formulario">
@@ -36,19 +37,19 @@ console.log("Soy info detail",data)
                 <h2 className="tituloGris">Informacion del destinatario</h2>
                 <section className="subtitulo">
                     <label >Nombre del remitente</label>
-                    <input></input>
+                    <div className="datoForm">{shipping.origin_name?shipping.origin_name:"No se cargó el nombre"}</div>
                 </section>
                 <section className="subtitulo">
                     <label>Nombre del destinatario</label>
-                    <input></input>
+                    <div className="datoForm">{shipping.destiny_name?shipping.destiny_name:"No se cargó el nombre"}</div>
                 </section>
                 <section className="subtitulo">
                     <label>Dirección de retiro</label>
-                    <input></input>
+                    <div className="datoForm">{shipping.origin_address?shipping.origin_address:"No se cargó la direccrión"}</div>
                 </section>
                 <section className="subtitulo">
                     <label>Dirección de entrega</label>
-                    <input></input>
+                    <div className="datoForm">{shipping.destiny_address?shipping.destiny_address:"No se cargó la dirección"}</div>
                 </section>
 
                 <section className="subtitulo">
@@ -56,7 +57,7 @@ console.log("Soy info detail",data)
                     <div className="contacto">
                     <input></input>
                     <input></input>
-                    <input></input>
+                    <div className="datoForm">{shipping.origin_phone?shipping.origin_phone:"No se cargó el telefono"}</div>
                     </div>
                 </section>
                
@@ -65,7 +66,7 @@ console.log("Soy info detail",data)
                     <div className="contacto">
                     <input></input>
                     <input></input>
-                    <input></input>
+                    <div className="datoForm">{shipping.destiny_phone?shipping.destiny_phone:"No se cargó el telefono"}</div>
                     </div>
                 </section>
             </form>
