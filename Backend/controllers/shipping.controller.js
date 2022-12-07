@@ -11,11 +11,13 @@ const { AppError } = require('../utils/appError');
 //const { Branch } = require('../database/branch.model');
 const { Ubigeo } = require('../database/ubigeo.model');
 const { Shipping } = require('../database/shipping.model');
+const { ShippingStatusHistory } = require('../database/shippingStatusHistory.model');
 
 // utils
 const { catchAsync } = require('../utils/catchAsync');
 const sequelize = require('sequelize');
 const { Distancia } = require('../utils/distancia');
+const { NOW } = require('sequelize');
 
 const getPrice = catchAsync(async (req, res, next) => {
   const { ubigeo_id_origin, ubigeo_id_destiny } = req.body;
@@ -47,14 +49,16 @@ const getPrice = catchAsync(async (req, res, next) => {
 });
 
 const createShipping = catchAsync(async (req, res, next) => {
-  const { user_id, ubigeo_id_origin, destiny_name, destiny_address, ubigeo_id_destiny, category_id, branch_id,
-          shipping_date, price, high_size, width_size, large_size, weight, special_cares } = req.body;
-  
-  const shipping = await Shipping.create({
-    user_id, 
+  const { user_id, 
     ubigeo_id_origin, 
     destiny_name, 
     destiny_address, 
+    destiny_email,
+    destiny_phone,
+    origin_name,
+    origin_address,
+    origin_email,
+    origin_phone,
     ubigeo_id_destiny, 
     category_id, 
     branch_id,
@@ -64,10 +68,51 @@ const createShipping = catchAsync(async (req, res, next) => {
     width_size,
     large_size,
     weight,
-    special_cares
+    special_cares,
+    origin_comment,
+    destiny_comment,
+    origin_zip_code,
+    destiny_zip_code } = req.body;
+  
+  const shipping = await Shipping.create({
+    user_id, 
+    ubigeo_id_origin, 
+    destiny_name, 
+    destiny_address, 
+    destiny_email,
+    destiny_phone,
+    origin_name,
+    origin_address,
+    origin_email,
+    origin_phone,
+    ubigeo_id_destiny, 
+    category_id, 
+    branch_id,
+    shipping_date, 
+    price, 
+    high_size, 
+    width_size,
+    large_size,
+    weight,
+    special_cares,
+    origin_comment,
+    destiny_comment,
+    origin_zip_code,
+    destiny_zip_code
   });
 
   if(shipping){
+
+    // Status created
+    const savedStatus = await ShippingStatusHistory.create(
+      {
+        shipping_id: shipping.id,
+        shipping_status_date: sequelize.literal('CURRENT_TIMESTAMP'),
+        status_id: 1, // CREATED
+        shippingId: shipping.id,
+        statusId: 1,
+      }
+    );
     res.status(201).json({
       status: 'success',
       data: shipping

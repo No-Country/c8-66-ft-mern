@@ -9,6 +9,7 @@ import Shipping from './components/routes/Shipping'
 import BranchOfficeses from './components/routes/BranchOffices'
 import Questions from './components/routes/Questions'
 import Getinto from './components/routes/Getinto'
+import DetailSearch from './components/routes/DetailSearch'
 
 
 
@@ -19,6 +20,7 @@ function App() {
        <Header/>
        <Routes>       
        <Route  path='/' element={<Home/>} />
+        <Route path='/DetailSearch' element={<DetailSearch/>}></Route>
         <Route path='/getInto' element={<Getinto/>} />
         <Route path='/register' element={<Register/>} />
         <Route path='/login' element={<Login/>} />      
