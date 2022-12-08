@@ -1400,6 +1400,14 @@ button {
 .contenedorDetailSearch .formulario .subtitulo {
   text-align: left;
 }
+.contenedorDetailSearch .formulario .subtitulo .datoForm {
+  padding: 15px;
+  margin: 15px 0 15px 0;
+  width: 100%;
+  padding: 15px;
+  border: solid rgba(179, 179, 179, 0.788) 1px;
+  border-radius: 15px;
+}
 .contenedorDetailSearch .formulario .contacto {
   gap: 15px;
   display: grid;

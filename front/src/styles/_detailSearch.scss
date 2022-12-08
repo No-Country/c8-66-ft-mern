@@ -109,7 +109,15 @@
         }
         .subtitulo{
             text-align: left;
+            .datoForm{
+                padding: 15px;
+                margin: 15px 0 15px 0 ;
+                width: 100%;
+                padding: 15px;
+                border: solid rgba(179, 179, 179, 0.788) 1px;
+                border-radius: 15px ;
         }
+    }
         .contacto{
             // display: flex;
             gap: 15px;
