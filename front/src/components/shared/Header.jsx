@@ -10,7 +10,9 @@ const Header = () => {
   const userName = useSelector((state) => state.userLogin);
 
   const handleClick = () => {
-    localStorage.removeItem("token");
+    if (userName) {
+      localStorage.removeItem("token");
+    }
   };
   useEffect(() => {
     setToggleLogout(localStorage);
@@ -19,7 +21,7 @@ const Header = () => {
   const handleHamClick = () => {
     navbar.current.classList.toggle('header__nav--close')
   }
-  // console.log(userName.name);
+  
   return (
     <header className="header_app">
     <NavLink className='header__logo-navlink' to="/">
@@ -60,7 +62,7 @@ const Header = () => {
           </NavLink>
         </li>
         <li className="header__item">
-            {toggleLogout && toggleLogout.length === 0 ? (
+        {toggleLogout && toggleLogout.length === 0 ? (
          <NavLink 
          className={({isActive}) => isActive ? 'header__navlink active-link ': 'header__navlink'} 
          to="/getInto"
@@ -69,8 +71,12 @@ const Header = () => {
          Ingresar
        </NavLink>
         ) : (
-          <NavLink>
-            <h3 onClick={handleClick}>Logout</h3>
+          <NavLink
+          onClick={handleClick}
+          className={({isActive}) => isActive ? 'header__navlink active-link ': 'header__navlink'} 
+           >
+          <i className="fa-solid fa-right-to-bracket"></i>
+          Loguot
           </NavLink>
         )}
         </li>
@@ -81,7 +87,6 @@ const Header = () => {
           >
                  <i className="fa-solid fa-circle-question"></i>
             Preguntas Frecuentes
-       
           </NavLink>
         </li>
 

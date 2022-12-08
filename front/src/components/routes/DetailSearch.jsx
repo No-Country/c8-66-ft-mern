@@ -81,18 +81,24 @@ console.log("Soy info detail",data)
             <img src="Ellipse 54.png" className="elipce1"/>
             </div>
 
-            <h3>*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>
-            <h3 className="titulo4">Si sucede algún iconveniente, te avisaremos mediante un correo electrónico</h3>
+            <h3 className="titulo_fotter">*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>
+            <h3 className="titulo4 titulo_fotter">Si sucede algún iconveniente, te avisaremos mediante un correo electrónico</h3>
             <div className="rectangulo">
             <div className='card'>
                 <div className='subCard'>
                 <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
+                <div className='left_footer-home'>
                 <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
                 <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
                 <button className='boton'>Preguntas frecuentes</button>
+                </div>
             </div>
             </div>
+
         </div>
+        <footer className="footer_detail icons_mobile">
+
+        </footer>
         </div>
     )
 }

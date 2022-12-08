@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import {setUserLogin} from '../../store/slices/userLogin.slice'
 
 const Login = () => {
   const {
@@ -26,13 +27,12 @@ const Login = () => {
   const login = (data) => {
     const url = `http://localhost:4000/api/v1/users/login`;
     axios.post(url, data).then((res) => {
-      dispatch(setUserLogin(res.data.data))
-      setUser(res.data.data);
+      dispatch(setUserLogin(res.data.data.user))
+      setUser(res.data.data.user);
       localStorage.setItem("token", res.data.data.token);
       history("/");
     });
   };
-  // console.log(user);
   const onSubmit = (data) => {
     login(data);
   };
