@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import AddressClient from "./AddressClient";
+import { useSelector } from "react-redux";
 
 // const defaulValues = {
 //   user_id,
@@ -39,9 +40,11 @@ const SendForm = (data) => {
   const [destinyUbigeo, setDestinyUbigeo] = useState();
 
   const [surcursales, setSurcursales] = useState();
+  
+  const userName = useSelector((state) => state.userLogin);
 
   const getAllSurcursales = () => {
-    const url = "http://3.89.23.42:4001/api/v1/branch";
+    const url = "http://3.89.23.42:4000/api/v1/branch";
     axios.get(url).then((res) => setSurcursales(res.data.branch));
   };
   useEffect(() => {
@@ -56,7 +59,7 @@ const SendForm = (data) => {
   } = useForm();
 
   const postForm = (data) => {
-    const url = `http://localhost:4001/api/v1/shipping`;
+    const url = `http://localhost:4000/api/v1/shipping`;
     axios
       .post(url, data)
       .then((res) => {
@@ -67,7 +70,8 @@ const SendForm = (data) => {
 
   const submit = (data) => {
     delete data.order_option;
-    postForm(data);
+    const data2 = {... data , user_id: userName.id , ubigeo_id_destiny: destinyUbigeo , ubigeo_id_origin: OriginUbigeo}
+    postForm(data2);
     // console.log(data)
   };
 
@@ -208,12 +212,12 @@ const SendForm = (data) => {
           </section>
         </div>
         <div className="destiny_data">
-        <section className="container-title position_title">
+        {/* <section className="container-title position_title">
               <div className="circle"></div>
 
               <h3>Destino del envío</h3>
               <p>Completá los datos del destinatario</p>
-            </section>
+            </section> */}
           <section>
             <input
               {...register("destiny_name", {

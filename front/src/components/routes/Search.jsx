@@ -58,8 +58,10 @@ console.log("Soy info",info)
 
     return(
         <div className='search'>
+                  <h3 className='titulo_input'>¿Quieres saber dónde esta tu envío?</h3>
+
           <div className="search1">
-            <select className="search__input">
+            <select className="search__input d_none">
               <option hidden selected>Tipo de envío</option>
               <option value= "enc">Encomienda</option>
               <option value= "sob" >Sobre</option>
@@ -67,7 +69,7 @@ console.log("Soy info",info)
               <option value= "sobi">Sobre internacional</option>
               <option value= "eco">E Commers</option>
             </select>
-          <input  className="search__input1 br_button" 
+          <input  className="search__input br_button" 
             value= {input}
             type="text"
             placeholder='Numero seguimiento'
