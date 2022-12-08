@@ -4,6 +4,8 @@ import {useSelector} from 'react-redux';
 const DetailSearch = (data) => {
     const shipping = useSelector((state)=>state.getShipping);
     const [observacion, setObservacion] = useState(false)
+    console.log( "Soy shipping detail",shipping) 
+
 
 
 let ship = shipping.shipping_status_histories
