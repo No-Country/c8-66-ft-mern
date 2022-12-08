@@ -2,6 +2,7 @@ import React from 'react'
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Search from './Search';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
     },
   });
 
+  const history = useNavigate();
 
   const infoEnvio = (data) => {
     const url = `url`;
@@ -33,11 +35,12 @@ const Home = () => {
     console.log(data)
   }
 
-
+const handleClickRegister = ()=>{
+  history('/register')
+}
   return (
     <div className="home">
-      <div className='inicoiHome'>
-        {/* <img src="../public/img/img_principal-mobile.png" alt="" /> */}
+      <div className='inicioHome'>
       <h1 className="titulo5">¡Conocé el estado de tu envío!</h1>
         <Search/>
     </div>
@@ -79,8 +82,9 @@ const Home = () => {
         </div>
         </div>
 
-       <h1 className="titulo1">¡Cotiza tu envío en dos simples pasos!</h1>
        <div className='container_form'>
+       <h1 className="titulo1">¡Cotiza tu envío en dos simples pasos!</h1>
+
        <form className='formDoble' onSubmit={handleSubmit(onSubmit)}>
         <h2>Informaciòn del envío</h2>
         <hr></hr>
@@ -168,67 +172,96 @@ const Home = () => {
        </form>
        </div>
 
+<div className='container_bg'>
+<h1 className="titulo1">¿Ya conoces los planes personalizados que tenemos para vos?</h1>
 
-       <h1 className="titulo1">¿Ya conoces los planes personalizados que tenemos para vos?</h1>
-
+<img src='../img/Rectangle.png' alt="" className='icons_mobile'/>
+</div>
       <div className='contenedorTarjeta1'>
-       <div className='tarjeta1'>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg=="className='iconos1'/>
+       <div className='tarjeta1 stl_card'>
+       <i className="fa-solid fa-shop icons_mobile"></i>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg=="
+        className='iconos1 d_none'/>
         <h2 >Pimes</h2>
         </div>
 
-        <div className='tarjeta2'>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJRJREFUSEvFlVEOgCAMQ8vJ1JvryTQSIYSA6yBj/hG7vXU1EmD8BOP+WAo4AWyCo1dzaFyXDm6yUOXaBZCgyVHvTBluOWABf5nlrGZWJGUWe7sA2BWVDuqaPPxIBq1wVQDq6yBEwxkQvaOkC5AymF6ROYBdgaTzy0CajH2/3gFz4bDTXwD2+l/EFqt0qttJ1fkTmwMeXQ4pGSz6W/gAAAAASUVORK5CYII=" className='iconos1'/>
+        <div className='tarjeta2 stl_card'>
+        <i class="fa-solid fa-building icons_mobile" ></i>       
+         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJRJREFUSEvFlVEOgCAMQ8vJ1JvryTQSIYSA6yBj/hG7vXU1EmD8BOP+WAo4AWyCo1dzaFyXDm6yUOXaBZCgyVHvTBluOWABf5nlrGZWJGUWe7sA2BWVDuqaPPxIBq1wVQDq6yBEwxkQvaOkC5AymF6ROYBdgaTzy0CajH2/3gFz4bDTXwD2+l/EFqt0qttJ1fkTmwMeXQ4pGSz6W/gAAAAASUVORK5CYII=" 
+        className='iconos1 d_none'/>
         <h2>Empresas</h2>
         </div>
         </div>
+<div className='container_text-sucurs'> 
+<h1 className='titulo1'>Nuestras sucursales</h1>
+<h3 className='titulo2'>Retira y despacha donde mas comodo te quede</h3>
 
-        <h1 className='titulo1'>Nuestras sucursales</h1>
+</div>
 
-        <h3 className='titulo2'>Retira y despacha donde mas comodo te quede</h3>
 
         <h1 className='titulo1'>¿Como lo hago?</h1>
-        <ul>
-          <li>Selecciona el tipo de envío</li>
-          <li>Elegí tu ciudad mas cercana</li>
-          <li>Conoce nuestra sucursal mas cercana</li>
+        <ul className='to-do_list'>
+          <li>
+            <span>
+            <i className="fa-solid fa-check  icons_mobile"></i>
+            </span>
+            Selecciona el tipo de envío</li>
+          <li>
+          <span>
+            <i className="fa-solid fa-check  icons_mobile"></i>
+            </span>
+            Elegí tu ciudad mas cercana</li>
+          <li>
+          <span>
+            <i className="fa-solid fa-check  icons_mobile"></i>
+            </span>
+            Conoce nuestra sucursal mas cercana</li>
+            <i className="fa-solid fa-location-dot  icons_mobile"></i>
         </ul>
        
         <br/>
-        <div className='inLine'>
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbBJREFUSEu1le01REEQRO9GgAgQASJABIgAESASRIAIEAEiIANkQASc63Q7s+PNm7c/zJ+3Zz6qqqt6Zmf885j9Mz5TCNaAE2AH2AxBL8AjcAm8jYnsEVwE+BiGe85aG8YIVLkRB28AgZxzWMkpcFhUtDVE0iJI5Z9hTQLXGBJp1VLYJencGCLQ89fYpSrBnTuvMtAW/ZfkOfav15kMEaR6A1SR4AIsV+I+AAVIch125ZnfrUME6X2qvwP2gCfgKE4KuA3cA/tFFZ6dy2KI4CtAck2lelyWnzaq3nlHfe5nchGCFUAyRxK8x++FCOwKy68tcv44CK6iu9IiL+FD2Ojv0QwyMLvEwFWrt9pUDlvYDtImm8Eu875kTk2LDO02Dqa/kkhWPhWC5jPhdxU4AGyK0QpczANaYkVjQ8VaVubRJcgqDNUqMtyayLvhpfT7R32rixIkw/a72ygh74x3ZC7c3D/22KlKqwxXm7KD8mw2g2Gb0WCVvee6fMxKkhJc5a3HcNIfTk1iZWbUe2mbbTpkd0ni+iTwXsg1kSTZsrZm05Yp96DT+tOXeyFPR2rs/AZz92gZw5u8WQAAAABJRU5ErkJggg=="className='iconos2'/>
-       <button className='login__btn2'>Buscar sucursal</button>
+        <div className='inLine container_btn'>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbBJREFUSEu1le01REEQRO9GgAgQASJABIgAESASRIAIEAEiIANkQASc63Q7s+PNm7c/zJ+3Zz6qqqt6Zmf885j9Mz5TCNaAE2AH2AxBL8AjcAm8jYnsEVwE+BiGe85aG8YIVLkRB28AgZxzWMkpcFhUtDVE0iJI5Z9hTQLXGBJp1VLYJencGCLQ89fYpSrBnTuvMtAW/ZfkOfav15kMEaR6A1SR4AIsV+I+AAVIch125ZnfrUME6X2qvwP2gCfgKE4KuA3cA/tFFZ6dy2KI4CtAck2lelyWnzaq3nlHfe5nchGCFUAyRxK8x++FCOwKy68tcv44CK6iu9IiL+FD2Ojv0QwyMLvEwFWrt9pUDlvYDtImm8Eu875kTk2LDO02Dqa/kkhWPhWC5jPhdxU4AGyK0QpczANaYkVjQ8VaVubRJcgqDNUqMtyayLvhpfT7R32rixIkw/a72ygh74x3ZC7c3D/22KlKqwxXm7KD8mw2g2Gb0WCVvee6fMxKkhJc5a3HcNIfTk1iZWbUe2mbbTpkd0ni+iTwXsg1kSTZsrZm05Yp96DT+tOXeyFPR2rs/AZz92gZw5u8WQAAAABJRU5ErkJggg=="
+        className='iconos2 d_none'/>
+       <button className='login__btn2 btn_mobile'>Buscar sucursal</button>
        </div>
 
        <h1 className='titulo1'>¡Registrate y conocé todo lo que podes hacer con tus envios!</h1>
-        <h3>Completá tus datos y controlá lo que sucede con tus paquetes </h3>
+        <h3 className='titulo2'>Completá tus datos y controlá lo que sucede con tus paquetes </h3>
     
-        <div className='lista'>
+        <div className='lista list_mobile'>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg==" className='iconos3'/>
         <h3 className='textoInterior' >Retiralo en sucursal</h3>
         </div>
 
-        <div className='lista'>    
+        <div className='lista list_mobile'>    
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATNJREFUSEvtlGFRA0EMRl8VgAQcgAOKAnAAKCgoKDgABYACwAE4AAW1AA6YN5PrbHd2LwdM/zV/btrb/V7yJbkZW47ZlvXZAVKHp1i0DyyAM+AoFD+AF+Ae+BqjZABFHwAhrVD8GnjsQcYAij/HxXfgBniL3767AE6By78AzHgVmZvhXSdDLdOubvQqMNsl8BreZ820muOoZuNsD2BWh8BJYUsPorh9MuyFlq2jBJQHa7Gn8Lz+v3VnA1JX0LrwG/EhgTWkZVEJ6YmXlQzT9lnsSdOi8pKQeceW2iZH1wbfxihPanJ5SNAw/7W4VpwD38BBa6uzTR4EBDi6Lpwh1DH2qbjP5j5kAK1yyfY6Mzoq7p0M4Bm3+ioWzt0wbKhgP3j/+thlG5y+n1JBKjJ2YAdI7fsB6p82GUOUm7kAAAAASUVORK5CYII=" className='iconos3'/>
         <h3 className='textoInterior1'>Modificá los datos de envío</h3>
         </div>
 
-        <div className='lista'>
+        <div className='lista list_mobile'>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPNJREFUSEvtldENwjAQQ90JgAmACYANYBOYDDaBEWADmAA2ALlKpOi4pE6lSHzQv/ZyflbiSzs0frrG+qgBTAGcg6EdgJdiTgVE8XUQvQKQIAogFb8FwAqABBkCWPFtAFwASJASwBOP+86aBMkBSuLxbCWIB1DEZYgF1IhLkBRgozhTsw6AvU8vwimAsWMy4jOUMDtn7+QDtTZ8bwXgvPRD6bmMTmKN2T8CWBjLdwCHEFeWbF+/XAFQaJ65d1hbhtpogNvoOP4Dvs7LbsnvbBFvzInyt3LWPGycvZgy96dCNHNsiu+TucjOwUjzflvtfVMN/wCUvlMZx+RBFQAAAABJRU5ErkJggg==" className='iconos3'/>
         <h3 className='textoInterior1'>Cambia el método de envío</h3>
         </div>
 
+<div className='inLine container_btn'>
 
-        <button className='login__btn3'>Registrate ahora</button>
+        <button onClick={handleClickRegister}  className='login__btn3 btn_mobile'>Registrate ahora</button>
+</div>
 
         <div className='card'>
           <div className='subCard'>
           <img src='smart-executive-asian-woman-white-dress-meeting-with-coworker-with-laptop-presentation-office-background_609648-1928.jpg'className='imagenCard'/>
+            <div className='left_footer-home'>
             <h2 className='tituloCard'>¿Nesecitas ayuda?</h2>
             <h4 className='tituloCard1'>Lee nuestras preguntas frecuentes y resolvé tus dudas</h4>
             <button className='boton'>Preguntas frecuentes</button>
+            </div>
            </div>
         </div>
+      <footer className='footer_home'>
+
+      </footer>
     </div>
   )
 }

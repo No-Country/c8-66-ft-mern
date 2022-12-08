@@ -1,247 +1,247 @@
-// .home {
-//     text-align: center;
-
-//     .inicoiHome{
-//         background-image: url("../../public/img/Imagen\ principal.png");
-//         background-size: 100% 100%;
-//         background-repeat: no-repeat;
-//         height: 600px;
-//     }
-//     .titulo5{
-//         font-size: 50px;
-//         text-align: left;
-//         padding-left: 150px;
-//         padding-top: 360px;
-//         margin-bottom: 20px;
-//     }
-//     .titulo1{
-//         text-align: left;
-//         padding-left: 200px;
-//         padding-top: 100px;
-//         margin-bottom: 20px;
-//     }
-//     .titulo2{
-//         text-align: left;
-//         padding-left: 200px;
-//     }
-//     .titulo3{
-//         text-align: center;
-//         margin-top: 40px;
-//         padding-top: 100px;
-//     }
-//     .titulo4{
-//         text-align: center;
-//     }
-
-//     .select{
-//         align-self: left;
-//     }
-//     .inLine{
-//         display: grid;
-//         grid-template-columns: 1fr 1fr;
-//         flex-direction: column;
-//     }
-//     .iconos{
-//         height: 50px;
-//         padding: 15px;
-//         border-radius: 10px;
-//         box-shadow: 0 0 10px #0003;
-//         margin: 30px;
-//     }
-//     .iconos2{
-//         height: 60px;
-//         padding: 15px;
-//         box-shadow: 0 0 10px #0003;
-//         margin-left: 500px;
-//     }
-
-//     .contenedorTarjeta{
-//         margin: 10px;
-//         display: grid;
-//         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-//         flex-direction: column;
-//         padding: 15px;
-//         .tarjeta1{
-//             height: 150px;
-//             width: 150px;;
-//             padding: 15px;
-//             border-radius: 10px;
-//             box-shadow: 0 0 10px #0003;
-//             margin: 30px;
-//             margin-left: 300px;
-
-//         }
-//         .iconos{
-//             height: 70px;
-//             padding: 15px;
-//         }
-//     }
-
-//     .contenedorTarjeta1{
-//         margin: 10px;
-//         display: grid;
-//         grid-template-columns: 1fr 1fr;
-//         padding: 15px;
-//         .tarjeta1{
-//             height: 150px;
-//             width: 150px;;
-//             padding: 15px;
-//             border-radius: 10px;
-//             box-shadow: 0 0 10px #0003;
-//             margin: 30px;
-//             margin-left: 300px;
-//             .iconos1{
-//                 height: 90px;
-//                 padding: 15px;
-//             }
-//         }
-//             .tarjeta2{
-//                 height: 150px;
-//                 width: 150px;;
-//                 padding: 15px;
-//                 border-radius: 10px;
-//                 box-shadow: 0 0 10px #0003;
-//                 margin: 30px;
-//                 .iconos1{
-//                     height: 90px;
-//                     padding: 15px;
-//                 }
-//             }
-
-//         }
-
-//     .login__btn1{
-//         width: 15%;
-//         padding: 10px 15px;
-//         color: white;
-//         background-color:  $colorButton;
-//         border: none;
-//         font-weight: 500;
-//         border-radius: 5px;
-//         transition: filter 100ms ease;
-//         cursor: pointer;
-//         font-size: 15px;
-//       }
-//       .login__btn2{
-//         width: 180px;
-//         height: 40px;
-//         padding: 10px 15px;
-//         margin-top: 30px;
-//         color: white;
-//         background-color:  $colorButton;
-//         border: none;
-//         font-weight: 500;
-//         border-radius: 5px;
-//         transition: filter 100ms ease;
-//         cursor: pointer;
-//         font-size: 15px;
-//       }
-//       .login__btn3{
-//         width: 15%;
-//         margin-top: 40px;
-//         margin-bottom: 100px;
-//         padding: 10px 15px;
-//         color: white;
-//         background-color:  $colorButton;
-//         border: none;
-//         font-weight: 500;
-//         border-radius: 5px;
-//         transition: filter 100ms ease;
-//         cursor: pointer;
-//         font-size: 15px;
-//       }
-//       .login__btn:hover {
-//         filter: brightness(1.05);
-//         transition: filter 100ms ease;
-
-//       } .login__btn1:hover {
-//         filter: brightness(1.05);
-//         transition: filter 100ms ease;
-//       }
-//       .login__btn2:hover {
-//         filter: brightness(1.05);
-//         transition: filter 100ms ease;
-//       }
-//     ul{
-//         font-size: 30px;
-//         list-style-type: circle;
-//         background-color: white;
-//         text-align: left;
-//         padding-left: 150px;
-//     }
-//     .lista{
-//         margin: 10px;
-//         display: grid;
-//         grid-template-columns: 1fr 1fr;
-//         padding: 15px;
-//             .iconos3{
-//                 padding: 15px;
-//                 box-shadow: 0 0 10px #0003;
-//                 margin-left: 250px;
-//                 display: grid;
-//                 grid-template-columns: 1fr 1fr;
-//                 flex-direction: column;
-//             }
-//         .textoInterior{
-//              width: 300px;
-//             margin-right: 700px;
-//         }
-//         .textoInterior1{
-//             width: 300px;
-//            margin-right: 650px;
-//        }
-
-//     }
-//     .card{
-//         // text-align: center;
-//         width: 850px;
-//         height: 214px;
-//         margin-left: 250px;
-//         background-color: white;
-//         backface-visibility: hidden;
-//         border-radius: 15px;
-//         box-shadow: 0 0 10px #0003;
-//         // grid-template-columns: 1fr 1fr;
-//             .tituloCard{
-//                 margin-right: 500px;
-//                 padding-top: 30px
-//                }
-//                .tituloCard1{
-//                 font-size: 12px;
-//                 margin-right: 500px;
-//                 padding: 5px;
-//                 padding-top: 0px;
-//                 width: 400px;
-//                }
-//                .boton{
-//                 margin-right: 500px;
-//                 margin-top: 35px;
-//                 // margin-bottom: 100px;
-//                 padding: 13px;
-//                 color: white;
-//                 background-color:#24105F ;
-//                 border: none;
-//                 font-weight: 500;
-//                 border-radius: 40px;
-//                 transition: filter 100ms ease;
-//                 cursor: pointer;
-//                 font-size: 15px;
-//                }
-
-//        .imagenCard{
-//         position: absolute;
-//         width: 28%;
-//         height: 31%;
-//         backface-visibility: hidden;
-//         margin-left: 60px;
-//         border-radius: 10px;
-//         // overflow: hidden;
-//         transition: .5s;
-//        }
-//     }
-// };
+// desktop desing
 
 @media (min-width: 780px) {
+  .home {
+    text-align: center;
+
+    .inicioHome{
+        background-image: url("../../public/img/Imagen principal.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 600px;
+        position: relative;
+        >img{
+          display: none;
+        }
+    }
+
+    .titulo_input, .titulo5{
+display: none;
+    }
+    .titulo1{
+        text-align: center;
+        padding-top: 100px;
+        margin-bottom: 20px;
+    }
+    .titulo2{
+        text-align: left;
+        padding-left: 200px;
+    }
+    .titulo3{
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 100px;
+    }
+    .titulo4{
+        text-align: center;
+    }
+
+    .select{
+        align-self: left;
+    }
+    .inLine{
+        flex-direction: column;
+    }
+    .iconos{
+        height: 50px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #0003;
+        margin: 30px;
+    }
+    .iconos2{
+        height: 60px;
+        padding: 15px;
+        box-shadow: 0 0 10px #0003;
+        margin-left: 500px;
+    }
+
+    .contenedorTarjeta{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        flex-direction: column;
+        padding: 15px;
+        .tarjeta1{
+            height: 150px;
+            width: 150px;;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0003;
+            margin: 30px;
+            margin-left: 300px;
+
+        }
+        .iconos{
+            height: 70px;
+            padding: 15px;
+        }
+    }
+
+    .contenedorTarjeta1{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+        .tarjeta1{
+            height: 150px;
+            width: 150px;;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #0003;
+            margin: 30px;
+            margin-left: 300px;
+            .iconos1{
+                height: 90px;
+                padding: 15px;
+            }
+        }
+            .tarjeta2{
+                height: 150px;
+                width: 150px;;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px #0003;
+                margin: 30px;
+                .iconos1{
+                    height: 90px;
+                    padding: 15px;
+                }
+            }
+
+        }
+
+    .login__btn1{
+        width: 15%;
+        padding: 10px 15px;
+        color: white;
+        background-color:  $colorButton;
+        border: none;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: filter 100ms ease;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .login__btn2{
+        width: 180px;
+        height: 40px;
+        padding: 10px 15px;
+        margin-top: 30px;
+        color: white;
+        background-color:  $colorButton;
+        border: none;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: filter 100ms ease;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .login__btn3{
+        width: 15%;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        padding: 10px 15px;
+        color: white;
+        background-color:  $colorButton;
+        border: none;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: filter 100ms ease;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      .login__btn:hover {
+        filter: brightness(1.05);
+        transition: filter 100ms ease;
+
+      } .login__btn1:hover {
+        filter: brightness(1.05);
+        transition: filter 100ms ease;
+      }
+      .login__btn2:hover {
+        filter: brightness(1.05);
+        transition: filter 100ms ease;
+      }
+    ul{
+        font-size: 30px;
+        list-style-type: circle;
+        background-color: white;
+        text-align: left;
+        padding-left: 150px;
+    }
+    .lista{
+        margin: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+            .iconos3{
+                padding: 15px;
+                box-shadow: 0 0 10px #0003;
+                margin-left: 250px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                flex-direction: column;
+            }
+        .textoInterior{
+             width: 300px;
+            margin-right: 700px;
+        }
+        .textoInterior1{
+            width: 300px;
+           margin-right: 650px;
+       }
+
+    }
+    .card{
+        // text-align: center;
+        width: 850px;
+        height: 214px;
+        margin-left: 250px;
+        background-color: white;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        box-shadow: 0 0 10px #0003;
+        // grid-template-columns: 1fr 1fr;
+            .tituloCard{
+                margin-right: 500px;
+                padding-top: 30px
+               }
+               .tituloCard1{
+                font-size: 12px;
+                margin-right: 500px;
+                padding: 5px;
+                padding-top: 0px;
+                width: 400px;
+               }
+               .boton{
+                margin-right: 500px;
+                margin-top: 35px;
+                // margin-bottom: 100px;
+                padding: 13px;
+                color: white;
+                background-color:#24105F ;
+                border: none;
+                font-weight: 500;
+                border-radius: 40px;
+                transition: filter 100ms ease;
+                cursor: pointer;
+                font-size: 15px;
+               }
+
+       .imagenCard{
+        position: absolute;
+        width: 28%;
+        height: 31%;
+        backface-visibility: hidden;
+        margin-left: 60px;
+        border-radius: 10px;
+        // overflow: hidden;
+        transition: .5s;
+       }
+    }
+};
+
   .inicoiHome {
     > img,
     .titulo_input {
@@ -252,11 +252,15 @@
     display: none;
   }
 }
+
+// mobile desing 
+
 @media (max-width: 780px) {
   .home {
     width: 100vw;
     position: relative;
-    .inicoiHome {
+    overflow-x: hidden;
+    .inicioHome {
       color: #fff;
       display: flex;
       flex-direction: column;
@@ -284,9 +288,7 @@
         font-weight: 400;
       }
     }
-    .d_none {
-      display: none;
-    }
+
   }
   .subCard {
     img {
@@ -408,6 +410,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .formDoble {
     background-color: rgba(25, 48, 129, 0.37);
@@ -470,4 +473,185 @@
         }
     }
   }
+  .container_bg{
+    position: relative;
+      height: auto;
+    img{
+      margin-top: 50px;
+      width: 100%;
+      position: absolute;
+      z-index: -100;
+      transform: scale(2.5)  rotate(-10deg);
+      top: 0px;
+      
+    }
+
+  }
+  .contenedorTarjeta1{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+.stl_card{
+    width: 80px;
+    height: 80px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    padding:45px;
+      i{
+      font-size: 30px;
+      color: #24105F;
+    }
+    h2{
+      font-size: 15px;
+      font-weight: bold;
+    }
+}
+  }
+  .d_none {
+    display: none;
+  }
+.container_text-sucurs{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.titulo1{
+      margin: 0 10px 0 10px;
+  font-size: 16px;
+  letter-spacing: 1px;
+font-weight: 600;
+margin-top: 40px;
+margin-bottom: 20px;
+}
+.titulo2{
+  margin: 0 10px 0 10px;
+
+  font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+}
+.to-do_list{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  li{
+    list-style: none;
+    span{
+      width: 40px;
+      height: 40px;
+      background-color: rgba(25, 48, 129, 1);
+      border-radius: 50%;
+      padding: 5px;
+      margin-right: 15px;
+      i{
+        color: white;
+      }
+    }
+  }
+  >i{
+    position: absolute;
+    font-size: 180px;
+    z-index: -100;
+    color: rgba(171, 186, 238, 0.733);
+    right: 90px;
+    top: -60px;
+  }
+}
+.container_btn{
+  display: flex;
+  justify-content: center;
+  
+
+}
+.list_mobile{
+  display: flex;
+  gap: 15px;
+  margin: 15px 0 15px 20px;
+img{
+  background-color:  rgba(171, 186, 238, 0.733);
+  border-radius: 50%;
+  width: 30px;
+  padding: 5px;
+}
+h3{
+  font-size: 15px;
+  text-align: 1px;
+}
+}
+.btn_mobile{
+  width: 50%;
+  border: none;
+  background-color: #24105F;
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 15px;
+  .subCard{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    border-radius: 20px;
+
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+      rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+margin-bottom: 50px;
+    img{
+      width: 50%;
+      border-top-right-radius:  20px;
+      border-bottom-right-radius: 20px;
+    }
+    .left_footer-home{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      padding: 15px;
+      background-color: white;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      
+      h2{
+        font-size: 13px;}
+        h4{
+          font-size: 10px;
+      }
+      .boton{
+        font-size: 12px;
+        border: none;
+        background-color: #24105F;
+        color: white;
+        padding: 10px;
+        border-radius: 20px;
+        margin-top: 10px;
+      }
+    }
+
+  }
+}
+.footer_home{
+  position:absolute;
+  width: 100%;
+  height: 150px;
+  background-color: #24105F;
+  bottom: 0;
+  z-index: -100;
+}
 }
