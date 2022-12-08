@@ -59,7 +59,7 @@ const SendForm = (data) => {
   } = useForm();
 
   const postForm = (data) => {
-    const url = `http://localhost:4000/api/v1/shipping`;
+    const url = `http://3.89.23.42:4000/api/v1/shipping`;
     axios
       .post(url, data)
       .then((res) => {
