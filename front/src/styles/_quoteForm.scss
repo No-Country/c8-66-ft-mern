@@ -1,3 +1,12 @@
+@media (min-width:800px) { 
+    .container_form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center
+
+
+    }
 .formDoble {
     align-items: center;
     width: 700px;
@@ -11,8 +20,10 @@
     grid-template-columns: 1fr 1fr;
     flex-direction: column;
     gap: 1.3em;
-    margin-left: 200px;
-  
+
+    hr{
+        display: none;
+    }
     .title{
     align-items: center;
     }
@@ -78,4 +89,10 @@ flex-direction: row;
     filter: brightness(1.05);
     transition: filter 100ms ease;
   }
+}
+@media (max-width:800px) {
+  .formDoble{
+      margin-left: 0;
+  }
+}
 }

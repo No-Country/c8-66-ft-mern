@@ -1,3 +1,17 @@
+
+
+@media (max-width:800px) {
+  .App{
+    padding-top: 50px;
+  }
+  .header_app {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(211, 209, 209);
+    filter: drop-shadow(0 0 10px rgba(122, 122, 122, 0.568));
+  }
+}
 .header_app {
     padding: 12px 16px;
     display: flex;
@@ -5,6 +19,7 @@
     align-items: baseline;
     z-index: 100;
     flex-direction: row-reverse;
+
     a{
         text-decoration: none;
     }
@@ -36,6 +51,7 @@
     color: purple;
     position: relative;
     z-index: 2;
+    margin-right: 20px;
   }
   .header__menu-ham{
     font-size: 22px;
@@ -104,6 +120,8 @@
     }
     .header__logo {
       font-size: 30px;
+      margin-right: 0px;
+
     }
     
     .header__menu-ham, .name_user{
