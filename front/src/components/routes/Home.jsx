@@ -36,46 +36,54 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className='inicioHome'>
+      <div className='inicoiHome'>
+        {/* <img src="../public/img/img_principal-mobile.png" alt="" /> */}
       <h1 className="titulo5">¡Conocé el estado de tu envío!</h1>
         <Search/>
     </div>
-    {/* <div> */}
+        <div className='container_text-icons'>
        <h1 className="titulo3">¿Qué querés enviar?</h1>
        <h4 className='titulo4'>Múltiples servicios para tus múltiples nesecidades</h4>
         
+    </div>
         <div className='contenedorTarjeta'>
-        <div>
+        <div className='card_icons'>
+        <i className="fa-solid fa-box-open icons_mobile "></i>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbVJREFUSEu1lYExBEEQRf9FgAjIABGQASJABIgAESACREAGyIAMZIAIqLfV/6qva3btKjdVVzfTO9O/+//umZmWPGZL9q8pALuSziVtSDqW9DwmuDEAOMTxUXEIwJmk1yGgIYBVSSeSLsLBV5pjWwn7naRLSe8toD6A04gaEI8DSY+xwO49mD4lXUu6ifn8UAXYl3QVPLPpXhLcr8cJaIF/Rwt9ZHMY3wECmHPdyABEtxf2lzhoITmUaSFaaMEhgyD4vhNrdNmuAN+JDhzjIFcKtOAEXUwLa2hxhfG/EHzOwACIOSQgtCCso4UubIx8tvPdAlgbISDZ3EpCMw8yhrqPTH8LwLY+AU1VrrAcrJnozaBWVhXQEbsQnkrBTAawQzoZWhiUKjowFhzW9RBFid75tDrjA5VGNbnifs0gd2wFaQHkPYj+0CcyzbEZH1t90KLDzmsfvEnaqmXKGp4ptb4+qBnUm5Y+oOutT/M98EXGRgO5Y13j9Eq9aQmMn6+PLruh67rVB659nHjOxUYAk67rLBxcEpmvhtwHZPnnB6dWEEKaW7T6tyez1Q+jbWPe5NHOWht/ACgGaxmb7/TKAAAAAElFTkSuQmCC"className='iconos'/>
         <h3>Encomienda</h3>
         </div>
 
-        <div>
+        <div className='card_icons'>
+        <i className="fa-solid fa-envelope-open-text icons_mobile"></i>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR1JREFUSEvdleFNw0AMhb9MABsAG8AEwAawAZ2gMAl0ArpB2QCYAEaADdoJQB+ypVNIyjVRhFT/SZSz37OffU7DxNZMjM9+EVwAj8DxSNk+gBnwIk4pkQdHI8EzXKyTNsFXnJ4B7wOJToG3iP1JvqwgCdZR4tOOJFch8eFfBIn7ANxVkug7b/n2ViDofTjbqGvAqrrMbFeAA6KVsb0EHqil4AcBftnRF32eAUk2QWLvUuqtBGZjoH04j+xugUXxnlW+AuqfVVYTlL1IfZfx8SaeEkpc2s4EBpuh4EqmKYkkXZM2iEBQNS8r6LsrgwkqJ7a+ybWAbb//q8AxyyYOzT7jPnMrl7vI22gTx25UwZ2wX+t6bNad8fv1y5xEom9+ED0ZymZNKwAAAABJRU5ErkJggg=="className='iconos'/>
         <h3>Sobre</h3>
         </div>
         
-        <div>
+        <div className='card_icons'>
+        <i className="fa-solid fa-folder-open icons_mobile"></i>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAMVJREFUSEvtleERAUEMRt9VgArowKgAneiMUpRAB3SgAybmzqy93CZ27WDG/dxLvpfNl7s0VH6ayvpogBWwBWYJ+AFYAxerQA1wAqZWIuCCaIBrKz7Uvu69hJmQEsARmFuQEsAE2FuQEoDkji2IBxB7EnoQz4J4sggPcwDSlmViyp40PQDHxN5D1On7CkCq51J5V2T2DaoD/h70OvDKh/UWk3/PA9lSI2/ZUdw53oRDK3Pn3Gqhvohv2r/r4/wjSz+zO3raDTzEPRmj6DYvAAAAAElFTkSuQmCC" className='iconos'/>
         <h3>Carta documento</h3>
         </div>
 
-        <div>
+        <div className='card_icons'>
+        <i className="fa-solid fa-envelope-open-text icons_mobile"></i>
+        <span></span>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPJJREFUSEvtldsRwUAUhr9UgAqUgEoogQ6oIDqhBDqhAypABcyf2TVn4uQikZeMfcrsnvPf9pKEjkfSMT79IlgAKTBtGdsF2AAH4diItDBuCR7bT8AsT/AMq0dg3pDI9mbirYNIoDnFtQcGNYkewDLEYnFcghFwB4aBpMqNVAs89tyCqEIHKlzFTSpxY1ULU653Qdg7HS+imIpOgYg8N3nVAhaBHYUObJHnRuvZEXRUf03gudGc9sdT3ZhAjdGNvm3WRQetVkQ1T6lb9ieoTO8jol8+duf4KtuLpouyBSaV2soLrsDae65b4vrt/fpldhLRC6AYNhngkXrwAAAAAElFTkSuQmCC"className='iconos'/>
         <h3>Sobre internacional</h3>
         </div>
         
-        <div>
+        <div className='card_icons'>
+        <i className="fa-solid fa-store icons_mobile"></i>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEvllP0tRFEQR89WgArQARWgAlSAClABKqADVGBVgAroAB1QATly5+W+8Z68fckmxPyz2dk7c+bjNzthzjaZc376ABfA4YxwY45zTBfgFDiZMXk8PwOMbywDVoBHYBHYAu6BHeAGeAA2S6T+DWAXmBb/HfAGrAMvQcgAH28DtyWx76KjurouX8T6KfjLaoDVWcU7sFZVkas1rqsru38CFqruWwDbWgbyHG3boNUKarLnMpKlauTRmbl83wL8lMi3XQD9AozVAuwU3GMLcAXslaWF3C7TYp2tgdl/UADnZXzXwH4GBD0r1Go0x1Rbn7/VbVbRR5XhtSzNSqzaQ1Jhmio7KqOxc0Xh/sKavH2AsX8hUeDvAngfLtUd1aYUXa53Ejaqg7iPvHy/N3ovP44CfAvqSwb8A0D8XXTNe6jP+2kEkfWuYjyc+miGJvadyT3MRlljD2ow9O8DPgHWLF8ZxUgN9QAAAABJRU5ErkJggg=="className='iconos'/>
         <h3>E-commerce</h3>
         </div>
         </div>
 
        <h1 className="titulo1">¡Cotiza tu envío en dos simples pasos!</h1>
-       
+       <div className='container_form'>
        <form className='formDoble' onSubmit={handleSubmit(onSubmit)}>
-        <h2>Informacion del envío</h2>
-
+        <h2>Informaciòn del envío</h2>
+        <hr></hr>
         <h2 className='detalle'>Detalle del paquete</h2>
 
         <section>
@@ -112,7 +120,7 @@ const Home = () => {
             <input 
             className='detalle2' 
             type = 'text'
-            placeholder="Origen"
+            placeholder="Seleccionar pais"
             {...register("origen",{
               required: true
             })}></input>
@@ -120,7 +128,6 @@ const Home = () => {
           </section>
 
           <section>
-          <label className='detalle1'>Desde</label>
             <input  
             className='detalle2'
             type = 'text'
@@ -136,7 +143,7 @@ const Home = () => {
             <input 
             className='detalle2' 
             type = 'text'
-            placeholder="Destino"
+            placeholder="Seleccionar pais"
             {...register("destino",{
               required: true
             })}></input>
@@ -144,7 +151,6 @@ const Home = () => {
           </section>
 
           <section>
-          <label className='detalle1'>Hasta</label>
             <input 
             className='detalle2' 
             type = 'text'
@@ -155,8 +161,13 @@ const Home = () => {
              {errors.email?.type === "required" && <p>La ciudad de destino es requerida</p>}
           </section>
 
-          <button className="login__btn">Siguiente paso</button>
+            <div className='container_btn'>
+
+          <button className="login__btn">Siguiente</button>
+            </div>
        </form>
+       </div>
+
 
        <h1 className="titulo1">¿Ya conoces los planes personalizados que tenemos para vos?</h1>
 
