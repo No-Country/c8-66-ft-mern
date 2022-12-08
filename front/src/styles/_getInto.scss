@@ -97,6 +97,8 @@ $colorButton: #24105f;
       display: none;
     }
     .container-info_get-into {
+      margin-top: 0;
+      padding-top:50px;
         .title-get_info {
             h2{
                 font-size: 35px;
@@ -104,6 +106,9 @@ $colorButton: #24105f;
           h3 {
             font-size: 14px;
           }
+        }
+        .container-icon-user {
+          margin-top: 15px;
         }
       }
   }
