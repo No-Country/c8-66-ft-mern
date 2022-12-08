@@ -19,7 +19,8 @@ const showHistory = catchAsync(async (req,res,next) => {
                     shippingId: {
                         [Op.eq]: shipping_id
                     }
-                }
+                },
+                required:false
             }
         }
     );

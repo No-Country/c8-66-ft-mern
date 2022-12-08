@@ -36,7 +36,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className='inicoiHome'>
+      <div className='inicioHome'>
         {/* <img src="../public/img/img_principal-mobile.png" alt="" /> */}
       <h1 className="titulo5">¡Conocé el estado de tu envío!</h1>
         <Search/>
