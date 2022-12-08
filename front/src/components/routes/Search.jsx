@@ -33,7 +33,7 @@ const Search = () => {
 
     
 console.log("Soy info",info)
-    
+
     const handleSubmit = (data) => {
       data.preventDefault();
             setError()

@@ -1,13 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import {useSelector} from 'react-redux';
 
 const DetailSearch = (data) => {
     const shipping = useSelector((state)=>state.getShipping);
-    console.log( "Soy shipping detail",shipping)
-    
+    const [observacion, setObservacion] = useState(false)
 
-// const{info}=props
-console.log("Soy info detail",data)
+
+let ship = shipping.shipping_status_histories
+
+let mensaje = ''
+
+if (ship[0].id === 1) {
+    mensaje = 'Iniciado'
+} else if (ship[0].id === 2) {
+    mensaje = 'Cancelado'
+} else if (ship[0].id === 3) {
+    mensaje = 'En espera para recoger en domicilio'
+} else if (ship[0].id === 4) {
+    mensaje = 'En centro de distribucion'
+} else if (ship[0].id === 5) {
+    mensaje = 'En posesion del cartero'
+} else if (ship[0].id === 6) {
+    mensaje = 'En espera para retirar en sucursal'
+} else if (ship[0].id === 7) {
+    mensaje = 'Entregado'
+}
+
 
     return(
         <div className="contenedorDetailSearch">
@@ -75,10 +93,8 @@ console.log("Soy info detail",data)
 
             <div className="lista2">
             <img src="Paquete.png" className="elipce"/>
-            <h2 className="titulolista2">El paquete fue entregado</h2>
+            <h2 className="titulolista2">El estado del envio es: {mensaje}</h2>
             <img src="mdi_truck-check.png" className="elipce"/>
-            <h2 className="titulolista2">El paquete será entregad pronto</h2>
-            <img src="Ellipse 54.png" className="elipce1"/>
             </div>
 
             <h3>*Los envíos pueden sufrir modificaciones por situaciones especiales y/o ajenas a nuestra empresa</h3>
