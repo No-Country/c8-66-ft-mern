@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @media (min-width:800px) {
         .lista2{
             margin: 10px;
@@ -58,26 +57,6 @@
             // overflow: hidden;
             transition: .5s;
            }
-=======
-.contenedorDetailSearch{
-
-    text-align: center;
-    .persona{
-        margin-top: 100px;
-        text-align: left;
-        padding: 10px;
-        .logoPersona{
-            height: 30px;
-            width: 30px;
-            padding: 4px;
-            background-image: url("recuadroLogoPersona.png");
-            position: relative;
-        }
-        .PERSONA{
-            padding: 10px;
-            margin-top: 5px;
-        }
->>>>>>> a03bd755c8b1ffa6a9fd717731d26d3e197a3b52
     }
         
         }
@@ -238,6 +217,15 @@ padding: 12px;
 margin-bottom: 100px;
 }
 
+.datoForm{
+    padding: 15px;
+    margin: 15px 0 15px 0 ;
+    width: 100%;
+    padding: 15px;
+    border: solid rgba(179, 179, 179, 0.788) 1px;
+    border-radius: 15px ;
+}
+
 //nobile desing
 @media (max-width:800px) {
     .contenedorDetailSearch {
@@ -268,7 +256,8 @@ margin-bottom: 100px;
     .lista2{
         margin-top: 50px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:0.3fr 1fr;
+        justify-items: center
     }
     }
     .titulolista2{
@@ -276,6 +265,7 @@ margin-bottom: 100px;
         width: 100%;
         margin-left: 0px;
         margin-top: 0px;
+        font-size: 20px;
 }
 .elipce{
     margin-left: 0;
@@ -297,6 +287,19 @@ margin-bottom: 100px;
             background-color: #24105F;
             bottom: 0;
             z-index: -100;
+        }
+        .datoForm{
+            font-size: 10px;
+        }
+        .tituloGris{
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .subtitulo{
+            >label{
+                font-size: 12px;
+                font-weight: bold;
+            }
         }
     }
 

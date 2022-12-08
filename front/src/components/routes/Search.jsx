@@ -69,7 +69,7 @@ console.log("Soy info",info)
               <option value= "sobi">Sobre internacional</option>
               <option value= "eco">E Commers</option>
             </select>
-          <input  className="search__input1 br_button" 
+          <input  className="search__input br_button" 
             value= {input}
             type="text"
             placeholder='Numero seguimiento'
