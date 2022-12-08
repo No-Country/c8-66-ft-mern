@@ -41,6 +41,10 @@ const handleClickRegister = ()=>{
   return (
     <div className="home">
       <div className='inicioHome'>
+<<<<<<< HEAD
+=======
+        {/* <img src="../public/img/img_principal-mobile.png" alt="" /> */}
+>>>>>>> a03bd755c8b1ffa6a9fd717731d26d3e197a3b52
       <h1 className="titulo5">¡Conocé el estado de tu envío!</h1>
         <Search/>
     </div>
