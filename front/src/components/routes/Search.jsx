@@ -47,7 +47,7 @@ console.log("Soy info",info)
             axios.get(url).then((res)=>{
               dispatch(setShipping(res.data.shipping))
               setInfo(res.data)
-              //  alert("buscando su envío")
+                alert("buscando su envío")
             })
           
           //  .catch((err) =>console.log(err))
